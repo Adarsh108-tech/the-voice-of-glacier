@@ -15,7 +15,6 @@ export default function Navbar() {
       name: "Home",
       href: "/",
       sublinks: [
-        { label: "Hero", href: "/#hero" },
         { label: "Crisis", href: "/#crisis" },
         { label: "Why TVGF", href: "/#why-tvgf" },
         { label: "Vision", href: "/#vision" },
@@ -28,7 +27,6 @@ export default function Navbar() {
       name: "Our Strategy",
       href: "/ourStrategy",
       sublinks: [
-        { label: "Hero", href: "/ourStrategy#strategy-hero" },
         { label: "Cryosphere Crisis", href: "/ourStrategy#cryosphere-crisis" },
         { label: "Strategic Gaps", href: "/ourStrategy#strategic-gaps" },
         { label: "Dual-Force Model", href: "/ourStrategy#dual-force-model" },
@@ -63,7 +61,6 @@ export default function Navbar() {
     name: "Learn",
     href: "/Learn",
     sublinks: [
-    { label: "Hero", href: "/Learn#hero" },
     { label: "Introduction", href: "/Learn#introduction" },
     { label: "Explore", href: "/Learn#explore" },
     { label: "Glacier Data", href: "/Learn#glacier-data" },

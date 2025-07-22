@@ -162,7 +162,7 @@ export default function FlagshipPrograms() {
 
         <div className="space-y-14">
           {programs.map((program, index) => (
-            <section key={index} id={program.id} className="space-y-1 scroll-mt-20">
+            <section key={index} id={program.id} className="space-y-1 ">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

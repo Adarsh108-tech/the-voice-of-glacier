@@ -22,6 +22,7 @@ import {
   FaGlobe,
   FaEye, FaBullseye
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function HomePage() {
 
@@ -29,32 +30,32 @@ export default function HomePage() {
   {
     title: "A Cryosphere Justice Framework",
     desc: "Glaciers legally and culturally protected in 10+ countries.",
-    image: "/goals/goal1.jpg",
+    image: "/img3.jpg",
   },
   {
     title: "Cryosphere Pedagogy & Education",
     desc: "Embedded in school systems worldwide.",
-    image: "/goals/goal2.jpg",
+    image: "/img3.jpg",
   },
   {
     title: "Real-time Glacier Monitoring",
     desc: "Publicly accessible data for all.",
-    image: "/goals/goal3.jpg",
+    image: "/img3.jpg",
   },
   {
     title: "Global Glacier Guardians Network",
     desc: "Mobilizing 100,000+ individuals across continents.",
-    image: "/goals/goal4.jpg",
+    image: "/img3.jpg",
   },
   {
     title: "Glaciers Resacralized",
     desc: "Through art, ritual, memory, and community initiatives.",
-    image: "/goals/goal5.jpg",
+    image: "/img3.jpg",
   },
   {
     title: "Humanity & Glaciers",
     desc: "A relationship built on reverence and reciprocity.",
-    image: "/goals/goal6.jpg",
+    image: "/img3.jpg",
   },
 ];
 
@@ -210,7 +211,9 @@ useEffect(() => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Button>Meet the Movement</Button>
-            <Button variant="outline" className="border-white text-white "><span className="text-white">Watch the Story</span></Button>
+            <Link href="/story" passHref>
+              <Button variant="outline" className="border-white text-white "><span className="text-white">Watch the Story</span></Button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -254,9 +257,11 @@ useEffect(() => {
         <p className="text-glacier-soft text-sm italic mb-4">
           Founder & Glacier Survivor
         </p>
-        <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
-          Watch Anurag&apos;s Story
-        </Button>
+          <Link href="/story" passHref>
+            <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
+              Watch Anurag&apos;s Story
+            </Button>
+          </Link>
         </div>
         </motion.div>
       </div>

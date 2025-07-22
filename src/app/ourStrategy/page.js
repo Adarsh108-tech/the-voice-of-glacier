@@ -270,7 +270,7 @@ export default function StrategyPage() {
             Theory of Change
           </h2>
           <img
-            src="/theory-of-change.png"
+            src="/theory-of-change-model.png"
             alt="Theory of Change Diagram"
             className="w-full rounded-xl border"
           />
@@ -291,7 +291,7 @@ export default function StrategyPage() {
             Strategic Roadmap (2025-2035)
           </h2>
           <img
-            src="/roadmap-2035.png"
+            src="/ourStrategicRoadmap.png"
             alt="Strategic Roadmap"
             className="w-full rounded-xl border"
           />

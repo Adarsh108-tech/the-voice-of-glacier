@@ -8,8 +8,6 @@ export default function CompareSlider({
   beforeLabel = "Before",
   afterLabel = "After",
   heading = "Image Comparison",
-  width = 800,
-  height = 500,
 }) {
   const containerRef = useRef(null);
   const [dividerX, setDividerX] = useState(0.5);
@@ -49,11 +47,11 @@ export default function CompareSlider({
   }, [dragging]);
 
   return (
-    <div className="w-full max-w-full">
+    <div className="w-full">
       {/* Heading */}
       <h3 className="text-2xl font-semibold text-glacier-dark mb-4">{heading}</h3>
 
-      {/* Slider Container */}
+      {/* Slider Container with aspect ratio */}
       <div
         ref={containerRef}
         onMouseDown={(e) => {
@@ -64,20 +62,19 @@ export default function CompareSlider({
           setDragging(true);
           updateSliderPosition(e.touches[0].clientX);
         }}
-        className="relative overflow-hidden rounded-xl shadow-md select-none"
-        style={{ width, height, touchAction: "none", userSelect: "none" }}
+        className="relative w-full aspect-[16/10] overflow-hidden rounded-xl shadow-md select-none touch-none"
+        style={{ userSelect: "none" }}
       >
         {/* After Image */}
         <Image
           src={afterImage}
           alt="After"
-          width={width}
-          height={height}
-          className="absolute inset-0 w-full h-full object-cover z-0 select-none"
+          fill
+          className="object-cover absolute inset-0 z-0 select-none"
           draggable={false}
         />
 
-        {/* Before Image with clipping effect */}
+        {/* Before Image with clipping */}
         <div
           className="absolute inset-0 z-10"
           style={{
@@ -88,9 +85,8 @@ export default function CompareSlider({
           <Image
             src={beforeImage}
             alt="Before"
-            width={width}
-            height={height}
-            className="w-full h-full object-cover select-none"
+            fill
+            className="object-cover select-none"
             draggable={false}
           />
         </div>

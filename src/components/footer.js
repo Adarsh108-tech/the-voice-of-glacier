@@ -3,10 +3,9 @@
 import {
   FaInstagram,
   FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-  FaWhatsapp,
+  FaLinkedin,
 } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -19,37 +18,65 @@ export default function Footer() {
             Where glaciers speak, communities rise, and the world listens.
           </p>
           <div className="flex space-x-5 mt-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/thevoiceofglaciers/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="text-glacier-light hover:text-glacier-primary text-xl" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF className="text-glacier-light hover:text-glacier-primary text-xl" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-glacier-light hover:text-glacier-primary text-xl" />
+            <a
+              href="https://www.linkedin.com/company/the-voice-of-glaciers-foundation/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="text-glacier-light hover:text-glacier-primary text-xl" />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="text-glacier-light hover:text-glacier-primary text-xl" />
-            </a>
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp className="text-glacier-light hover:text-glacier-primary text-xl" />
+            <a
+              href="https://substack.com/@thevoiceofglaciers"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/substack-icon.webp"
+                alt="Substack"
+                width={20}
+                height={20}
+                className="invert hover:invert-0 transition duration-300"
+              />
             </a>
           </div>
         </div>
 
-        {/* Right: Founder Info */}
-        <div className="text-glacier-soft">
-          <h3 className="text-lg font-semibold text-white mb-2">Founder</h3>
-          <p>Anuraag Maloo</p>
-          <p>
-            Email:{" "}
-            <a
-              href="mailto:thevoiceofglaciers@gmail.com"
-              className="text-glacier-light underline hover:text-glacier-primary"
-            >
-              thevoiceofglaciers@gmail.com
-            </a>
-          </p>
+        {/* Right: Founder Info + Logo */}
+        <div className="text-glacier-soft flex flex-col items-start md:items-end space-y-4">
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-2">Founder</h3>
+            <p>Anuraag Maloo</p>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:thevoiceofglaciers@gmail.com"
+                className="text-glacier-light underline hover:text-glacier-primary"
+              >
+                thevoiceofglaciers@gmail.com
+              </a>
+            </p>
+          </div>
+          <Image
+            src="/comapny-dark-logo.png"
+            alt="The Voice of Glaciers Logo"
+            width={120}
+            height={60}
+            className="object-contain"
+          />
         </div>
       </div>
 
