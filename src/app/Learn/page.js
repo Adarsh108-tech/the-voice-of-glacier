@@ -150,26 +150,58 @@ export default function LearnPage() {
         <h2 className="text-4xl font-semibold mb-8 text-glacier-dark">Explore</h2>
 
         <div className="flex gap-6 overflow-x-auto custom-scrollbar pb-4">
-          {Array.from({ length: 7 }).map((_, i) => (
-            <Card
+          {[
+            {
+              title: "NASA Climate Change",
+              link: "https://climate.nasa.gov/",
+              image: "/explore/nasa.png",
+            },
+            {
+              title: "Learn about Cryosphere",
+              link: "https://wmo.int/topics/cryosphere",
+              image: "/explore/cryosphere.png",
+            },
+            {
+              title: "Global Himalaya Expedition",
+              link: "https://ghe.co.in/",
+              image: "/explore/nwes.png",
+            },
+            {
+              title: "International Year of Glaciers’ Preservation 2025",
+              link: "https://wmo.int/resources/campaigns/launch-of-website-international-year-of-glaciers-preservation-2025",
+              image: "/explore/YearOfGlacier.png",
+            },
+            {
+              title: "National Snow and Ice Data Center",
+              link: "https://nsidc.org/learn/parts-cryosphere/glaciers",
+              image: "/explore/NationalSnowIceDomain.png",
+            },
+            {
+              title: "List of Glaciers in India",
+              link: "https://en.wikipedia.org/wiki/List_of_glaciers_in_India",
+              image: "/explore/ListOfGlacier.png",
+            },
+          ].map((item, i) => (
+            <a
               key={i}
-              className="bg-glacier-light shadow-md min-w-[300px] max-w-sm flex-shrink-0"
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group rounded-lg overflow-hidden min-w-[350px] max-w-md flex-shrink-0 h-64 shadow-lg"
             >
-              <CardContent className="p-4">
-                <h4 className="text-xl font-bold mb-2">NASA Climate Change</h4>
-                <a
-                  href="https://climate.nasa.gov/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-glacier-primary underline"
-                >
-                  Visit NASA&#39;s Official Climate Site
-                </a>
-              </CardContent>
-            </Card>
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                style={{ backgroundImage: `url(${item.image})` }}
+              ></div>
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <h4 className="text-white text-lg font-bold px-4 text-center">{item.title}</h4>
+              </div>
+            </a>
           ))}
         </div>
       </section>
+
+
 
       {/* Section 3: Glacier Data Comparison */}
       <section className="py-20 px-6 md:px-20 bg-glacier-light" id="glacier-data">
