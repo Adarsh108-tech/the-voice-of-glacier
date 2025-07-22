@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
@@ -9,6 +10,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   const structuredLinks = [
     {
@@ -86,8 +91,14 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const handleSmoothScroll = (href) => {
-    const id = href.split("#")[1];
-    const element = document.getElementById(id);
+    const [path, hash] = href.split("#");
+
+    if (pathname !== "/" && path === "/") {
+      router.push(`/#${hash}`);
+      return;
+    }
+
+    const element = document.getElementById(hash);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", href);
@@ -166,7 +177,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                setIsOpen(!isOpen);
+                setOpenDropdown(null);
+              }}
               className="text-white focus:outline-none"
               aria-label="Toggle menu"
             >
@@ -181,14 +195,16 @@ export default function Navbar() {
         <div className="md:hidden px-4 pt-2 pb-4 space-y-4 bg-black/70 shadow-md border-t border-white/20">
           {structuredLinks.map((link) => (
             <div key={link.name}>
-              <Link
-                href={link.href}
-                className="block text-white hover:text-cyan-300 font-medium"
-                onClick={() => setIsOpen(false)}
+              <button
+                className="w-full text-left text-white font-medium hover:text-cyan-300"
+                onClick={() =>
+                  setOpenDropdown((prev) => (prev === link.name ? null : link.name))
+                }
               >
                 {link.name}
-              </Link>
-              {link.sublinks?.length > 0 && (
+              </button>
+
+              {link.sublinks?.length > 0 && openDropdown === link.name && (
                 <div className="ml-4 mt-1 space-y-1">
                   {link.sublinks.map((sublink) =>
                     sublink.href.startsWith("/#") ? (
@@ -198,6 +214,7 @@ export default function Navbar() {
                         onClick={(e) => {
                           e.preventDefault();
                           setIsOpen(false);
+                          setOpenDropdown(null);
                           handleSmoothScroll(sublink.href);
                         }}
                         className="block text-white hover:text-cyan-300 text-sm cursor-pointer"
@@ -209,7 +226,10 @@ export default function Navbar() {
                         key={sublink.label}
                         href={sublink.href}
                         className="block text-white hover:text-cyan-300 text-sm"
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setOpenDropdown(null);
+                        }}
                       >
                         {sublink.label}
                       </Link>
