@@ -58,17 +58,17 @@ export default function Navbar() {
       ],
     },
     {
-    name: "Learn",
-    href: "/Learn",
-    sublinks: [
-    { label: "Introduction", href: "/Learn#introduction" },
-    { label: "Explore", href: "/Learn#explore" },
-    { label: "Glacier Data", href: "/Learn#glacier-data" },
-    { label: "Glossary", href: "/Learn#glossary" },
-    { label: "Partners", href: "/Learn#partners" },
-    { label: "Join Us", href: "/Learn#join" },
-    ],
-  }
+      name: "Learn",
+      href: "/Learn",
+      sublinks: [
+        { label: "Introduction", href: "/Learn#introduction" },
+        { label: "Explore", href: "/Learn#explore" },
+        { label: "Glacier Data", href: "/Learn#glacier-data" },
+        { label: "Glossary", href: "/Learn#glossary" },
+        { label: "Partners", href: "/Learn#partners" },
+        { label: "Join Us", href: "/Learn#join" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -85,13 +85,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Handle internal smooth scroll
   const handleSmoothScroll = (href) => {
     const id = href.split("#")[1];
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", href); // update URL hash
+      history.replaceState(null, "", href);
     }
   };
 
@@ -123,14 +122,18 @@ export default function Navbar() {
               <div key={link.name} className="relative group">
                 <Link
                   href={link.href}
-                  className="relative text-white font-medium transition duration-200 group"
+                  className="relative text-white font-medium transition duration-200"
                 >
                   {link.name}
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
                 </Link>
 
                 {link.sublinks?.length > 0 && (
-                  <div className="absolute top-full left-0 w-56 mt-2 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition duration-200 z-10">
+                  <div
+                    className={`absolute top-full mt-2 w-56 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-10 ${
+                      link.name === "Learn" ? "right-0" : "left-0"
+                    }`}
+                  >
                     {link.sublinks.map((sublink) =>
                       sublink.href.startsWith("/#") ? (
                         <a

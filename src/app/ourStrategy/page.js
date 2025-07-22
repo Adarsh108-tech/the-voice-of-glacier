@@ -228,33 +228,54 @@ export default function StrategyPage() {
       {/* 4. Solution Pillars */}
       <motion.section
         id="solution-pillars"
-        className="w-full bg-glacier-light py-24"
+        className="w-full bg-glacier-light py-10"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="w-[80%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6 text-glacier-primary">Core Solution Pillars</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {pillars.map((pillar, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="p-4 rounded-lg bg-white/10 backdrop-blur-md border border-white/20"
-              >
-                <h4 className="font-semibold text-glacier-primary mb-1">
-                  {pillar.title}
-                </h4>
-                <p className="text-sm text-glacier-dark/90">{pillar.content}</p>
-              </motion.div>
-            ))}
+        <div className="w-[95%] max-w-5xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-glacier-primary mb-4">Core Solution Pillars</h2>
+
+          <div className="relative w-full h-[520px] md:h-[660px] lg:h-[740px] mb-4">
+            <svg viewBox="0 0 750 620" className="w-full h-full">
+              {/* Adjusted positions for slight overlaps */}
+              <circle cx="375" cy="190" r="135" fill="#00BFFF" fillOpacity="0.5" /> {/* Glacier Literacy */}
+              <circle cx="270" cy="335" r="135" fill="#32CD32" fillOpacity="0.5" /> {/* Community Engagement */}
+              <circle cx="480" cy="335" r="135" fill="#FFA500" fillOpacity="0.5" /> {/* Creative Comms */}
+              <circle cx="165" cy="190" r="135" fill="#FF6347" fillOpacity="0.5" /> {/* Open Data */}
+              <circle cx="585" cy="190" r="135" fill="#9370DB" fillOpacity="0.5" /> {/* Policy Advocacy */}
+
+              {/* Labels aligned with new positions */}
+              <text x="375" y="185" textAnchor="middle" className="fill-white font-semibold text-[10px] sm:text-xs md:text-sm lg:text-base">
+                Glacier Literacy
+              </text>
+              <text x="270" y="340" textAnchor="middle" className="fill-white font-semibold text-[10px] sm:text-xs md:text-sm lg:text-base">
+                Community Engagement
+              </text>
+              <text x="480" y="340" textAnchor="middle" className="fill-white font-semibold text-[10px] sm:text-xs md:text-sm lg:text-base">
+                Creative Comms
+              </text>
+              <text x="165" y="195" textAnchor="middle" className="fill-white font-semibold text-[10px] sm:text-xs md:text-sm lg:text-base">
+                Open Data
+              </text>
+              <text x="585" y="195" textAnchor="middle" className="fill-white font-semibold text-[10px] sm:text-xs md:text-sm lg:text-base">
+                Policy Advocacy
+              </text>
+            </svg>
           </div>
+
+          <p className="text-sm md:text-base text-glacier-dark/90 max-w-2xl mx-auto">
+            The overlapping circles highlight the interconnectedness of glacier literacy, grassroots engagement, open data, storytelling, and policy action — driving a unified strategy for cryosphere justice.
+          </p>
         </div>
       </motion.section>
+
+
+
+
+
+
 
       {/* 5. Theory of Change */}
       <motion.section
@@ -265,17 +286,61 @@ export default function StrategyPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="w-[80%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-4 text-glacier-primary">
-            Theory of Change
-          </h2>
-          <img
-            src="/theory-of-change-model.png"
-            alt="Theory of Change Diagram"
-            className="w-full rounded-xl border"
-          />
+        <div className="w-[90%] max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-6 text-glacier-primary">Theory of Change</h2>
+          <div className="overflow-x-auto rounded-xl shadow">
+            <table className="min-w-full border border-gray-200 text-left text-sm">
+              <thead className="bg-glacier-light text-glacier-dark font-semibold">
+                <tr>
+                  <th className="px-4 py-3 border">Inputs</th>
+                  <th className="px-4 py-3 border">Activities</th>
+                  <th className="px-4 py-3 border">Outputs</th>
+                  <th className="px-4 py-3 border">Outcomes</th>
+                  <th className="px-4 py-3 border">Impact</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white text-glacier-dark">
+                <tr>
+                  <td className="px-4 py-3 border">
+                    • Programs<br />
+                    • Networks<br />
+                    • Media<br />
+                    • Advocacy<br />
+                    • Funding<br />
+                    • Partners
+                  </td>
+                  <td className="px-4 py-3 border">
+                    • GlacierX<br />
+                    • Fellowships<br />
+                    • Curricula<br />
+                    • Storytelling<br />
+                    • Campaigns
+                  </td>
+                  <td className="px-4 py-3 border">
+                    • Events<br />
+                    • Curriculum<br />
+                    • Declarations<br />
+                    • Toolkits<br />
+                    • Policy briefs<br />
+                    • Art<br />
+                    • Community pledges
+                  </td>
+                  <td className="px-4 py-3 border">
+                    • Policy recognition<br />
+                    • Influence, local stewardship<br />
+                    • Youth/community engagement<br />
+                    • Digital activation
+                  </td>
+                  <td className="px-4 py-3 border font-semibold text-glacier-primary">
+                    Systemic glacier protection<br />+<br />Cryosphere justice
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </motion.section>
+
 
       {/* 6. Roadmap */}
       <motion.section
@@ -286,17 +351,47 @@ export default function StrategyPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="w-[80%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-4 text-glacier-primary">
-            Strategic Roadmap (2025-2035)
-          </h2>
-          <img
-            src="/ourStrategicRoadmap.png"
-            alt="Strategic Roadmap"
-            className="w-full rounded-xl border"
-          />
+        <div className="w-[90%] max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-6 text-glacier-primary">Strategic Roadmap (2025-2035)</h2>
+          <div className="overflow-x-auto rounded-xl shadow">
+            <table className="min-w-full border border-gray-200 text-left text-sm">
+              <thead className="bg-glacier-primary text-white font-semibold">
+                <tr>
+                  <th className="px-4 py-3 border">Phase</th>
+                  <th className="px-4 py-3 border">Focus / Milestone</th>
+                  <th className="px-4 py-3 border">2030-2035 Goal</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white text-glacier-dark">
+                <tr>
+                  <td className="px-4 py-3 border">2025-26</td>
+                  <td className="px-4 py-3 border">
+                    Build narrative capital: storytelling, visibility, co-creation model, launch GlacierX, core team, digital channels
+                  </td>
+                  <td className="px-4 py-3 border" rowSpan={3}>
+                    Ensure glaciers have policy protection, cultural visibility, and community stewardship in at least 10 countries.<br />
+                    Global Glacier Guardians Network visualized.<br />
+                    Policy change realized.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 border">2026-27</td>
+                  <td className="px-4 py-3 border">
+                    Deploy Education + Activation tools, fellowships, residencies, glacier curriculum pilots, early policy pilots & policy white paper
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 border">2027-29 Goal</td>
+                  <td className="px-4 py-3 border">
+                    Ensure glaciers have policy protection, cultural visibility, and community stewardship in at least 10 countries
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </motion.section>
+
       <Footer/>
     </div>
   );
