@@ -67,8 +67,8 @@ const glacierDetails = [
   {
     title: "Chhota Shigri Glacier (Himachal Pradesh)",
     location: "Lahaul-Spiti region",
-    retreat: "~15–20 meters/year",
-    concern: "One of India’s benchmark glaciers with detailed data.",
+    retreat: "~15-20 meters/year",
+    concern: "One of India's benchmark glaciers with detailed data.",
     beforeImage: "/gangotri-old.png",
     afterImage: "/gangotri-new.png",
     beforeLabel: "1988",
@@ -167,7 +167,7 @@ export default function LearnPage() {
               image: "/explore/nwes.png",
             },
             {
-              title: "International Year of Glaciers’ Preservation 2025",
+              title: "International Year of Glaciers' Preservation 2025",
               link: "https://wmo.int/resources/campaigns/launch-of-website-international-year-of-glaciers-preservation-2025",
               image: "/explore/YearOfGlacier.png",
             },

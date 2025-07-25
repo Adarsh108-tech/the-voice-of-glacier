@@ -65,7 +65,7 @@ export default function HomePage() {
   const stats = [
   {
     icon: <FaTemperatureHigh className="text-2xl text-glacier-light" />,
-    label: "3× Faster Warming",
+    label: "3x Faster Warming",
     desc: "The Cryosphere is warming three times faster than the global average, signaling an urgent crisis.",
   },
   {
@@ -238,8 +238,8 @@ useEffect(() => {
       <div className="space-y-6">
         <p className="text-xl md:text-2xl font-semibold leading-relaxed italic text-glacier-dark">
           &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb - cold, silent, alive.<br/><br/>
-          That ice didn't just trap me. It protected me. That glacier gave me a second chance. <br/><br/>
-          I survived . But glaciers won't. <br/><br/>
+          That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br/><br/>
+          I survived . But glaciers won&apos;t. <br/><br/>
           I owe my life to these glaciers. This work is my return offering.&quot;
           
         </p>

@@ -39,8 +39,8 @@ const programs = [
     description:
       "Cross-disciplinary residencies and labs for artists, scientists, and youth.",
     details: [
-      "Fellows: Artist–scientist pairings",
-      "Youth Labs: Local 18–25 year-old leaders",
+      "Fellows: Artist-scientist pairings",
+      "Youth Labs: Local 18-25 year-old leaders",
       "Wisdom Council: Elders, ritualists, storytellers",
     ],
     image: "/img2.jpg",

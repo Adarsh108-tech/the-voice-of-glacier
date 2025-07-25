@@ -488,7 +488,7 @@ export default function StrategyPage() {
       >
         <div className="w-[90%] max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-glacier-primary mb-12 text-center">
-            Strategic Roadmap (2025–2035)
+            Strategic Roadmap (2025-2035)
           </h2>
 
           <div className="relative border-l-4 border-glacier-primary pl-6 ml-3">
@@ -512,7 +512,7 @@ export default function StrategyPage() {
               <div className="absolute -left-[1.45rem] top-2.5 bg-glacier-accent w-4 h-4 rounded-full border-4 border-white z-10" />
               <div className="bg-glacier-accent/10 border border-glacier-accent text-glacier-dark p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-glacier-accent mb-2">
-                  2030–2035 Goal
+                  2030-2035 Goal
                 </h3>
                 <ul className="list-disc pl-5 text-sm leading-relaxed">
                   {longTermGoal.map((point, i) => (
