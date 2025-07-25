@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -127,24 +127,19 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
+          {/* Desktop Menu with Clickable Dropdowns */}
+          <div className="hidden md:flex space-x-8 items-center relative">
             {structuredLinks.map((link) => (
-              <div
-                key={link.name}
-                className="relative"
-                onMouseEnter={() => setOpenDropdown(link.name)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <div className="cursor-pointer text-white font-medium relative">
-                  <Link
-                    href={link.href}
-                    className="relative transition duration-200"
-                  >
-                    {link.name}
-                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
-                  </Link>
-                </div>
+              <div key={link.name} className="relative">
+                <button
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === link.name ? null : link.name)
+                  }
+                  className="flex items-center gap-1 text-white font-medium transition duration-200"
+                >
+                  {link.name}
+                  {link.sublinks?.length > 0 && <ChevronDown size={16} />}
+                </button>
 
                 {link.sublinks?.length > 0 && openDropdown === link.name && (
                   <div
