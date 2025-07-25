@@ -14,6 +14,7 @@ export default function Navbar() {
 
   const router = useRouter();
   const pathname = usePathname();
+  const dropdownRef = useRef(null);
 
   const structuredLinks = [
     {
@@ -90,14 +91,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Handle click outside for dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const handleSmoothScroll = (href) => {
     const [path, hash] = href.split("#");
-
     if (pathname !== "/" && path === "/") {
       router.push(`/#${hash}`);
       return;
     }
-
     const element = document.getElementById(hash);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -128,7 +138,10 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu with Clickable Dropdowns */}
-          <div className="hidden md:flex space-x-8 items-center relative">
+          <div
+            className="hidden md:flex space-x-8 items-center relative"
+            ref={dropdownRef}
+          >
             {structuredLinks.map((link) => (
               <div key={link.name} className="relative">
                 <button
@@ -202,7 +215,9 @@ export default function Navbar() {
               <button
                 className="w-full text-left text-white font-medium hover:text-cyan-300"
                 onClick={() =>
-                  setOpenDropdown((prev) => (prev === link.name ? null : link.name))
+                  setOpenDropdown((prev) =>
+                    prev === link.name ? null : link.name
+                  )
                 }
               >
                 {link.name}
