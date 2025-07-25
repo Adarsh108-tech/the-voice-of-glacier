@@ -435,7 +435,7 @@ useEffect(() => {
       <section id="north-star" className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
         <div className="max-w-6xl mx-auto" >
           <SectionHeader
-            title="TVGF’s North Star: Goals by 2035"
+            title="TVGF's North Star: Goals by 2035"
             description="By 2035, we envision a world fundamentally transformed in its relationship with glaciers."
             isLightBackground={true}
           />
@@ -543,7 +543,7 @@ useEffect(() => {
       <ParallaxBackground imageUrl="/img3.jpg">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeader
-            title="Strategic Context: Why 2025–2034 is Critical"
+            title="Strategic Context: Why 2025-2034 is Critical"
             description="The next decade presents unprecedented opportunities and urgent calls to action for glacier preservation."
             isLightBackground={false}
           />
@@ -556,7 +556,7 @@ useEffect(() => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h3 className="text-xl font-semibold text-white">UN Year of Glaciers’ Preservation – 2025</h3>
+              <h3 className="text-xl font-semibold text-white">UN Year of Glaciers&apos; Preservation - 2025</h3>
               <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
                 <li>UN Resolution A/RES/77/281 adopted globally</li>
                 <li>Raises urgency on glacier melt & water security</li>
@@ -573,7 +573,7 @@ useEffect(() => {
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h3 className="text-xl font-semibold text-white">UN Decade of Cryospheric Sciences – 2025–2034</h3>
+              <h3 className="text-xl font-semibold text-white">UN Decade of Cryospheric Sciences - 2025-2034</h3>
               <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
                 <li>Led by WMO & UNESCO</li>
                 <li>Integrates cryosphere science & local knowledge</li>
