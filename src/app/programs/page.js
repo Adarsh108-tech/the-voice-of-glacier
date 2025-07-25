@@ -160,7 +160,7 @@ export default function FlagshipPrograms() {
           connection, knowledge, and advocacy.
         </p>
 
-        <div className="space-y-14">
+        <div className="">
           {programs.map((program, index) => (
             <section key={index} id={program.id} className="space-y-1 ">
               <motion.div
@@ -212,6 +212,7 @@ export default function FlagshipPrograms() {
                 />
               )}
             </section>
+            
           ))}
         </div>
 

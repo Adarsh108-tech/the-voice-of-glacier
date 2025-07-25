@@ -20,7 +20,7 @@ import {
   FaSeedling,
   FaUsers,
   FaGlobe,
-  FaEye, FaBullseye
+  FaEye, FaBullseye ,FaStarOfLife 
 } from "react-icons/fa";
 import Link from "next/link";
 
@@ -159,7 +159,7 @@ useEffect(() => {
       className="relative bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${imageUrl})`, backgroundAttachment: 'fixed' }}
     >
-      <div className="absolute inset-0 bg-black/60"></div> {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-glacier-dark/60"></div> {/* Dark overlay for readability */}
       <div className="relative z-10 py-24 px-6 md:px-16 text-white">
         {children}
       </div>
@@ -237,10 +237,14 @@ useEffect(() => {
       {/* LEFT: QUOTE */}
       <div className="space-y-6">
         <p className="text-xl md:text-2xl font-semibold leading-relaxed italic text-glacier-dark">
-          &quot;I was held, not buried, by a glacier on Annapurna. For 72 hours, it cradled me like a womb — cold, silent, alive. That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. I owe my life to a glacier. This work is my return offering.&quot;
+          &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb - cold, silent, alive.<br/><br/>
+          That ice didn't just trap me. It protected me. That glacier gave me a second chance. <br/><br/>
+          I survived . But glaciers won't. <br/><br/>
+          I owe my life to these glaciers. This work is my return offering.&quot;
+          
         </p>
         <p className="text-lg font-medium text-glacier-primary">
-          — Anurag Maloo, Founder & Glacier Survivor
+          — Anurag Maloo, Founder
         </p>
       </div>
 
@@ -248,14 +252,14 @@ useEffect(() => {
       <div className="flex flex-col items-center md:items-start text-center md:text-left">
         <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
           <img
-            src="/founder.jpg"
+            src="/hero-image.jpg"
             alt="Anurag Maloo"
             className="w-full h-full object-cover"
           />
         </div>
         <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
         <p className="text-glacier-soft text-sm italic mb-4">
-          Founder & Glacier Survivor
+          Founder
         </p>
           <Link href="/story" passHref>
             <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
@@ -281,7 +285,7 @@ useEffect(() => {
         {stats.map((stat, idx) => (
           <motion.div
             key={idx}
-            className="flex items-start gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg"
+            className="group flex items-start gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg cursor-pointer transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
@@ -290,11 +294,14 @@ useEffect(() => {
             <div className="min-w-[2rem]">{stat.icon}</div>
             <div>
               <h3 className="text-lg font-semibold text-white mb-1">{stat.label}</h3>
-              <p className="text-sm text-white/90">{stat.desc}</p>
+              <p className="text-sm text-white/90 max-h-0 overflow-hidden group-hover:max-h-40 group-hover:mt-1 transition-all duration-300 ease-in-out">
+                {stat.desc}
+              </p>
             </div>
           </motion.div>
         ))}
       </div>
+
 
       <motion.p
         className="text-lg mt-12 max-w-3xl mx-auto text-white"
@@ -333,45 +340,46 @@ useEffect(() => {
               </ul>
             </motion.div>
             <motion.div
-              className="grid grid-cols-1 gap-6"
+              className="grid grid-cols-1 gap-6 cursor-pointer"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-            {/* Unique Blend */}
-            <div className="p-6 bg-glacier-light rounded-xl shadow-md">
-              <div className="flex items-center gap-3 mb-2">
-              <FaSeedling className="text-glacier-primary text-xl" />
-              <h4 className="font-bold text-xl text-glacier-primary">Unique Blend</h4>
-            </div>
-            <p className="text-base text-glacier-dark">
-              Blending science, storytelling, and spirituality for a holistic approach to glacier preservation.
-            </p>
-          </div>
+              {/* Unique Blend */}
+              <div className="p-6 bg-glacier-light rounded-xl shadow-md group transition-all duration-300">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaSeedling className="text-glacier-primary text-xl" />
+                  <h4 className="font-bold text-xl text-glacier-primary">Unique Blend</h4>
+                </div>
+                <p className="text-base text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
+                  Blending science, storytelling, and spirituality for a holistic approach to glacier preservation.
+                </p>
+              </div>
 
-            {/* Community-Driven */}
-          <div className="p-6 bg-glacier-light rounded-xl shadow-md">
-            <div className="flex items-center gap-3 mb-2">
-              <FaUsers className="text-glacier-primary text-xl" />
-              <h4 className="font-bold text-xl text-glacier-primary">Community-Driven</h4>
-            </div>
-            <p className="text-base text-glacier-dark">
-              Empowering mountain communities and uplifting indigenous wisdom.
-            </p>
-          </div>
+              {/* Community-Driven */}
+              <div className="p-6 bg-glacier-light rounded-xl shadow-md group transition-all duration-300">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaUsers className="text-glacier-primary text-xl" />
+                  <h4 className="font-bold text-xl text-glacier-primary">Community-Driven</h4>
+                </div>
+                <p className="text-base text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
+                  Empowering mountain communities and uplifting indigenous wisdom.
+                </p>
+              </div>
 
-            {/* Global Impact */}
-          <div className="p-6 bg-glacier-light rounded-xl shadow-md">
-            <div className="flex items-center gap-3 mb-2">
-              <FaGlobe className="text-glacier-primary text-xl" />
-              <h4 className="font-bold text-xl text-glacier-primary">Global Impact</h4>
-            </div>
-            <p className="text-base text-glacier-dark">
-              Influencing global policy and fostering intergenerational resilience.
-            </p>
-          </div>
-          </motion.div>
+              {/* Global Impact */}
+              <div className="p-6 bg-glacier-light rounded-xl shadow-md group transition-all duration-300">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaGlobe className="text-glacier-primary text-xl" />
+                  <h4 className="font-bold text-xl text-glacier-primary">Global Impact</h4>
+                </div>
+                <p className="text-base text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
+                  Influencing global policy and fostering intergenerational resilience.
+                </p>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
@@ -431,39 +439,38 @@ useEffect(() => {
             description="By 2035, we envision a world fundamentally transformed in its relationship with glaciers."
             isLightBackground={true}
           />
+          <div className="relative max-w-6xl mx-auto duration-1000">
+            {/* North Star Icon - Positioned to the right */}
+            <div className="hidden md:block absolute right-0 top-10 transform translate-x-1/2 opacity-10 text-glacier-primary text-[160px] pointer-events-none">
+              <FaStarOfLife />
+            </div>
 
-          <div className="space-y-16 mt-12">
-            {goals.map((goal, index) => (
-              <div key={index}>
-                <motion.div
-                  className={`flex flex-col ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  } gap-8 items-center`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.3 }}
+            <ul className="space-y-10 mt-12">
+              {goals.map((goal, index) => (
+                <li
+                  key={index}
+                  className="group relative border-l-4 border-glacier-primary pl-6 cursor-pointer"
                 >
-                  {/* Image */}
-                  <div className="w-full md:w-1/2">
-                    <img
-                      src={goal.image}
-                      alt={goal.title}
-                      className="rounded-xl shadow-lg w-full h-auto object-cover"
-                    />
+                  {/* Title as bullet point */}
+                  <div className="text-xl font-semibold text-glacier-primary">
+                    • {goal.title}
                   </div>
 
-                  {/* Text */}
-                  <div className="w-full md:w-1/2">
-                    <h3 className="text-2xl font-bold text-glacier-primary mb-3">{goal.title}</h3>
-                    <p className="text-lg text-glacier-dark/90">{goal.desc}</p>
-                  </div>
-                </motion.div>
-
-                {/* Divider */}
-                {index !== goals.length - 1 && <hr className="my-10 border-glacier-soft" />}
-              </div>
-            ))}
+                  {/* Hidden description appears on hover */}
+                  <motion.div
+                    className="mt-2 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[500px] transition-all duration-500 ease-in-out"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    <div className="text-glacier-dark/90 text-base md:text-lg">
+                      {goal.desc}
+                    </div>
+                  </motion.div>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Core Values Grid (unchanged) */}

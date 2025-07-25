@@ -130,18 +130,25 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             {structuredLinks.map((link) => (
-              <div key={link.name} className="relative group">
-                <Link
-                  href={link.href}
-                  className="relative text-white font-medium transition duration-200"
-                >
-                  {link.name}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
-                </Link>
+              <div
+                key={link.name}
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(link.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <div className="cursor-pointer text-white font-medium relative">
+                  <Link
+                    href={link.href}
+                    className="relative transition duration-200"
+                  >
+                    {link.name}
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </div>
 
-                {link.sublinks?.length > 0 && (
+                {link.sublinks?.length > 0 && openDropdown === link.name && (
                   <div
-                    className={`absolute top-full mt-2 w-56 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-10 ${
+                    className={`absolute top-full mt-2 w-56 bg-white text-black rounded-md shadow-lg z-10 ${
                       link.name === "Learn" ? "right-0" : "left-0"
                     }`}
                   >
@@ -153,6 +160,7 @@ export default function Navbar() {
                           onClick={(e) => {
                             e.preventDefault();
                             handleSmoothScroll(sublink.href);
+                            setOpenDropdown(null);
                           }}
                           className="block px-4 py-2 hover:bg-glacier-light hover:text-glacier-dark text-sm cursor-pointer"
                         >
@@ -163,6 +171,7 @@ export default function Navbar() {
                           key={sublink.label}
                           href={sublink.href}
                           className="block px-4 py-2 hover:bg-glacier-light hover:text-glacier-dark text-sm"
+                          onClick={() => setOpenDropdown(null)}
                         >
                           {sublink.label}
                         </Link>

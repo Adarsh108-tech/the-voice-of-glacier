@@ -7,37 +7,29 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    text: "An Indian climber who went missing after falling into a crevasse on Mount Annapurna in Nepal has been found alive. Anurag Maloo, who went missing on Monday, was found in a critical condition by rescuers.",
+    text: "For me, mountaineering has never just been about the thrill of summiting peaks. It's been a journey with a deeper mission—to spread awareness about the United Nations' Sustainable Development Goals (SDGs). That's what led me to launch the 'Climbing4SDGs' initiative, where I use mountaineering as a platform to engage with communities, encourage action, and advocate for global change",
     image: "/story/anuraag-maloo1.jpg",
   },
   {
-    text: "Two other Indian climbers were rescued on Tuesday, while an Irish climber died while descending Annapurna. It is the 10th highest mountain in the world and is known for its treacherous terrain.",
+    text: "Annapurna is infamous for its danger, with a high fatality rate of 33% due to avalanches and technical difficulty. Despite knowing the risks, I was determined to climb it to amplify my cause. On April 17, 2023, after 16 hours of climbing and reaching 7,900 meters, I decided to turn back just 150 meters from the summit due to worsening weather and exhaustion.",
     image: "/story/anuraag-maloo2.jpg",
   },
   {
-    text: "Mr Maloo is currently seeking treatment at Manipal Hospital in Pokhara city, a sherpa from Seven Summit Treks - a mountaineering company that led the search operation - told ANI news.",
-    image: "/story/anuraag3.jpg",
+    text: "While descending, I accidentally clipped onto the wrong rope and fell 300 meters into a deep crevasse. I lay unconscious in the ice for three days, recording messages on my GoPro, hoping someone would find me. On the third night, an avalanche buried me deeper, and I lost consciousness completely.",
+    image: "/story/image.png",
   },
   {
-    text: "Amit Chowdhury of UIAA told the BBC that it's possible to survive in a crevasse since it's warmer and protected from wind—if not severely injured.",
-    image: "/story/anuraag4.jpg",
+    text: "Meanwhile, rescue efforts were underway. The first two attempts failed, but finally, a third team—including Polish climbers Adam Bielecki and Mariusz Hatala, Sherpas, and pilot Sobit Gauchan—set out, expecting to retrieve a body. But on April 20th, they found me alive, buried in the fetal position 80 meters deep at 6,000 meters altitude.",
+    image: "/story/anurag-snow.png",
   },
   {
-    text: "A resident of Rajasthan state, Mr Maloo, went missing at around 6,000m while descending. His father Om Prakash said he fell into a crevasse between Camp III and Camp II.",
-    image: "/story/anuraag5.jpg",
+    text: "Since then, I've relearned everything—walking, writing, even moving my fingers. I feel like a 34-year-old with the motor skills of a baby. While my physical strength is still limited, I continue to undergo therapy and focus on healing.",
+    image: "/story/group.jpg",
   },
   {
-    text: "His brother Aashish launched an online petition urging special rescue intervention, noting that the sherpa team was insufficient alone.",
-    image: "/story/anuraag6.jpg",
-  },
-  {
-    text: "Last year, Mr Maloo climbed a Himalayan peak. He's on a mission to climb all 14 peaks above 8,000m and the world's seven summits to promote the UN's SDGs.",
-    image: "/story/anuraag7.jpg",
-  },
-  {
-    text: "On Tuesday, climber Baljeet Kaur and others were rescued. In November, she became the first Indian woman to summit Mount Manaslu without oxygen.",
-    image: "/story/anuraag8.jpg",
-  },
+    text: "This journey has been nothing short of a miracle, made possible by relentless efforts from my rescuers, doctors, family, and friends. Above all, I owe my life to the mountains. Annapurna may have nearly taken my life, but it also gave it back. I'm alive to share this story—and I will always climb for a purpose.",
+    image: "/story/anurag-last.jpg",
+  }
 ];
 
 export default function AnuraagStoryPage() {
@@ -53,10 +45,26 @@ export default function AnuraagStoryPage() {
     <main className="w-full bg-glacier-light text-glacier-dark min-h-screen">
       <Navbar />
 
+      {/* 📽️ Story Section with Background Video */}
       <section
-        className="relative w-full h-screen bg-glacier-soft flex items-center justify-center overflow-hidden cursor-pointer px-4 sm:px-8"
+        className="relative w-full h-screen flex items-center justify-center overflow-hidden cursor-pointer px-4 sm:px-8"
         onClick={nextSlide}
       >
+        {/* 🔹 Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/AnuragMaloo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* 🔹 Overlay Color Filter */}
+        <div className="absolute top-0 left-0 w-full h-full bg-glacier-soft/70 z-10" />
+
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -74,7 +82,7 @@ export default function AnuraagStoryPage() {
                   Anurag Maloo: A Story of Survival
                 </h1>
               )}
-              <p className="text-glacier-dark">{slides[index].text}</p>
+              <p className="text-glacier-dark md:text-2xl text-xs">{slides[index].text}</p>
             </div>
 
             <div className="flex-1 w-full md:w-1/2 flex justify-center">
@@ -89,6 +97,7 @@ export default function AnuraagStoryPage() {
           </motion.div>
         </AnimatePresence>
 
+        {/* 🔸 Slide Counter Prompt */}
         <div className="absolute bottom-10 w-full flex justify-center z-30">
           <p className="text-white font-semibold px-4 py-2 rounded-md bg-black/70 animate-pulse text-sm md:text-base">
             Click anywhere to continue ({index + 1}/{slides.length})
@@ -96,6 +105,7 @@ export default function AnuraagStoryPage() {
         </div>
       </section>
 
+      {/* 📺 YouTube Section */}
       <section className="w-full bg-glacier-light py-16 flex flex-col items-center justify-center px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-glacier-dark mb-6 text-center">
           Watch the Full Story
