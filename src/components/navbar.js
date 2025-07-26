@@ -51,7 +51,7 @@ export default function Navbar() {
       ],
     },
     {
-      name: "collaborate",
+      name: "Collaborate",
       href: "/collaborate",
       sublinks: [
         { label: "Partners", href: "/collaborate#partners" },

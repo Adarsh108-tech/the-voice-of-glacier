@@ -284,6 +284,57 @@ useEffect(() => {
         </div>
       </section>
 
+ {/* The Gaps We&#39;re Addressing */}
+      <ParallaxBackground imageUrl="/img1.jpg">
+        <div id="the-gaps" className="max-w-6xl mx-auto">
+          <SectionHeader
+            title="The Gaps We&#39;re Addressing"
+            description="Despite the critical importance of glaciers, significant gaps hinder effective preservation efforts. TVGF steps in to bridge these divides."
+            isLightBackground={false}
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Public Imagination",
+                missing: "Glaciers are seen as distant and abstract, not personal and relatable.",
+              },
+              {
+                title: "Cultural Voice",
+                missing: "Indigenous wisdom, mountain community stories, and sacred rituals are often ignored.",
+              },
+              {
+                title: "Interdisciplinary Collaboration",
+                missing: "Science, art, and spirituality operate in isolated silos.",
+              },
+              {
+                title: "Policy Integration",
+                missing:
+                  "Glaciers and the broader Cryosphere are frequently excluded from national and international climate plans.",
+              },
+              {
+                title: "Open Data Access",
+                missing: "Glacier data, especially from the Global South, is limited, fragmented, or inaccessible.",
+              },
+              {
+                title: "Glacier Pedagogy",
+                missing: "No integrated, cryosphere-specific educational curriculum framework exists across schools and universities.",
+              },
+            ].map((gap, idx) => (
+              <motion.div
+                key={idx}
+                className="p-6 bg-white/10 backdrop-blur-sm rounded-xl shadow-md border border-white/20"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true, amount: 0.4 }}
+              >
+                <h3 className="text-xl font-bold text-white mb-2">{gap.title}</h3>
+                <p className="text-base text-white/90">{gap.missing}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </ParallaxBackground>
 
       {/* Why TVGF? */}
       <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
@@ -522,63 +573,13 @@ useEffect(() => {
       </section>
 
 
-      {/* The Gaps We&#39;re Addressing */}
-      <ParallaxBackground imageUrl="/img1.jpg">
-        <div id="the-gaps" className="max-w-6xl mx-auto">
-          <SectionHeader
-            title="The Gaps We&#39;re Addressing"
-            description="Despite the critical importance of glaciers, significant gaps hinder effective preservation efforts. TVGF steps in to bridge these divides."
-            isLightBackground={false}
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Public Imagination",
-                missing: "Glaciers are seen as distant and abstract, not personal and relatable.",
-              },
-              {
-                title: "Cultural Voice",
-                missing: "Indigenous wisdom, mountain community stories, and sacred rituals are often ignored.",
-              },
-              {
-                title: "Interdisciplinary Collaboration",
-                missing: "Science, art, and spirituality operate in isolated silos.",
-              },
-              {
-                title: "Policy Integration",
-                missing:
-                  "Glaciers and the broader Cryosphere are frequently excluded from national and international climate plans.",
-              },
-              {
-                title: "Open Data Access",
-                missing: "Glacier data, especially from the Global South, is limited, fragmented, or inaccessible.",
-              },
-              {
-                title: "Glacier Pedagogy",
-                missing: "No integrated, cryosphere-specific educational curriculum framework exists across schools and universities.",
-              },
-            ].map((gap, idx) => (
-              <motion.div
-                key={idx}
-                className="p-6 bg-white/10 backdrop-blur-sm rounded-xl shadow-md border border-white/20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                <h3 className="text-xl font-bold text-white mb-2">{gap.title}</h3>
-                <p className="text-base text-white/90">{gap.missing}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </ParallaxBackground>
+     
 
       {/* Origin Story: A Movement Born in Ice */}
      <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-          title="Origin Story: A Movement Born in Ice"
+          title="A Movement Born in Ice"
           description="The ice is speaking — will we listen?"
           isLightBackground={true}
         />

@@ -49,13 +49,14 @@ add dropdown to the navbar
 media section page , remove the core pillars and ven diagram , represt the core pillar in simple way 
 
 25-7-25 
+add the Crevasse pic - done
+
 conference page - done
-embeed the pdf in confrence section 
 
-make a webpage talking about sdgs
+embeed the pdf in confrence section - done
 
-media section page so that user can access our cotent 
+make a webpage talking about sdgs - in learn 
+
+media section page so that user can access our cotent - should I implement it now ?
 core pillars should be in section - done
-add this in learning page - https://climate-cryosphere.org/ipy/ - added in programs page as programs page was empty
-
-
+add this in learning page - https://climate-cryosphere.org/ipy/ - added in programs page
