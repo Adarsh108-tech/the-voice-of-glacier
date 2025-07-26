@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+
+
 const Button = ({ children, variant = "solid", className = "" }) => {
   const base = "px-6 py-2 rounded-md font-medium transition duration-300";
   const styles = {
@@ -147,8 +149,6 @@ export default function FlagshipPrograms() {
             &quot;Where glaciers speak, communities rise, and the world listens.&quot;
           </p>
           <div className="mt-6 flex gap-4">
-            <Button>Our Programs</Button>
-            <Button variant="outline">International efforts</Button>
           </div>
         </div>
       </section>
@@ -174,7 +174,7 @@ export default function FlagshipPrograms() {
               },
               {
                 src: "/efforts/YearOfGlacier.png",
-                alt: "International Year of Glaciers’ Preservation",
+                alt: "International Year of Glaciers' Preservation",
                 label: "International Year of Glaciers Preservation",
               },
               {
@@ -290,18 +290,6 @@ export default function FlagshipPrograms() {
         </section>
       ))}
 
-      {/* CTA */}
-      <div className="text-center mt-24 pb-24">
-        <h3 className="text-lg md:text-3xl font-bold text-glacier-primary mb-4">
-          Join the Movement
-        </h3>
-        <p className="text-xs md:text-xl text-glacier-dark mb-8 max-w-2xl mx-auto">
-          Explore how you can contribute to protecting our planet&#39;s cryosphere.
-        </p>
-        <button className="bg-glacier-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-glacier-dark transition-colors duration-300">
-          Learn More
-        </button>
-      </div>
 
       <Footer />
     </div>
