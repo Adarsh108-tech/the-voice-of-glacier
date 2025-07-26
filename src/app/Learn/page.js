@@ -1,11 +1,4 @@
 "use client";
-
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
-import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import GlacierGlossary from "@/components/glossary";
@@ -118,32 +111,31 @@ export default function LearnPage() {
       {/* Section 1: Introduction */}
       <section className="py-20 px-6 md:px-20 bg-glacier-light text-glacier-dark" id="introduction">
         <h2 className="text-4xl font-semibold mb-8 text-glacier-primary">Introduction</h2>
-        <p className="mb-6 text-lg leading-relaxed">
-          Glaciers play a crucial role in regulating Earth&#39;s climate, providing freshwater,
-          and maintaining ecological balance. However, due to global warming, glaciers are rapidly melting,
-          threatening ecosystems and water security globally.
-        </p>
-        <ul className="list-disc list-inside mb-8 space-y-2 text-glacier-dark">
-          <li>Mobilizing global efforts to prevent further melting</li>
-          <li>Raising awareness</li>
-          <li>Fostering collaboration</li>
-          <li>Advocating for action</li>
-          <li>Enhancing scientific understanding</li>
-          <li>Strengthening policy frameworks and financial support</li>
-        </ul>
 
-        <div className="bg-white p-6 rounded-xl shadow-md">
-          <h3 className="text-2xl font-bold mb-4">Glacier Volume Decline Over Time</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={glacierData}>
-              <XAxis dataKey="year" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="volumeIndex" stroke="#2A787C" strokeWidth={3} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        <blockquote className="text-xl italic mb-8 text-center text-glacier-dark">
+          &#8220;When the ice melts, it&#39;s not just water that disappears&mdash;it&#39;s memory, balance, and the future.&#8221;
+        </blockquote>
+
+        <p className="mb-6 text-lg leading-relaxed">
+          The <strong>cryosphere</strong> includes all components of the Earth System that are frozen&mdash;such as snow cover,
+          glaciers, ice sheets, ice shelves, icebergs, sea ice, lake ice, river ice, permafrost, and seasonally frozen ground.
+          It plays a critical role in regulating Earth&#39;s climate, supporting ecosystems, and providing water to billions of people.
+        </p>
+
+        <p className="mb-6 text-lg leading-relaxed">
+          According to the <strong>IPCC Special Report</strong>, the cryosphere is undergoing rapid and alarming changes:
+        </p>
+
+        <ul className="list-disc list-inside mb-8 space-y-3 text-glacier-dark text-lg">
+          <li>🌐 <strong>70%</strong> of Earth&#39;s freshwater is locked in snow and ice</li>
+          <li>🧊 <strong>10%</strong> of Earth&#39;s land area is covered by glaciers or ice sheets</li>
+          <li>🌊 Global sea level rise (2006&ndash;2015) was <strong>2.5&times; faster</strong> than during 1901&ndash;1990</li>
+          <li>🌨 Arctic June snow cover has declined by <strong>13.4%</strong> per decade since 1967</li>
+          <li>🏔 Ice sheets are up to <strong>4 km</strong> thick in East Antarctica and <strong>3 km</strong> in Greenland</li>
+          <li>🧱 Antarctica holds enough ice to raise sea levels by <strong>58 meters</strong> if completely melted</li>
+        </ul>
       </section>
+
 
       {/* Section 2: Explore */}
       <section className="py-20 px-6 md:px-20 bg-glacier-soft" id="explore">

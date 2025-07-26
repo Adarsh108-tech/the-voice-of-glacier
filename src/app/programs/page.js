@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import DushanbeConferenceSection from "@/components/DushanbeConferenceSection";
 
 
 
@@ -289,6 +290,8 @@ export default function FlagshipPrograms() {
           </div>
         </section>
       ))}
+
+      <DushanbeConferenceSection/>
 
 
       <Footer />

@@ -20,10 +20,9 @@ import {
   FaSeedling,
   FaUsers,
   FaGlobe,
-  FaEye, FaBullseye ,FaStarOfLife 
+  FaEye, FaBullseye , FaTint, FaBookOpen, FaMagic
 } from "react-icons/fa";
 import Link from "next/link";
-import Snowfall from "react-snowfall";
 
 export default function HomePage() {
 
@@ -254,15 +253,28 @@ useEffect(() => {
               </motion.div>
             ))}
           </div>
-
           <motion.p
-            className="text-lg mt-12 max-w-3xl mx-auto"
+            className="text-lg mt-12 max-w-3xl mx-auto text-center flex flex-wrap justify-center gap-1"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            Without glaciers, we lose water, wisdom, and wonder. Yet, glaciers remain underrepresented and invisible in policy, education, and public imagination.
+            Without glaciers, we lose
+            <span className="inline-flex items-center mx-1">
+              <FaTint className="text-glacier-primary mr-1" />
+              water,
+            </span>
+            <span className="inline-flex items-center mx-1">
+              <FaBookOpen className="text-glacier-primary mr-1" />
+              wisdom,
+            </span>
+            and
+            <span className="inline-flex items-center mx-1">
+              <FaMagic className="text-glacier-primary mr-1" />
+              wonder.
+            </span>
+            Yet, glaciers remain underrepresented and invisible in policy, education, and public imagination.
           </motion.p>
         </div>
       </section>
@@ -560,55 +572,67 @@ useEffect(() => {
       {/* Origin Story: A Movement Born in Ice */}
      <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
       <div className="max-w-6xl mx-auto">
-      <SectionHeader
-      title="Origin Story: A Movement Born in Ice"
-      description="The ice is speaking — will we listen?"
-      isLightBackground={true}
-      />
+        <SectionHeader
+          title="Origin Story: A Movement Born in Ice"
+          description="The ice is speaking — will we listen?"
+          isLightBackground={true}
+        />
 
-      <motion.div
-        className="grid md:grid-cols-2 gap-12 items-center mt-12"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-      {/* LEFT: QUOTE */}
-      <div className="space-y-6">
-        <p className="text-xl md:text-2xl font-semibold leading-relaxed italic text-glacier-dark">
-          &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb - cold, silent, alive.<br/><br/>
-          That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br/><br/>
-          I survived . But glaciers won&apos;t. <br/><br/>
-          I owe my life to these glaciers. This work is my return offering.&quot;
-          
-        </p>
-        <p className="text-lg font-medium text-glacier-primary">
-          — Anurag Maloo, Founder
-        </p>
-      </div>
+        <motion.div
+          className="grid md:grid-cols-3 gap-12 items-center mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
 
-      {/* RIGHT: IMAGE + BUTTON */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
-          <img
-            src="/hero-image.jpg"
-            alt="Anurag Maloo"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
-        <p className="text-glacier-soft text-sm italic mb-4">
-          Founder
-        </p>
-          <Link href="/story" passHref>
-            <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
-              Watch Anurag&apos;s Story
-            </Button>
-          </Link>
-        </div>
+          {/* LEFT IMAGE */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
+              <img
+                src="/hero-image.jpg"
+                alt="Anurag Maloo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
+            <p className="text-glacier-soft text-sm italic mb-4">Founder</p>
+            <Link href="/story" passHref>
+              <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
+                Watch Anurag&apos;s Story
+              </Button>
+            </Link>
+          </div>
+
+          {/* CENTER QUOTE */}
+          <div className="space-y-6 text-center md:text-left">
+            <p className="text-lg md:text-xl font-semibold leading-relaxed italic text-glacier-dark">
+              &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb — cold, silent, alive.<br /><br />
+              That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br /><br />
+              I survived. But glaciers won&apos;t. <br /><br />
+              I owe my life to these glaciers. This work is my return offering.&quot;
+            </p>
+            <p className="text-lg font-medium text-glacier-primary">
+              — Anurag Maloo, Founder
+            </p>
+          </div>
+
+          {/* RIGHT IMAGE (Larger with rounded-lg) */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="w-64 h-64 md:w-72 md:h-72 rounded-xl overflow-hidden border-4 border-glacier-light shadow-xl transition-transform duration-300 mb-4">
+              <img
+                src="/story/anurag-snow.png"
+                alt="Anurag in Snow"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
         </motion.div>
       </div>
     </section>
+
+
       {/* Join the Movement CTA */}
       <section className="py-24 px-6 md:px-16 bg-gradient-to-r from-glacier-primary to-glacier-dark text-center text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow ">Join the Movement</h2>

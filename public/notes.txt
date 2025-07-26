@@ -48,4 +48,14 @@ add dropdown to the navbar
 4 confreneces page , and check the doc again , embeed the pdf in confrence section , make a different page for charts , a website for sdgs 
 media section page , remove the core pillars and ven diagram , represt the core pillar in simple way 
 
+25-7-25 
+conference page - done
+embeed the pdf in confrence section 
+
+make a webpage talking about sdgs
+
+media section page so that user can access our cotent 
+core pillars should be in section - done
+add this in learning page - https://climate-cryosphere.org/ipy/ - added in programs page as programs page was empty
+
 

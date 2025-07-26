@@ -62,7 +62,7 @@ export default function Footer() {
       <div className="mt-10 text-center text-sm text-glacier-soft space-y-1">
         <p>
           <span className="font-semibold text-white">Founder: </span>
-          Anuraag Maloo
+          Anurag Maloo
         </p>
         <p>
           Email:{" "}
