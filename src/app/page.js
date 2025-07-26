@@ -23,6 +23,7 @@ import {
   FaEye, FaBullseye ,FaStarOfLife 
 } from "react-icons/fa";
 import Link from "next/link";
+import Snowfall from "react-snowfall";
 
 export default function HomePage() {
 
@@ -64,37 +65,37 @@ export default function HomePage() {
 
   const stats = [
   {
-    icon: <FaTemperatureHigh className="text-2xl text-glacier-light" />,
+    icon: <FaTemperatureHigh className="text-2xl text-glacier-primary" />,
     label: "3x Faster Warming",
     desc: "The Cryosphere is warming three times faster than the global average, signaling an urgent crisis.",
   },
   {
-    icon: <FaWater className="text-2xl text-glacier-light" />,
+    icon: <FaWater className="text-2xl text-glacier-primary" />,
     label: "50% Melt by 2100",
     desc: "Projections show that half of our glaciers may vanish by the end of the century, drastically altering ecosystems.",
   },
   {
-    icon: <FaMountain className="text-2xl text-glacier-light" />,
+    icon: <FaMountain className="text-2xl text-glacier-primary" />,
     label: "Himalayan Ice Loss",
     desc: "Himalayan glaciers alone have lost over 40% of their ice volume since 2000, impacting millions downstream.",
   },
   {
-    icon: <FaPeopleCarry className="text-2xl text-glacier-light" />,
+    icon: <FaPeopleCarry className="text-2xl text-glacier-primary" />,
     label: "2 Billion Lives at Risk",
     desc: "Over 2 billion people depend on glacier-fed rivers (like the Ganges, Indus, Brahmaputra, Yangtze) for survival.",
   },
   {
-    icon: <FaTractor className="text-2xl text-glacier-light" />,
+    icon: <FaTractor className="text-2xl text-glacier-primary" />,
     label: "Disrupted Livelihoods",
     desc: "Melting glaciers lead to disrupted agriculture, unstable hydropower, and critical water security issues.",
   },
   {
-    icon: <FaExclamationTriangle className="text-2xl text-glacier-light" />,
+    icon: <FaExclamationTriangle className="text-2xl text-glacier-primary" />,
     label: "Increasing GLOFs",
     desc: "Glacial lake outburst floods (GLOFs) are becoming more frequent, posing severe threats to mountain communities.",
   },
   {
-    icon: <FaGlobeAmericas className="text-2xl text-glacier-light" />,
+    icon: <FaGlobeAmericas className="text-2xl text-glacier-primary" />,
     label: "Albedo Loss & Warming",
     desc: "Loss of glacial albedo reduces Earth’s reflectivity, accelerating planetary warming and collapsing fragile ecosystems.",
   },
@@ -218,108 +219,60 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Origin Story: A Movement Born in Ice */}
-     <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
-      <div className="max-w-6xl mx-auto">
-      <SectionHeader
-      title="Origin Story: A Movement Born in Ice"
-      description="The ice is speaking — will we listen?"
-      isLightBackground={true}
-      />
-
-      <motion.div
-        className="grid md:grid-cols-2 gap-12 items-center mt-12"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-      {/* LEFT: QUOTE */}
-      <div className="space-y-6">
-        <p className="text-xl md:text-2xl font-semibold leading-relaxed italic text-glacier-dark">
-          &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb - cold, silent, alive.<br/><br/>
-          That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br/><br/>
-          I survived . But glaciers won&apos;t. <br/><br/>
-          I owe my life to these glaciers. This work is my return offering.&quot;
-          
-        </p>
-        <p className="text-lg font-medium text-glacier-primary">
-          — Anurag Maloo, Founder
-        </p>
-      </div>
-
-      {/* RIGHT: IMAGE + BUTTON */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
-          <img
-            src="/hero-image.jpg"
-            alt="Anurag Maloo"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
-        <p className="text-glacier-soft text-sm italic mb-4">
-          Founder
-        </p>
-          <Link href="/story" passHref>
-            <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
-              Watch Anurag&apos;s Story
-            </Button>
-          </Link>
-        </div>
-        </motion.div>
-      </div>
-    </section>
+      
 
 
       {/* Parallax Section 1: Cryosphere Background */}
-      <ParallaxBackground imageUrl="/img1.jpg">
-        <div id="crisis" className="max-w-6xl mx-auto text-center">
-        <SectionHeader
-        title="The Crisis: A Universal Cry from the Ice"
-        description="Glaciers, Earth&#39;s water towers, are disappearing — rapidly, silently, irreversibly. Yet they remain largely invisible in global imagination and climate policy."
-        isLightBackground={false}
-      />
-
-      <div className="grid md:grid-cols-2 gap-8 text-left mt-10">
-        {stats.map((stat, idx) => (
-          <motion.div
-            key={idx}
-            className="group flex items-start gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg cursor-pointer transition-all duration-300"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.1 }}
-            viewport={{ once: true, amount: 0.4 }}
-          >
-            <div className="min-w-[2rem]">{stat.icon}</div>
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-1">{stat.label}</h3>
-              <p className="text-sm text-white/90 max-h-0 overflow-hidden group-hover:max-h-40 group-hover:mt-1 transition-all duration-300 ease-in-out">
-                {stat.desc}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-
-      <motion.p
-        className="text-lg mt-12 max-w-3xl mx-auto text-white"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        viewport={{ once: true }}
+      <section
+        id="crisis"
+        className="py-24 px-6 md:px-16 bg-glacier-light text-glacier-dark"
       >
-        Without glaciers, we lose water, wisdom, and wonder. Yet, glaciers remain underrepresented and invisible in policy, education, and public imagination.
-      </motion.p>
-    </div>
-    </ParallaxBackground>;
+        <div className="max-w-6xl mx-auto text-center">
+          <SectionHeader
+            title="The Crisis: A Universal Cry from the Ice"
+            description="Glaciers, Earth&#39;s water towers, are disappearing — rapidly, silently, irreversibly. Yet they remain largely invisible in global imagination and climate policy."
+            isLightBackground={true}
+          />
+
+          <div className="grid md:grid-cols-2 gap-8 text-left mt-10">
+            {stats.map((stat, idx) => (
+              <motion.div
+                key={idx}
+                className="group flex items-start gap-4 p-6 bg-white/60 rounded-xl border border-white/30 shadow-lg cursor-pointer transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                viewport={{ once: true, amount: 0.4 }}
+              >
+                <div className="min-w-[2rem] text-glacier-dark">{stat.icon}</div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">{stat.label}</h3>
+                  <p className="text-sm max-h-0 overflow-hidden group-hover:max-h-40 group-hover:mt-1 transition-all duration-300 ease-in-out">
+                    {stat.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            className="text-lg mt-12 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Without glaciers, we lose water, wisdom, and wonder. Yet, glaciers remain underrepresented and invisible in policy, education, and public imagination.
+          </motion.p>
+        </div>
+      </section>
+
 
       {/* Why TVGF? */}
       <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
         <div id="why-tvgf" className="max-w-6xl mx-auto">
           <SectionHeader
-            title="Why TVGF? Our Unique Approach"
+            title="Our Approach"
             description="The Voice of Glaciers Foundation is more than an organization; it&#39;s a global gratitude movement born from lived survival, uniting diverse voices for glacier stewardship."
             isLightBackground={true}
           />
@@ -433,45 +386,58 @@ useEffect(() => {
 
       {/* TVGF’s North Star & Core Values */}
       <section id="north-star" className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
-        <div className="max-w-6xl mx-auto" >
-          <SectionHeader
-            title="TVGF's North Star: Goals by 2035"
-            description="By 2035, we envision a world fundamentally transformed in its relationship with glaciers."
-            isLightBackground={true}
-          />
-          <div className="relative max-w-6xl mx-auto duration-1000">
-            {/* North Star Icon - Positioned to the right */}
-            <div className="hidden md:block absolute right-0 top-10 transform translate-x-1/2 opacity-10 text-glacier-primary text-[160px] pointer-events-none">
-              <FaStarOfLife />
-            </div>
 
-            <ul className="space-y-10 mt-12">
-              {goals.map((goal, index) => (
-                <li
-                  key={index}
-                  className="group relative border-l-4 border-glacier-primary pl-6 cursor-pointer"
-                >
-                  {/* Title as bullet point */}
-                  <div className="text-xl font-semibold text-glacier-primary">
-                    • {goal.title}
-                  </div>
+  {/* Main content on top of snow */}
+  <div className="relative z-10 max-w-6xl mx-auto">
+    <SectionHeader
+      title="TVGF's North Star: Goals by 2035"
+      description="By 2035, we envision a world fundamentally transformed in its relationship with glaciers."
+      isLightBackground={true}
+    />
 
-                  {/* Hidden description appears on hover */}
-                  <motion.div
-                    className="mt-2 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[500px] transition-all duration-500 ease-in-out"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                  >
-                    <div className="text-glacier-dark/90 text-base md:text-lg">
-                      {goal.desc}
-                    </div>
-                  </motion.div>
-                </li>
-              ))}
-            </ul>
+    <div className="relative duration-1000">
+  {/* Snow SVGs on the right */}
+  <div className="hidden md:block absolute right-0 top-0 h-full w-[200px] flex flex-col items-end gap-6 pointer-events-none z-0">
+    {[...Array(6)].map((_, i) => (
+      <img
+        key={i}
+        src="/snow.svg"
+        alt="Snowflake"
+        className={`w-10 h-10 opacity-20 animate-float-slow-${i % 3}`}
+        style={{
+          marginTop: `${i * 20}px`,
+          transform: `translateX(${i % 2 === 0 ? "0" : "20px"})`,
+        }}
+      />
+    ))}
+  </div>
+
+  {/* Main content */}
+  <ul className="space-y-10 mt-12 relative z-10">
+    {goals.map((goal, index) => (
+      <li
+        key={index}
+        className="group relative border-l-4 border-glacier-primary pl-6 cursor-pointer"
+      >
+        <div className="text-xl font-semibold text-glacier-primary">
+          • {goal.title}
+        </div>
+        <motion.div
+          className="mt-2 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[500px] transition-all duration-500 ease-in-out"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <div className="text-glacier-dark/90 text-base md:text-lg">
+            {goal.desc}
           </div>
+        </motion.div>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           {/* Core Values Grid (unchanged) */}
           <div className="mt-20" id="core-values">
@@ -539,101 +505,110 @@ useEffect(() => {
       </section>
 
 
-      {/* Parallax Section 3: Strategic Context Background */}
-      <ParallaxBackground imageUrl="/img3.jpg">
-        <div className="max-w-6xl mx-auto px-4">
-          <SectionHeader
-            title="Strategic Context: Why 2025-2034 is Critical"
-            description="The next decade presents unprecedented opportunities and urgent calls to action for glacier preservation."
-            isLightBackground={false}
-          />
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1: UN International Year of Glaciers' Preservation */}
-            <motion.div
-              className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg space-y-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-xl font-semibold text-white">UN Year of Glaciers&apos; Preservation - 2025</h3>
-              <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
-                <li>UN Resolution A/RES/77/281 adopted globally</li>
-                <li>Raises urgency on glacier melt & water security</li>
-                <li>Calls for public education & research funding</li>
-                <li>Arctic may be ice-free by 2030</li>
-              </ul>
-            </motion.div>
-
-            {/* Card 2: UN Decade of Cryospheric Sciences */}
-            <motion.div
-              className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg space-y-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-xl font-semibold text-white">UN Decade of Cryospheric Sciences - 2025-2034</h3>
-              <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
-                <li>Led by WMO & UNESCO</li>
-                <li>Integrates cryosphere science & local knowledge</li>
-                <li>Aligns glacier research with SDGs</li>
-                <li>Targets water, climate, ecosystems & livelihoods</li>
-              </ul>
-            </motion.div>
-
-            {/* Card 3: Related Global Movements */}
-            <motion.div
-              className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg space-y-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-xl font-semibold text-white">Global Movements & Climate Platforms</h3>
-              <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
-                <li><b>UN Ocean Decade:</b> Links glacial melt to ocean health</li>
-                <li><b>COP30 & UN Water Conferences:</b> Key platforms for cryosphere advocacy in climate finance</li>
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </ParallaxBackground>
-
-
       {/* The Gaps We&#39;re Addressing */}
-      <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark" id="the-gaps">
-        <div className="max-w-6xl mx-auto">
+      <ParallaxBackground imageUrl="/img1.jpg">
+        <div id="the-gaps" className="max-w-6xl mx-auto">
           <SectionHeader
             title="The Gaps We&#39;re Addressing"
             description="Despite the critical importance of glaciers, significant gaps hinder effective preservation efforts. TVGF steps in to bridge these divides."
-            isLightBackground={true}
+            isLightBackground={false}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Public Imagination", missing: "Glaciers are seen as distant and abstract, not personal and relatable." },
-              { title: "Cultural Voice", missing: "Indigenous wisdom, mountain community stories, and sacred rituals are often ignored." },
-              { title: "Interdisciplinary Collaboration", missing: "Science, art, and spirituality operate in isolated silos." },
-              { title: "Policy Integration", missing: "Glaciers and the broader Cryosphere are frequently excluded from national and international climate plans." },
-              { title: "Open Data Access", missing: "Glacier data, especially from the Global South, is limited, fragmented, or inaccessible." },
-              { title: "Glacier Pedagogy", missing: "No integrated, cryosphere-specific educational curriculum framework exists across schools and universities." },
+              {
+                title: "Public Imagination",
+                missing: "Glaciers are seen as distant and abstract, not personal and relatable.",
+              },
+              {
+                title: "Cultural Voice",
+                missing: "Indigenous wisdom, mountain community stories, and sacred rituals are often ignored.",
+              },
+              {
+                title: "Interdisciplinary Collaboration",
+                missing: "Science, art, and spirituality operate in isolated silos.",
+              },
+              {
+                title: "Policy Integration",
+                missing:
+                  "Glaciers and the broader Cryosphere are frequently excluded from national and international climate plans.",
+              },
+              {
+                title: "Open Data Access",
+                missing: "Glacier data, especially from the Global South, is limited, fragmented, or inaccessible.",
+              },
+              {
+                title: "Glacier Pedagogy",
+                missing: "No integrated, cryosphere-specific educational curriculum framework exists across schools and universities.",
+              },
             ].map((gap, idx) => (
               <motion.div
                 key={idx}
-                className="p-6 bg-glacier-light rounded-xl shadow-md border border-glacier-soft"
+                className="p-6 bg-white/10 backdrop-blur-sm rounded-xl shadow-md border border-white/20"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true, amount: 0.4 }}
               >
-                <h3 className="text-xl font-bold text-glacier-primary mb-2"> {gap.title}</h3>
-                <p className="text-base text-glacier-dark">{gap.missing}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{gap.title}</h3>
+                <p className="text-base text-white/90">{gap.missing}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </ParallaxBackground>
 
+      {/* Origin Story: A Movement Born in Ice */}
+     <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
+      <div className="max-w-6xl mx-auto">
+      <SectionHeader
+      title="Origin Story: A Movement Born in Ice"
+      description="The ice is speaking — will we listen?"
+      isLightBackground={true}
+      />
+
+      <motion.div
+        className="grid md:grid-cols-2 gap-12 items-center mt-12"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+      {/* LEFT: QUOTE */}
+      <div className="space-y-6">
+        <p className="text-xl md:text-2xl font-semibold leading-relaxed italic text-glacier-dark">
+          &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb - cold, silent, alive.<br/><br/>
+          That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br/><br/>
+          I survived . But glaciers won&apos;t. <br/><br/>
+          I owe my life to these glaciers. This work is my return offering.&quot;
+          
+        </p>
+        <p className="text-lg font-medium text-glacier-primary">
+          — Anurag Maloo, Founder
+        </p>
+      </div>
+
+      {/* RIGHT: IMAGE + BUTTON */}
+      <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
+          <img
+            src="/hero-image.jpg"
+            alt="Anurag Maloo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
+        <p className="text-glacier-soft text-sm italic mb-4">
+          Founder
+        </p>
+          <Link href="/story" passHref>
+            <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
+              Watch Anurag&apos;s Story
+            </Button>
+          </Link>
+        </div>
+        </motion.div>
+      </div>
+    </section>
       {/* Join the Movement CTA */}
       <section className="py-24 px-6 md:px-16 bg-gradient-to-r from-glacier-primary to-glacier-dark text-center text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow ">Join the Movement</h2>

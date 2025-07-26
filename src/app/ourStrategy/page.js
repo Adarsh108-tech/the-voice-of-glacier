@@ -6,7 +6,9 @@ import Footer from "@/components/footer";
 import { useEffect } from "react";
 import { FaDatabase, FaBookOpen, FaUsers, FaMicrophoneAlt, FaGavel , FaArrowRight, FaArrowDown } from "react-icons/fa";
 import CryosphereTimeline from "@/components/cryosphereTimeline";
+// the crises , our approach (why tvgf),  , vision and mission , tvgf goals , story , remove vission and mission 
 
+// add the gaps after the crises 
 const roadmap = [
   {
     phase: "2025-26",
@@ -141,6 +143,30 @@ export default function StrategyPage() {
   }
 }, []);
 
+  const ParallaxBackground = ({ imageUrl, children }) => (
+    <div
+      className="relative bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: `url(${imageUrl})`, backgroundAttachment: 'fixed' }}
+    >
+      <div className="absolute inset-0 bg-glacier-dark/60"></div> {/* Dark overlay for readability */}
+      <div className="relative z-10 py-24 px-6 md:px-16 text-white">
+        {children}
+      </div>
+    </div>
+  );
+
+    const SectionHeader = ({ title, description, isLightBackground = true }) => (
+    <div className="text-center mb-16">
+      <h2 className={`text-4xl md:text-5xl font-extrabold mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
+        {title}
+      </h2>
+      {description && (
+        <p className={`text-lg md:text-xl max-w-3xl mx-auto ${isLightBackground ? 'text-glacier-dark' : 'text-glacier-light'}`}>
+          {description}
+        </p>
+      )}
+    </div>
+  );
 
   return (
     <div className="bg-white text-glacier-dark min-h-screen">
@@ -229,6 +255,68 @@ export default function StrategyPage() {
           </div>
         </div>
       </motion.section>
+
+      
+      {/* Parallax Section 3: Strategic Context Background */}
+      <ParallaxBackground imageUrl="/img3.jpg">
+        <div className="max-w-6xl mx-auto px-4">
+          <SectionHeader
+            title="Strategic Context: Why 2025-2034 is Critical"
+            description="The next decade presents unprecedented opportunities and urgent calls to action for glacier preservation."
+            isLightBackground={false}
+          />
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1: UN International Year of Glaciers' Preservation */}
+            <motion.div
+              className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg space-y-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <h3 className="text-xl font-semibold text-white">UN Year of Glaciers&apos; Preservation - 2025</h3>
+              <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
+                <li>UN Resolution A/RES/77/281 adopted globally</li>
+                <li>Raises urgency on glacier melt & water security</li>
+                <li>Calls for public education & research funding</li>
+                <li>Arctic may be ice-free by 2030</li>
+              </ul>
+            </motion.div>
+
+            {/* Card 2: UN Decade of Cryospheric Sciences */}
+            <motion.div
+              className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg space-y-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <h3 className="text-xl font-semibold text-white">UN Decade of Cryospheric Sciences - 2025-2034</h3>
+              <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
+                <li>Led by WMO & UNESCO</li>
+                <li>Integrates cryosphere science & local knowledge</li>
+                <li>Aligns glacier research with SDGs</li>
+                <li>Targets water, climate, ecosystems & livelihoods</li>
+              </ul>
+            </motion.div>
+
+            {/* Card 3: Related Global Movements */}
+            <motion.div
+              className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg space-y-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <h3 className="text-xl font-semibold text-white">Global Movements & Climate Platforms</h3>
+              <ul className="list-disc list-inside text-white/90 text-sm space-y-2">
+                <li><b>UN Ocean Decade:</b> Links glacial melt to ocean health</li>
+                <li><b>COP30 & UN Water Conferences:</b> Key platforms for cryosphere advocacy in climate finance</li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </ParallaxBackground>
 
 
       {/* 2. Strategic Gaps */}

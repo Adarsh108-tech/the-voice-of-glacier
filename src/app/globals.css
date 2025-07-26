@@ -35,6 +35,30 @@
   background-color: #1f5f61; /* Slightly darker on hover */
 }
 
+@keyframes float-slow-0 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes float-slow-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes float-slow-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.animate-float-slow-0 {
+  animation: float-slow-0 6s ease-in-out infinite;
+}
+.animate-float-slow-1 {
+  animation: float-slow-1 7s ease-in-out infinite;
+}
+.animate-float-slow-2 {
+  animation: float-slow-2 8s ease-in-out infinite;
+}
+
+
 /* Firefox support */
 .custom-scrollbar {
   scrollbar-color: #2A787C transparent;
