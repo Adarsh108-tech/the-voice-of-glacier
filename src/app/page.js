@@ -20,7 +20,7 @@ import {
   FaSeedling,
   FaUsers,
   FaGlobe,
-  FaEye, FaBullseye , FaTint, FaBookOpen, FaMagic
+  FaEye, FaBullseye , FaTint, FaBookOpen, FaMagic , FaLeaf
 } from "react-icons/fa";
 import Link from "next/link";
 
@@ -65,40 +65,45 @@ export default function HomePage() {
   const stats = [
   {
     icon: <FaTemperatureHigh className="text-2xl text-glacier-primary" />,
-    label: "3x Faster Warming",
-    desc: "The Cryosphere is warming three times faster than the global average, signaling an urgent crisis.",
+    label: "3× Faster Warming",
+    desc: "The Cryosphere is warming three times faster than the global average, signaling an urgent climate crisis.",
   },
   {
     icon: <FaWater className="text-2xl text-glacier-primary" />,
     label: "50% Melt by 2100",
-    desc: "Projections show that half of our glaciers may vanish by the end of the century, drastically altering ecosystems.",
+    desc: "Half of the world’s glaciers could disappear by 2100, threatening ecosystems, water supplies, and sea levels.",
   },
   {
     icon: <FaMountain className="text-2xl text-glacier-primary" />,
     label: "Himalayan Ice Loss",
-    desc: "Himalayan glaciers alone have lost over 40% of their ice volume since 2000, impacting millions downstream.",
+    desc: "Himalayan glaciers have lost over 40% of their ice volume since 2000, destabilizing regional water systems.",
   },
   {
     icon: <FaPeopleCarry className="text-2xl text-glacier-primary" />,
     label: "2 Billion Lives at Risk",
-    desc: "Over 2 billion people depend on glacier-fed rivers (like the Ganges, Indus, Brahmaputra, Yangtze) for survival.",
+    desc: "Over 2 billion people rely on glacier-fed rivers like the Ganges, Indus, Brahmaputra, and Yangtze for water and food.",
   },
   {
     icon: <FaTractor className="text-2xl text-glacier-primary" />,
     label: "Disrupted Livelihoods",
-    desc: "Melting glaciers lead to disrupted agriculture, unstable hydropower, and critical water security issues.",
+    desc: "Glacier retreat disrupts agriculture, hydropower generation, and water security, especially in vulnerable regions.",
   },
   {
     icon: <FaExclamationTriangle className="text-2xl text-glacier-primary" />,
-    label: "Increasing GLOFs",
-    desc: "Glacial lake outburst floods (GLOFs) are becoming more frequent, posing severe threats to mountain communities.",
+    label: "Glacial Flood Threat",
+    desc: "Glacial lake outburst floods (GLOFs) are increasing in frequency, putting lives, infrastructure, and economies at risk.",
   },
   {
     icon: <FaGlobeAmericas className="text-2xl text-glacier-primary" />,
-    label: "Albedo Loss & Warming",
-    desc: "Loss of glacial albedo reduces Earth’s reflectivity, accelerating planetary warming and collapsing fragile ecosystems.",
+    label: "Albedo Loss",
+    desc: "Melting glaciers reduce Earth’s reflectivity (albedo), causing the planet to absorb more heat and warm even faster.",
   },
-  ];
+  {
+    icon: <FaLeaf className="text-2xl text-glacier-primary" />,
+    label: "Ecological & Cultural Loss",
+    desc: "Fragile mountain ecosystems are collapsing, and Indigenous cultures rooted in the cryosphere are eroding rapidly.",
+  },
+];
 
 
 
