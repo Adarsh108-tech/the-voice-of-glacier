@@ -7,27 +7,27 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    text: "For me, mountaineering has never just been about the thrill of summiting peaks. It's been a journey with a deeper mission—to spread awareness about the United Nations' Sustainable Development Goals (SDGs). That's what led me to launch the 'Climbing4SDGs' initiative, where I use mountaineering as a platform to engage with communities, encourage action, and advocate for global change",
+    text: "For me, mountaineering has never just been about the thrill of summiting peaks. It's been a journey with a deeper mission - to spread awareness about the United Nations' Sustainable Development Goals (SDGs). That's what led me to launch the 'Climbing4SDGs' initiative, where I use mountaineering as a platform to engage with communities, encourage action, and advocate for global change.",
     image: "/story/anuraag-maloo1.jpg",
   },
   {
-    text: "Annapurna is infamous for its danger, with a high fatality rate of 33% due to avalanches and technical difficulty. Despite knowing the risks, I was determined to climb it to amplify my cause. On April 17, 2023, after 16 hours of climbing and reaching 7,900 meters, I decided to turn back just 150 meters from the summit due to worsening weather and exhaustion.",
+    text: "Annapurna is infamous for its danger, with a high fatality rate of 33% due to avalanches and technical difficulty. Despite knowing the risks, I was determined to climb it to amplify my cause. On April 17, 2023, after 16-18 hours of climbing and reaching nearly 7,900 meters, I decided to turn back just 150 meters from the summit due to worsening weather and delayed time to reach the summit.",
     image: "/story/anuraag-maloo2.jpg",
   },
   {
-    text: "While descending, I accidentally clipped onto the wrong rope and fell 300 meters into a deep crevasse. I lay unconscious in the ice for three days, recording messages on my GoPro, hoping someone would find me. On the third night, an avalanche buried me deeper, and I lost consciousness completely.",
+    text: "While descending the most dangerous avalanche prone section of Annapurna between Camp 3 to Camp 2, I accidentally clipped onto the broken wrong rope and fell on the icy surface and then entered into a deep crevasse nearly 25 floors under the Earth. I lay trapped in the ice for three days and nights, recording messages on my GoPro, hoping someone would find me. On the third night, an avalanche buried me deeper, and I lost consciousness completely.",
     image: "/story/image.png",
   },
   {
-    text: "Meanwhile, rescue efforts were underway. The first two attempts failed, but finally, a third team—including Polish climbers Adam Bielecki and Mariusz Hatala, Sherpas, and pilot Sobit Gauchan—set out, expecting to retrieve a body. But on April 20th, they found me alive, buried in the fetal position 80 meters deep at 6,000 meters altitude.",
+    text: "Meanwhile, rescue efforts were underway. The first two attempts failed, but finally, a third team—including Polish climbers Adam Bielecki and Mariusz Hatala, Nepali Sherpas, and helicopter Sobit Gauchan—set out, expecting to retrieve a body. But on April 20th, they found me alive, buried in the fetal position nearly 70 meters deep at 6,000 meters altitude.",
     image: "/story/anurag-snow.png",
   },
   {
-    text: "Since then, I've relearned everything—walking, writing, even moving my fingers. I feel like a 34-year-old with the motor skills of a baby. While my physical strength is still limited, I continue to undergo therapy and focus on healing.",
+    text: "Since then, I've spent over 7 months in hospitals in Nepal and India, relearned everything—walking, writing, eating, even moving my fingers. I feel like a 34-year-old with the motor skills of a baby. While my physical strength is still limited, I continue to undergo therapy and focus on healing.",
     image: "/story/group.jpg",
   },
   {
-    text: "This journey has been nothing short of a miracle, made possible by relentless efforts from my rescuers, doctors, family, and friends. Above all, I owe my life to the mountains. Annapurna may have nearly taken my life, but it also gave it back. I'm alive to share this story—and I will always climb for a purpose.",
+    text: "This journey has been nothing short of a miracle, made possible by relentless efforts from my rescuers, doctors, therapists, family, and friends. Above all, I owe my life to the mountains and glaciers. Annapurna may have nearly taken my life, but it also gave it back. I'm alive to share this story, and I will always climb for a purpose.",
     image: "/story/anurag-last.jpg",
   }
 ];
