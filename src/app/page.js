@@ -96,7 +96,7 @@ export default function HomePage() {
   {
     icon: <FaGlobeAmericas className="text-2xl text-glacier-primary" />,
     label: "Albedo Loss",
-    desc: "Melting glaciers reduce Earth’s reflectivity (albedo), causing the planet to absorb more heat and warm even faster.",
+    desc: "Melting glaciers reduce Earth's reflectivity (albedo), causing the planet to absorb more heat and warm even faster.",
   },
   {
     icon: <FaLeaf className="text-2xl text-glacier-primary" />,
@@ -625,7 +625,7 @@ useEffect(() => {
 
           {/* RIGHT IMAGE (Larger with rounded-lg) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="w-64 h-64 md:w-72 md:h-72 rounded-xl overflow-hidden border-4 border-glacier-light shadow-xl transition-transform duration-300 mb-4">
+            <div className="w-64 h-64 md:w-full md:h-full rounded-xl overflow-hidden border-4 border-glacier-light shadow-xl transition-transform duration-300 mb-4">
               <img
                 src="/story/anurag-snow.png"
                 alt="Anurag in Snow"

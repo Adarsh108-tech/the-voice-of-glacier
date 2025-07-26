@@ -60,3 +60,8 @@ make a webpage talking about sdgs - in learn
 media section page so that user can access our cotent - should I implement it now ?
 core pillars should be in section - done
 add this in learning page - https://climate-cryosphere.org/ipy/ - added in programs page
+
+
+26-7-25 
+1 . change the font to comapny's font 
+2 . sdg in confrence section 
