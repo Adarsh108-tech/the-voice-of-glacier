@@ -566,7 +566,7 @@ export default function StrategyPage() {
 
 
       {/* 6. Roadmap */}
-      <motion.section
+      {/* <motion.section
         id="strategic-roadmap"
         className="w-full bg-glacier-light py-24"
         initial={{ opacity: 0, y: 40 }}
@@ -582,10 +582,8 @@ export default function StrategyPage() {
           <div className="relative border-l-4 border-glacier-primary pl-6 ml-3">
             {roadmap.map((step, index) => (
               <div key={index} className="mb-10 relative">
-                {/* Dot */}
                 <div className="absolute -left-[1.45rem] top-2.5 bg-glacier-primary w-4 h-4 rounded-full border-4 border-white z-10" />
 
-                {/* Card */}
                 <div className="bg-white p-6 rounded-xl shadow-md border border-glacier-soft transition hover:shadow-lg">
                   <h3 className="text-xl font-semibold text-glacier-primary mb-2">
                     {step.phase}
@@ -595,7 +593,6 @@ export default function StrategyPage() {
               </div>
             ))}
 
-            {/* Final Goal */}
             <div className="relative">
               <div className="absolute -left-[1.45rem] top-2.5 bg-glacier-accent w-4 h-4 rounded-full border-4 border-white z-10" />
               <div className="bg-glacier-accent/10 border border-glacier-accent text-glacier-dark p-6 rounded-xl shadow-md">
@@ -611,7 +608,7 @@ export default function StrategyPage() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       <Footer/>
     </div>
