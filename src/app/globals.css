@@ -35,6 +35,8 @@
   background-color: #1f5f61; /* Slightly darker on hover */
 }
 
+
+
 @keyframes float-slow-0 {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -143,4 +145,18 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('/font/Cabin-VariableFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NohemiBlack';
+  src: url('/font/Nohemi-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }

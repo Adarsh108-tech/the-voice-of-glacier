@@ -63,5 +63,5 @@ add this in learning page - https://climate-cryosphere.org/ipy/ - added in progr
 
 
 26-7-25 
-1 . change the font to comapny's font 
+1 . change the font to comapny's font - done
 2 . sdg in confrence section 

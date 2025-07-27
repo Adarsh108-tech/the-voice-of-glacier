@@ -157,7 +157,7 @@ export default function StrategyPage() {
 
     const SectionHeader = ({ title, description, isLightBackground = true }) => (
     <div className="text-center mb-16">
-      <h2 className={`text-4xl md:text-5xl font-extrabold mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
+      <h2 className={`text-4xl md:text-5xl font-nohemi mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
         {title}
       </h2>
       {description && (
@@ -180,7 +180,7 @@ export default function StrategyPage() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-glacier-dark/60 to-glacier-primary/30 flex items-center px-6 md:px-16">
-          <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
+          <h1 className="text-3xl md:text-5xl font-nohemi text-white drop-shadow">
             Our Cryosphere Strategy
           </h1>
         </div>
@@ -196,7 +196,7 @@ export default function StrategyPage() {
         viewport={{ once: true }}
       >
         <div className="w-[80%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6 text-white">
+          <h2 className="text-4xl font-nohemi mb-6 text-white">
             The Cryosphere Crisis
           </h2>
 
@@ -329,7 +329,7 @@ export default function StrategyPage() {
         viewport={{ once: true }}
       >
         <div className="w-[90%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-12 text-glacier-primary text-center">
+          <h2 className="text-4xl font-nohemi mb-12 text-glacier-primary text-center">
             Strategic Gaps We Address
           </h2>
 
@@ -388,7 +388,7 @@ export default function StrategyPage() {
         viewport={{ once: true }}
       >
         <div className="w-[90%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-12 text-center text-glacier-dark">
+          <h2 className="text-4xl font-nohemi mb-12 text-center  text-glacier-primary">
             Dual-Force Action Model
           </h2>
 
@@ -454,7 +454,7 @@ export default function StrategyPage() {
         viewport={{ once: true }}
       >
         <div className="w-[95%] max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-glacier-light mb-12">
+          <h2 className="text-3xl md:text-4xl font-nohemi text-glacier-light mb-12">
             Core Solution Pillars
           </h2>
 
@@ -498,7 +498,7 @@ export default function StrategyPage() {
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-sm text-glacier-light/80 leading-relaxed">
+                <p className="text-sm text-glacier-light/80 leading-relaxed font-cabin">
                   {item.description}
                 </p>
               </motion.div>
@@ -521,7 +521,7 @@ export default function StrategyPage() {
         viewport={{ once: true }}
       >
         <div className="w-[90%] max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-12 text-glacier-primary text-center">
+          <h2 className="text-4xl font-nohemi mb-12 text-glacier-primary text-center">
             Theory of Change
           </h2>
 

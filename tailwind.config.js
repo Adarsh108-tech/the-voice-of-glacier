@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+        	cabin: ['Cabin', 'sans-serif'],
+        	nohemi: ['NohemiBlack', 'sans-serif'],
+      	},
   		colors: {
   			glacier: {
   				primary: '#2A787C',

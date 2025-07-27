@@ -101,16 +101,16 @@ export default function LearnPage() {
           src="/AnuragMaloo.mp4"
         />
         <div className="absolute inset-0 bg-glacier-dark bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-4">
-          <h1 className="text-5xl font-bold mb-4">Learn about Glaciers</h1>
-          <p className="text-xl max-w-2xl">
+          <h1 className="text-5xl font-nohemi mb-4">Learn about Glaciers</h1>
+          <p className="text-xl max-w-2xl cabin">
             One of the most valuable components of nature
           </p>
         </div>
       </section>
 
       {/* Section 1: Introduction */}
-      <section className="py-20 px-6 md:px-20 bg-glacier-light text-glacier-dark" id="introduction">
-        <h2 className="text-4xl font-semibold mb-8 text-glacier-primary">Introduction</h2>
+      <section className="py-20 px-6 md:px-20 bg-glacier-light text-glacier-dark font-cabin" id="introduction">
+        <h2 className="text-4xl font-nohemi mb-8 text-glacier-primary">Introduction</h2>
 
         <blockquote className="text-xl italic mb-8 text-center text-glacier-dark">
           &#8220;When the ice melts, it&#39;s not just water that disappears&mdash;it&#39;s memory, balance, and the future.&#8221;
@@ -138,8 +138,8 @@ export default function LearnPage() {
 
 
       {/* Section 2: Explore */}
-      <section className="py-20 px-6 md:px-20 bg-glacier-soft" id="explore">
-        <h2 className="text-4xl font-semibold mb-8 text-glacier-dark">Explore</h2>
+      <section className="py-20 px-6 md:px-20 bg-glacier-soft font-cabin" id="explore">
+        <h2 className="text-4xl font-semibold mb-8  font-nohemi text-glacier-primary">Explore</h2>
 
         <div className="flex gap-6 overflow-x-auto custom-scrollbar pb-4">
           {[
@@ -191,8 +191,8 @@ export default function LearnPage() {
 
 
       {/* Section 3: Glacier Data Comparison */}
-      <section className="py-20 px-6 md:px-20 bg-glacier-light" id="glacier-data">
-        <h2 className="text-4xl font-semibold mb-8 text-glacier-primary">
+      <section className="py-20 px-6 md:px-20 bg-glacier-light font-cabin" id="glacier-data">
+        <h2 className="text-4xl font-nohemi mb-8 text-glacier-primary">
           Glacier Changes Over Time
         </h2>
         

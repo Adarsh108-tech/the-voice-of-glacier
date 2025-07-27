@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import DushanbeConferenceSection from "@/components/DushanbeConferenceSection";
+import SDGGrid from "@/components/SDG";
 
 
 
@@ -143,10 +144,10 @@ export default function FlagshipPrograms() {
           src="/glacier-hero.mp4"
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4 text-white">
-          <h1 className="text-lg md:text-6xl font-bold mb-4">
+          <h1 className="text-lg md:text-6xl font-nohemi mb-4">
             FLAGSHIP PROGRAMS AND EFFORTS
           </h1>
-          <p className="text-xs md:text-2xl max-w-2xl">
+          <p className="text-xs md:text-2xl max-w-2xl font-cabin">
             &quot;Where glaciers speak, communities rise, and the world listens.&quot;
           </p>
           <div className="mt-6 flex gap-4">
@@ -155,9 +156,9 @@ export default function FlagshipPrograms() {
       </section>
 
       {/* International Efforts Section */}
-      <section className="py-20 px-6 md:px-10 bg-white text-glacier-dark" id="international">
+      <section className="py-20 px-6 md:px-10 bg-white text-glacier-primary" id="international">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-lg md:text-4xl font-bold mb-12 leading-snug">
+          <h2 className="text-lg md:text-4xl font-nohemi mb-12 leading-snug">
             International efforts to advance cryospheric science.
           </h2>
 
@@ -206,9 +207,9 @@ export default function FlagshipPrograms() {
 
       {/* Summary Section */}
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-8" id="ourPrograms">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center font-cabin">
           <div>
-            <h2 className="text-lg md:text-4xl font-bold text-glacier-primary mb-6">
+            <h2 className="text-lg md:text-4xl font-nohemi text-glacier-primary mb-6">
               Our Flagship Programs Overview
             </h2>
             <p className="text-xs md:text-lg text-glacier-dark mb-8">
@@ -240,6 +241,8 @@ export default function FlagshipPrograms() {
           </div>
         </div>
       </section>
+      
+      <SDGGrid/>
 
       {/* Mapped Efforts Sections */}
       {effortsData.map((effort) => (
@@ -276,13 +279,13 @@ export default function FlagshipPrograms() {
               viewport={{ once: true }}
               className="w-full md:w-[60%]"
             >
-              <h2 className="text-lg md:text-4xl font-bold mb-6">
+              <h2 className="text-lg md:text-4xl font-nohemi text-glacier-primary mb-6">
                 {effort.title}
               </h2>
               {effort.content.map((para, i) => (
                 <p
                   key={i}
-                  className={`text-xs md:text-lg leading-relaxed ${i > 0 ? "mt-4" : ""}`}
+                  className={`text-xs md:text-lg font-cabin leading-relaxed ${i > 0 ? "mt-4" : ""}`}
                   dangerouslySetInnerHTML={{ __html: para }}
                 />
               ))}

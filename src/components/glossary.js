@@ -122,8 +122,8 @@ export default function GlacierGlossary() {
   };
 
   return (
-    <section id="glossary" className="py-20 px-4 md:px-20 bg-glacier-soft min-h-screen">
-      <h2 className="text-4xl font-semibold mb-6 text-glacier-dark">Glacier Glossary</h2>
+    <section id="glossary" className="py-20 px-4 md:px-20 bg-glacier-soft min-h-screen font-cabin">
+      <h2 className="text-4xl font-semibold mb-6 text-glacier-dark font-nohemi">Glacier Glossary</h2>
 
       {/* Search */}
       <div className="mb-6 max-w-xl">

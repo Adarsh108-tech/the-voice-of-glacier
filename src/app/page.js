@@ -148,7 +148,7 @@ useEffect(() => {
 
   const SectionHeader = ({ title, description, isLightBackground = true }) => (
     <div className="text-center mb-16">
-      <h2 className={`text-4xl md:text-5xl font-extrabold mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
+      <h2 className={`text-4xl md:text-5xl font-nohemi mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
         {title}
       </h2>
       {description && (
@@ -202,7 +202,7 @@ useEffect(() => {
             />
           </motion.div>
           <motion.p
-            className="text-lg md:text-2xl max-w-2xl drop-shadow-lg"
+            className="text-lg md:text-2xl max-w-2xl font-cabin drop-shadow-lg"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -328,8 +328,8 @@ useEffect(() => {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true, amount: 0.4 }}
               >
-                <h3 className="text-xl font-bold text-white mb-2">{gap.title}</h3>
-                <p className="text-base text-white/90">{gap.missing}</p>
+                <h3 className="text-xl font-nohemi text-white mb-2">{gap.title}</h3>
+                <p className="text-base font-cabin text-white/90">{gap.missing}</p>
               </motion.div>
             ))}
           </div>
