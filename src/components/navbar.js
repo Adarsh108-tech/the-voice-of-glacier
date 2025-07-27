@@ -23,7 +23,7 @@ export default function Navbar() {
       href: "/",
       sublinks: [
         { label: "Crisis", href: "/#crisis" },
-        { label: "Why TVGF", href: "/#why-tvgf" },
+        { label: "Our Approach", href: "/#why-tvgf" },
         { label: "Vision", href: "/#vision" },
         { label: "North Star", href: "/#north-star" },
         { label: "Core Values", href: "/#core-values" },
