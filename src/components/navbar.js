@@ -143,7 +143,7 @@ export default function Navbar() {
                   onClick={() =>
                     setDesktopDropdown(desktopDropdown === link.name ? null : link.name)
                   }
-                  className="flex items-center gap-1 text-white font-medium font-cabin"
+                  className="flex items-center gap-1 text-glacier-accent font-bold "
                 >
                   {link.name}
                   {link.sublinks?.length > 0 && <ChevronDown size={16} />}

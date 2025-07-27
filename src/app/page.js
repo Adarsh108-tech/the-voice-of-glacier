@@ -148,7 +148,7 @@ useEffect(() => {
 
   const SectionHeader = ({ title, description, isLightBackground = true }) => (
     <div className="text-center mb-16">
-      <h2 className={`text-4xl md:text-5xl font-nohemi mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
+      <h2 className={`text-xl md:text-5xl font-nohemi mb-4 ${isLightBackground ? 'text-glacier-primary' : 'text-white'}`}>
         {title}
       </h2>
       {description && (
@@ -238,7 +238,7 @@ useEffect(() => {
             isLightBackground={true}
           />
 
-          <div className="grid md:grid-cols-2 gap-8 text-left mt-10">
+          <div className="grid md:grid-cols-2 md:text-lg text-xs gap-8 text-left mt-10">
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
@@ -250,7 +250,7 @@ useEffect(() => {
               >
                 <div className="min-w-[2rem] text-glacier-dark">{stat.icon}</div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">{stat.label}</h3>
+                  <h3 className="md:text-lg text-xs font-semibold mb-1">{stat.label}</h3>
                   <p className="text-sm max-h-0 overflow-hidden group-hover:max-h-40 group-hover:mt-1 transition-all duration-300 ease-in-out">
                     {stat.desc}
                   </p>
@@ -259,7 +259,7 @@ useEffect(() => {
             ))}
           </div>
           <motion.p
-            className="text-lg mt-12 max-w-3xl mx-auto text-center flex flex-wrap justify-center gap-1"
+            className=" text-xs md:text-lg mt-12 max-w-3xl mx-auto text-center flex flex-wrap justify-center gap-1"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -352,8 +352,8 @@ useEffect(() => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h3 className="text-2xl font-bold text-glacier-primary mb-4">Because we exist at the intersection of science, spirit, and storytelling.</h3>
-              <ul className="list-disc list-inside space-y-3">
+              <h3 className="md:text-2xl text-lg font-bold text-glacier-primary mb-4">Because we exist at the intersection of science, spirit, and storytelling.</h3>
+              <ul className="list-disc md:text-lg text-sm  list-inside space-y-3">
                 <li>Founded from <b>lived experience</b> inside a glacier, not just theory.</li>
                 <li>We blend <b>policy, poetry, and people</b>; <b>data and devotion</b>; <b>science and spirit</b>; <b>memory and movement</b>.</li>
                 <li>TVGF acts as a crucial <b>bridge between ice and identity</b>, connecting global communities to the cryosphere.</li>
@@ -370,32 +370,32 @@ useEffect(() => {
               {/* Unique Blend */}
               <div className="p-6 bg-glacier-light rounded-xl shadow-md group transition-all duration-300">
                 <div className="flex items-center gap-3 mb-2">
-                  <FaSeedling className="text-glacier-primary text-xl" />
-                  <h4 className="font-bold text-xl text-glacier-primary">Unique Blend</h4>
+                  <FaSeedling className="text-glacier-primary md:text-xl text-sm" />
+                  <h4 className="font-bold md:text-xl text-sm  text-glacier-primary">Unique Blend</h4>
                 </div>
-                <p className="text-base text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
+                <p className=" text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2 md:text-xl text-sm">
                   Blending science, storytelling, and spirituality for a holistic approach to glacier preservation.
                 </p>
               </div>
 
               {/* Community-Driven */}
               <div className="p-6 bg-glacier-light rounded-xl shadow-md group transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <FaUsers className="text-glacier-primary text-xl" />
-                  <h4 className="font-bold text-xl text-glacier-primary">Community-Driven</h4>
+                <div className="flex items-center gap-3 mb-2 md:text-xl text-sm">
+                  <FaUsers className="text-glacier-primary" />
+                  <h4 className="font-bold text-glacier-primary">Community-Driven</h4>
                 </div>
-                <p className="text-base text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
+                <p className=" text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
                   Empowering mountain communities and uplifting indigenous wisdom.
                 </p>
               </div>
 
               {/* Global Impact */}
-              <div className="p-6 bg-glacier-light rounded-xl shadow-md group transition-all duration-300">
+              <div className="p-6 bg-glacier-light rounded-xl md:text-xl text-sm shadow-md group transition-all duration-300">
                 <div className="flex items-center gap-3 mb-2">
-                  <FaGlobe className="text-glacier-primary text-xl" />
-                  <h4 className="font-bold text-xl text-glacier-primary">Global Impact</h4>
+                  <FaGlobe className="text-glacier-primary" />
+                  <h4 className="font-bold text-glacier-primary">Global Impact</h4>
                 </div>
-                <p className="text-base text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
+                <p className=" text-glacier-dark opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden mt-2">
                   Influencing global policy and fostering intergenerational resilience.
                 </p>
               </div>
@@ -417,7 +417,7 @@ useEffect(() => {
     <div className="grid md:grid-cols-2 gap-10 text-center">
       {/* Vision Card */}
       <motion.div
-        className="p-8 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg flex flex-col items-center"
+        className="p-8 bg-white/10 backdrop-blur-sm rounded-xl md:text-xl text-sm border border-white/20 shadow-lg flex flex-col items-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
@@ -427,14 +427,14 @@ useEffect(() => {
           <FaEye className="text-2xl text-glacier-light" />
           <h3 className="text-2xl font-bold text-white">Vision</h3>
         </div>
-        <p className="text-lg text-white/90 leading-relaxed">
+        <p className=" text-white/90 leading-relaxed">
           A world where glaciers are protected as sacred lifelines — through <b>collective memory, community action, and creative expression</b> — for climate justice and intergenerational resilience.
         </p>
       </motion.div>
 
       {/* Mission Card */}
       <motion.div
-        className="p-8 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg flex flex-col items-center"
+        className="p-8 bg-white/10 backdrop-blur-sm md:text-xl text-sm rounded-xl border border-white/20 shadow-lg flex flex-col items-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -444,7 +444,7 @@ useEffect(() => {
           <FaBullseye className="text-2xl text-glacier-light" />
           <h3 className="text-2xl font-bold text-white">Mission</h3>
         </div>
-        <p className="text-lg text-white/90 leading-relaxed">
+        <p className=" text-white/90 leading-relaxed">
           To activate global and local ecosystems for glacier preservation by weaving <b>science, storytelling, spirituality, and stewardship</b> into transformative experiences that inspire policy, protect ecosystems, and reshape human relationships with the cryosphere.
         </p>
       </motion.div>
@@ -465,7 +465,7 @@ useEffect(() => {
 
     <div className="relative duration-1000">
   {/* Snow SVGs on the right */}
-  <div className="hidden md:block absolute right-0 top-0 h-full w-[200px] flex flex-col items-end gap-6 pointer-events-none z-0">
+  <div className=" md:block absolute right-0 top-0 h-full w-[200px] flex flex-col items-end gap-6 pointer-events-none z-0">
     {[...Array(6)].map((_, i) => (
       <img
         key={i}
@@ -481,13 +481,13 @@ useEffect(() => {
   </div>
 
   {/* Main content */}
-  <ul className="space-y-10 mt-12 relative z-10">
+  <ul className="space-y-10 mt-12 relative z-10 md:text-xl text-sm">
     {goals.map((goal, index) => (
       <li
         key={index}
         className="group relative border-l-4 border-glacier-primary pl-6 cursor-pointer"
       >
-        <div className="text-xl font-semibold text-glacier-primary">
+        <div className=" font-semibold text-glacier-primary">
           • {goal.title}
         </div>
         <motion.div
@@ -497,7 +497,7 @@ useEffect(() => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="text-glacier-dark/90 text-base md:text-lg">
+          <div className="text-glacier-dark/90">
             {goal.desc}
           </div>
         </motion.div>
