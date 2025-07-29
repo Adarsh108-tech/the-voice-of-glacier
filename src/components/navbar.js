@@ -117,7 +117,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-transform duration-300 ${
+      className={`fixed w-full z-50 transition-transform duration-300 font-cabin ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } bg-transparent border-b border-white/20 shadow-sm`}
     >

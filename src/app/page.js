@@ -23,6 +23,7 @@ import {
   FaEye, FaBullseye , FaTint, FaBookOpen, FaMagic , FaLeaf
 } from "react-icons/fa";
 import Link from "next/link";
+import HeroSection from "@/components/HeroSection";
 
 export default function HomePage() {
 
@@ -58,8 +59,6 @@ export default function HomePage() {
     image: "/img3.jpg",
   },
 ];
-
-
   const [isScrolled, setIsScrolled] = useState(false);
 
   const stats = [
@@ -171,121 +170,14 @@ useEffect(() => {
     </div>
   );
 
+
   return (
     <div className="bg-glacier-light text-glacier-dark">
       <Navbar />
 
       {/* Hero Banner */}
-      <section id="hero" className="relative h-screen w-full overflow-hidden">
-        <video
-          id="hero-video"
-          autoPlay
-          loop
-          muted
-          playsInline // Added for better mobile compatibility
-          className="absolute w-full h-full object-cover"
-          src="/glacier-hero.mp4" // Ensure this video path is correct and the video exists
-        />
-        <div className="absolute inset-0 bg-glacier-primary/30 flex flex-col items-center justify-center text-center p-4 text-white">
-          <motion.div
-            className="w-64 h-auto mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Image
-              src="/comapny-hero-logo.png"
-              alt="TVGF Logo"
-              width={256}
-              height={256}
-              className="mx-auto"
-            />
-          </motion.div>
-          <motion.p
-            className="text-lg md:text-2xl max-w-2xl font-cabin drop-shadow-lg"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            &quot;Where glaciers speak, communities rise, and the world listens.&quot;
-          </motion.p>
-          <motion.div
-            className="mt-8 flex flex-col sm:flex-row gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Button>Meet the Movement</Button>
-            <Link href="/story" passHref>
-              <Button variant="outline" className="border-white text-white "><span className="text-white">Watch the Story</span></Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection/>
 
-      
-      {/* Origin Story: A Movement Born in Ice */}
-     <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeader
-          title="A Movement Born in Ice"
-          description="The ice is speaking — will we listen?"
-          isLightBackground={true}
-        />
-
-        <motion.div
-          className="grid md:grid-cols-3 gap-12 items-center mt-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-
-          {/* LEFT IMAGE */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
-              <img
-                src="/hero-image.jpg"
-                alt="Anurag Maloo"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
-            <p className="text-glacier-soft text-sm italic mb-4">Founder</p>
-            <Link href="/story" passHref>
-              <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
-                Watch Anurag&apos;s Story
-              </Button>
-            </Link>
-          </div>
-
-          {/* CENTER QUOTE */}
-          <div className="space-y-6 text-center md:text-left">
-            <p className="text-lg md:text-xl font-semibold leading-relaxed italic text-glacier-dark">
-              &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb — cold, silent, alive.<br /><br />
-              That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br /><br />
-              I survived. But glaciers won&apos;t. <br /><br />
-              I owe my life to these glaciers. This work is my return offering.&quot;
-            </p>
-            <p className="text-lg font-medium text-glacier-primary">
-              — Anurag Maloo, Founder
-            </p>
-          </div>
-
-          {/* RIGHT IMAGE (Larger with rounded-lg) */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="w-64 h-64 md:w-full md:h-full rounded-xl overflow-hidden border-4 border-glacier-light shadow-xl transition-transform duration-300 mb-4">
-              <img
-                src="/story/anurag-snow.png"
-                alt="Anurag in Snow"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-        </motion.div>
-      </div>
-    </section>
       
 
 
@@ -297,7 +189,7 @@ useEffect(() => {
         <div className="max-w-6xl mx-auto text-center">
           <SectionHeader
             title="The Crisis: A Universal Cry from the Ice"
-            description="Glaciers, Earth&#39;s water towers, are disappearing — rapidly, silently, irreversibly. Yet they remain largely invisible in global imagination and climate policy."
+            description="Glaciers are vanishing fast, threatening water, ecosystems, and life. We must act now to raise awareness and protect them urgently."
             isLightBackground={true}
           />
 
@@ -321,8 +213,9 @@ useEffect(() => {
               </motion.div>
             ))}
           </div>
+
           <motion.p
-            className=" text-xs md:text-lg mt-12 max-w-3xl mx-auto text-center flex flex-wrap justify-center gap-1"
+            className="text-xs md:text-lg mt-12 max-w-3xl mx-auto text-center flex flex-wrap justify-center gap-1"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -344,15 +237,27 @@ useEffect(() => {
             </span>
             Yet, glaciers remain underrepresented and invisible in policy, education, and public imagination.
           </motion.p>
+
+          <motion.p
+            className="mt-12 max-w-4xl mx-auto text-sm md:text-lg font-cabin text-glacier-dark leading-relaxed text-justify"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-4xl">&ldquo;</span>Everyone knows climate change is real and dangerous. But what most people don&rsquo;t realize is this: if glaciers disappear, so does life as we know it. Glaciers store the world&rsquo;s freshwater, cool the planet, feed our rivers, and keep ecosystems alive &mdash; yet they&rsquo;re melting faster than ever before, almost silently. This isn&rsquo;t just a climate crisis; it&rsquo;s a life crisis. And still, glaciers remain invisible in most climate action, policy, and public awareness. If we don&rsquo;t act now, our children may grow up in a world without ice, without water, and without the ancient wisdom that glaciers hold. The Voice of Glaciers Foundation exists to change that &mdash; by blending art, science, culture, community, and local stories to wake people up, inspire action, and protect what&rsquo;s left before it&rsquo;s too late.<span className="text-4xl">&rdquo;</span>
+          </motion.p>
         </div>
       </section>
+
 
  {/* The Gaps We&#39;re Addressing */}
       <ParallaxBackground imageUrl="/img1.jpg">
         <div id="the-gaps" className="max-w-6xl mx-auto">
           <SectionHeader
             title="The Gaps We&#39;re Addressing"
-            description="Despite the critical importance of glaciers, significant gaps hinder effective preservation efforts. TVGF steps in to bridge these divides."
+            description="The Voice of Glaciers Foundation was born from a simple truth:
+ Glaciers are dying. Quietly. Quickly. Irreversibly."
             isLightBackground={false}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -572,70 +477,132 @@ useEffect(() => {
 
           {/* Core Values Grid (unchanged) */}
           <div className="mt-20" id="core-values">
-  <h3 className="text-3xl font-bold text-glacier-primary mb-8 text-center">
-    Our Core Values
-  </h3>
-  <div className="grid md:grid-cols-3 gap-6">
-    {(() => {
-      const coreValues = [
-        {
-          name: "Collaboration",
-          desc: "Bridging diverse disciplines and cultures for collective impact.",
-          icon: FaHandsHelping,
-        },
-        {
-          name: "Integrity",
-          desc: "Grounded in robust scientific evidence and deep community respect.",
-          icon: FaBalanceScale,
-        },
-        {
-          name: "Equity",
-          desc: "Uplifting indigenous wisdom and empowering local leadership.",
-          icon: FaPeopleArrows,
-        },
-        {
-          name: "Creativity",
-          desc: "Driving change through storytelling, science, and co-created art.",
-          icon: FaPaintBrush,
-        },
-        {
-          name: "Resilience",
-          desc: "Fostering long-term glacier guardianships and adaptive strategies.",
-          icon: FaMountain,
-        },
-        {
-          name: "Transparency",
-          desc: "Operating with open governance and unwavering accountability.",
-          icon: FaEye,
-        },
-      ];
-      return coreValues.map((value, idx) => {
-        const Icon = value.icon;
-        return (
-          <motion.div
-            key={idx}
-            className="p-6 bg-glacier-soft rounded-xl shadow-sm text-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: idx * 0.08 }}
-            viewport={{ once: true, amount: 0.4 }}
-          >
-            <Icon className="text-3xl text-glacier-primary mb-3 mx-auto" />
-            <h4 className="font-bold text-xl text-glacier-dark mb-2">
-              {value.name}
-            </h4>
-            <p className="text-sm text-glacier-dark/80">{value.desc}</p>
-          </motion.div>
-        );
-      });
-    })()}
-  </div>
-</div>
+            <h3 className="text-3xl font-bold text-glacier-primary mb-8 text-center">
+              Our Core Values
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {(() => {
+                const coreValues = [
+                  {
+                    name: "Collaboration",
+                    desc: "Bridging diverse disciplines and cultures for collective impact.",
+                    icon: FaHandsHelping,
+                  },
+                  {
+                    name: "Integrity",
+                    desc: "Grounded in robust scientific evidence and deep community respect.",
+                    icon: FaBalanceScale,
+                  },
+                  {
+                    name: "Equity",
+                    desc: "Uplifting indigenous wisdom and empowering local leadership.",
+                    icon: FaPeopleArrows,
+                  },
+                  {
+                    name: "Creativity",
+                    desc: "Driving change through storytelling, science, and co-created art.",
+                    icon: FaPaintBrush,
+                  },
+                  {
+                    name: "Resilience",
+                    desc: "Fostering long-term glacier guardianships and adaptive strategies.",
+                    icon: FaMountain,
+                  },
+                  {
+                    name: "Transparency",
+                    desc: "Operating with open governance and unwavering accountability.",
+                    icon: FaEye,
+                  },
+                ];
+                return coreValues.map((value, idx) => {
+                  const Icon = value.icon;
+                  return (
+                    <motion.div
+                      key={idx}
+                      className="p-6 bg-glacier-soft rounded-xl shadow-sm text-center"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: idx * 0.08 }}
+                      viewport={{ once: true, amount: 0.4 }}
+                    >
+                      <Icon className="text-3xl text-glacier-primary mb-3 mx-auto" />
+                      <h4 className="font-bold text-xl text-glacier-dark mb-2">
+                        {value.name}
+                      </h4>
+                      <p className="text-sm text-glacier-dark/80">{value.desc}</p>
+                    </motion.div>
+                  );
+                });
+              })()}
+            </div>
+          </div>
 
         </div>
       </section>
 
 
+      {/* Origin Story: A Movement Born in Ice */}
+     <section className="py-20 px-6 md:px-16 bg-white text-glacier-dark">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeader
+          title="A Movement Born in Ice"
+          description="The ice is speaking — will we listen?"
+          isLightBackground={true}
+        />
+
+        <motion.div
+          className="grid md:grid-cols-3 gap-12 items-center mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+
+          {/* LEFT IMAGE */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
+              <img
+                src="/hero-image.jpg"
+                alt="Anurag Maloo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-glacier-dark text-xl font-semibold mb-1">Anurag Maloo</p>
+            <p className="text-glacier-soft text-sm italic mb-4">Founder</p>
+            <Link href="/story" passHref>
+              <Button className="mt-2 hover:bg-glacier-primary hover:text-white transition duration-300">
+                Watch Anurag&apos;s Story
+              </Button>
+            </Link>
+          </div>
+
+          {/* CENTER QUOTE */}
+          <div className="space-y-6 text-center md:text-left">
+            <p className="text-lg md:text-xl font-semibold leading-relaxed italic text-glacier-dark">
+              &quot;I was held, not buried, by a Himalayan glacier on Annapurna. For 72 hours, it cradled me like a womb — cold, silent, alive.<br /><br />
+              That ice didn&apos;t just trap me. It protected me. That glacier gave me a second chance. <br /><br />
+              I survived. But glaciers won&apos;t. <br /><br />
+              I owe my life to these glaciers. This work is my return offering.&quot;
+            </p>
+            <p className="text-lg font-medium text-glacier-primary">
+              — Anurag Maloo, Founder
+            </p>
+          </div>
+
+          {/* RIGHT IMAGE (Larger with rounded-lg) */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="w-64 h-64 md:w-full md:h-full rounded-xl overflow-hidden border-4 border-glacier-light shadow-xl transition-transform duration-300 mb-4">
+              <img
+                src="/story/anurag-snow.png"
+                alt="Anurag in Snow"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+        </motion.div>
+      </div>
+    </section>
      
 
 

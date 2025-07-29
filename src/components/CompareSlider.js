@@ -49,7 +49,6 @@ export default function CompareSlider({
   return (
     <div className="w-full">
       {/* Heading */}
-      <h3 className="text-2xl font-semibold text-glacier-dark mb-4">{heading}</h3>
 
       {/* Slider Container with aspect ratio */}
       <div

@@ -1,11 +1,12 @@
 "use client";
+
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import GlacierGlossary from "@/components/glossary";
 import GlacierCard from "@/components/GlacierCard";
+import QuizSection from "@/components/quizSection";
+import GlacierNews from "@/components/news";
 
-
-// Glacier data array
 const glacierDetails = [
   {
     title: "Gangotri Glacier (Uttarakhand)",
@@ -55,7 +56,7 @@ const glacierDetails = [
     beforeImage: "/glacierData/DokrainGlacier-old.png",
     afterImage: "/glacierData/DokrianiGlacier-new.png",
     beforeLabel: "1984",
-    afterLabel: "2020", 
+    afterLabel: "2020",
   },
   {
     title: "Chhota Shigri Glacier (Himachal Pradesh)",
@@ -69,28 +70,12 @@ const glacierDetails = [
   },
 ];
 
-
-const glacierData = [
-  { year: 1980, volumeIndex: 200 },
-  { year: 1985, volumeIndex: 195 },
-  { year: 1990, volumeIndex: 190 },
-  { year: 1995, volumeIndex: 185 },
-  { year: 2000, volumeIndex: 180 },
-  { year: 2005, volumeIndex: 170 },
-  { year: 2010, volumeIndex: 160 },
-  { year: 2015, volumeIndex: 145 },
-  { year: 2020, volumeIndex: 130 },
-  { year: 2021, volumeIndex: 128 },
-  { year: 2022, volumeIndex: 125 },
-  { year: 2023, volumeIndex: 120 },
-];
-
 export default function LearnPage() {
   return (
-    <main className="w-full text-glacier-dark overflow-x-hidden">
+    <main className="w-full text-glacier-dark overflow-x-hidden scroll-smooth">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section with Quick Links */}
       <section className="relative h-screen w-full overflow-hidden" id="hero">
         <video
           autoPlay
@@ -100,48 +85,81 @@ export default function LearnPage() {
           className="absolute w-full h-full object-cover"
           src="/AnuragMaloo.mp4"
         />
-        <div className="absolute inset-0 bg-glacier-dark bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-4">
-          <h1 className="text-5xl font-nohemi mb-4">Learn about Glaciers</h1>
-          <p className="text-xl max-w-2xl cabin">
+        <div className="absolute inset-0 bg-glacier-dark bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-6">
+          <h1 className="text-4xl sm:text-5xl font-nohemi mb-4">
+            Learn about Glaciers
+          </h1>
+          <p className="text-lg sm:text-xl max-w-2xl font-cabin mb-8">
             One of the most valuable components of nature
           </p>
+
+          <div className="flex flex-wrap gap-4 justify-center">
+            {[
+              { label: "Introduction", id: "introduction" },
+              { label: "Explore", id: "explore" },
+              { label: "Glacier Data", id: "glacier-data" },
+              { label: "Glossary", id: "glossary" },
+            ].map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="bg-white text-glacier-primary px-4 py-2 rounded font-semibold font-cabin hover:bg-glacier-light transition"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Section 1: Introduction */}
-      <section className="py-20 px-6 md:px-20 bg-glacier-light text-glacier-dark font-cabin" id="introduction">
-        <h2 className="text-4xl font-nohemi mb-8 text-glacier-primary">Introduction</h2>
+      <section
+        className="py-20 px-6 md:px-20 bg-glacier-light text-glacier-dark font-cabin"
+        id="introduction"
+      >
+        <h2 className="text-4xl font-nohemi mb-8 text-glacier-primary">
+          Introduction
+        </h2>
 
         <blockquote className="text-xl italic mb-8 text-center text-glacier-dark">
-          &#8220;When the ice melts, it&#39;s not just water that disappears&mdash;it&#39;s memory, balance, and the future.&#8221;
+          &#8220;When the ice melts, it&#39;s not just water that disappears&mdash;it&#39;s
+          memory, balance, and the future.&#8221;
         </blockquote>
 
         <p className="mb-6 text-lg leading-relaxed">
-          The <strong>cryosphere</strong> includes all components of the Earth System that are frozen&mdash;such as snow cover,
-          glaciers, ice sheets, ice shelves, icebergs, sea ice, lake ice, river ice, permafrost, and seasonally frozen ground.
-          It plays a critical role in regulating Earth&#39;s climate, supporting ecosystems, and providing water to billions of people.
+          The <strong>cryosphere</strong> includes all components of the Earth
+          System that are frozen&mdash;such as snow cover, glaciers, ice sheets,
+          ice shelves, icebergs, sea ice, lake ice, river ice, permafrost, and
+          seasonally frozen ground. It plays a critical role in regulating
+          Earth&#39;s climate, supporting ecosystems, and providing water to
+          billions of people.
         </p>
 
         <p className="mb-6 text-lg leading-relaxed">
-          According to the <strong>IPCC Special Report</strong>, the cryosphere is undergoing rapid and alarming changes:
+          According to the <strong>IPCC Special Report</strong>, the cryosphere
+          is undergoing rapid and alarming changes:
         </p>
 
         <ul className="list-disc list-inside mb-8 space-y-3 text-glacier-dark text-lg">
-          <li>🌐 <strong>70%</strong> of Earth&#39;s freshwater is locked in snow and ice</li>
-          <li>🧊 <strong>10%</strong> of Earth&#39;s land area is covered by glaciers or ice sheets</li>
-          <li>🌊 Global sea level rise (2006&ndash;2015) was <strong>2.5&times; faster</strong> than during 1901&ndash;1990</li>
-          <li>🌨 Arctic June snow cover has declined by <strong>13.4%</strong> per decade since 1967</li>
-          <li>🏔 Ice sheets are up to <strong>4 km</strong> thick in East Antarctica and <strong>3 km</strong> in Greenland</li>
-          <li>🧱 Antarctica holds enough ice to raise sea levels by <strong>58 meters</strong> if completely melted</li>
+          <li>🌐 <strong>70%</strong> of Earth's freshwater is locked in snow and ice</li>
+          <li>🧊 <strong>10%</strong> of Earth’s land area is covered by glaciers or ice sheets</li>
+          <li>🌊 Sea level rise (2006–2015) was <strong>2.5× faster</strong> than 1901–1990</li>
+          <li>🌨 Arctic snow cover in June dropped <strong>13.4%</strong> per decade since 1967</li>
+          <li>🏔 Ice sheets are up to <strong>4 km</strong> thick in East Antarctica</li>
+          <li>🧱 Antarctica holds ice that could raise sea levels by <strong>58 meters</strong></li>
         </ul>
       </section>
 
-
       {/* Section 2: Explore */}
-      <section className="py-20 px-6 md:px-20 bg-glacier-soft font-cabin" id="explore">
-        <h2 className="text-4xl font-semibold mb-8  font-nohemi text-glacier-primary">Explore</h2>
+      <section
+        className="py-16 px-4 sm:px-6 md:px-20 bg-glacier-soft font-cabin"
+        id="explore"
+      >
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 font-nohemi text-glacier-primary">
+          Explore
+        </h2>
 
-        <div className="flex gap-6 overflow-x-auto custom-scrollbar pb-4">
+        <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory custom-scrollbar">
           {[
             {
               title: "NASA Climate Change",
@@ -174,44 +192,53 @@ export default function LearnPage() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group rounded-lg overflow-hidden min-w-[350px] max-w-md flex-shrink-0 h-64 shadow-lg"
+              className="relative group rounded-lg overflow-hidden min-w-[250px] sm:min-w-[300px] md:min-w-[350px] max-w-sm flex-shrink-0 h-60 sm:h-64 md:h-72 shadow-lg snap-start"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
                 style={{ backgroundImage: `url(${item.image})` }}
               ></div>
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <h4 className="text-white text-lg font-bold px-4 text-center">{item.title}</h4>
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center px-4 text-center">
+                <h4 className="text-white text-sm sm:text-base md:text-lg font-bold">
+                  {item.title}
+                </h4>
               </div>
             </a>
           ))}
         </div>
       </section>
 
-
+      {/* News Section */}
+      <GlacierNews />
 
       {/* Section 3: Glacier Data Comparison */}
-      <section className="py-20 px-6 md:px-20 bg-glacier-light font-cabin" id="glacier-data">
+      <section
+        className="py-20 px-6 md:px-20 bg-glacier-light font-cabin"
+        id="glacier-data"
+      >
         <h2 className="text-4xl font-nohemi mb-8 text-glacier-primary">
           Glacier Changes Over Time
         </h2>
-        
+
         <div className="grid md:grid-cols-2 gap-10">
-        {glacierDetails.map((glacier, index) => (
+          {glacierDetails.map((glacier, index) => (
             <GlacierCard
-            key={index}
-            title={glacier.title}
-            location={glacier.location}
-            retreat={glacier.retreat}
-            concern={glacier.concern}
-            beforeImage={glacier.beforeImage}
-            afterImage={glacier.afterImage}
-            beforeLabel={glacier.beforeLabel}
-            afterLabel={glacier.afterLabel}
+              key={index}
+              title={glacier.title}
+              location={glacier.location}
+              retreat={glacier.retreat}
+              concern={glacier.concern}
+              beforeImage={glacier.beforeImage}
+              afterImage={glacier.afterImage}
+              beforeLabel={glacier.beforeLabel}
+              afterLabel={glacier.afterLabel}
             />
-        ))}
+          ))}
         </div>
       </section>
+
+      {/* Quiz */}
+      <QuizSection />
 
       {/* Section 4: Glossary */}
       <section className="py-20 px-6 md:px-20 bg-glacier-soft" id="glossary">
