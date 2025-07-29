@@ -110,19 +110,16 @@ export default function AnuraagStoryPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-glacier-dark mb-6 text-center">
           Watch the Full Story
         </h2>
-        <div className="w-full max-w-4xl aspect-video shadow-xl rounded-lg overflow-hidden">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/5ikXr7qjjJk"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          ></iframe>
+        <div className="w-full max-w-sm aspect-[9/16] shadow-xl rounded-lg overflow-hidden">
+          <video
+            src="/story/amStory.mp4"
+            controls
+            className="w-full h-full object-cover"
+            playsInline
+          ></video>
         </div>
       </section>
+
 
       <Footer />
     </main>
