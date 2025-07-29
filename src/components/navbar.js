@@ -70,6 +70,13 @@ export default function Navbar() {
         { label: "Join Us", href: "/Learn#join" },
       ],
     },
+    {
+      name: "Media",
+      href: "/media",
+      sublinks: [
+        { label: "Go to media", href: "/media" }
+      ], // no dropdown
+    }
   ];
 
   useEffect(() => {
