@@ -5,7 +5,6 @@ import Footer from "@/components/footer";
 import GlacierGlossary from "@/components/glossary";
 import GlacierCard from "@/components/GlacierCard";
 import QuizSection from "@/components/quizSection";
-import GlacierNews from "@/components/news";
 
 const glacierDetails = [
   {
@@ -208,8 +207,6 @@ export default function LearnPage() {
         </div>
       </section>
 
-      {/* News Section */}
-      <GlacierNews />
 
       {/* Section 3: Glacier Data Comparison */}
       <section

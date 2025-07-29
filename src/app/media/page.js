@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import VideoCard from "@/components/videoCard";
 import ImageCard from "@/components/ImageCard";
-import GlacierNews from "@/components/news";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -35,20 +34,6 @@ export default function MediaPage() {
           <h1 className="text-4xl sm:text-5xl font-nohemi mb-6">
             Updates about Glacier
           </h1>
-          <div className="flex gap-4">
-            <button
-              onClick={() => scrollToSection(contentRef)}
-              className="px-6 py-2 bg-white text-glacier-dark rounded hover:bg-glacier-light transition font-cabin font-medium"
-            >
-              Our Content
-            </button>
-            <button
-              onClick={() => scrollToSection(newsRef)}
-              className="px-6 py-2 bg-white text-glacier-dark rounded hover:bg-glacier-light transition font-cabin font-medium"
-            >
-              Glacier News
-            </button>
-          </div>
         </div>
       </section>
 
@@ -87,12 +72,6 @@ export default function MediaPage() {
       </section>
 
       {/* Glacier News Section */}
-      <section
-        ref={newsRef}
-        className="bg-glacier-soft px-4 sm:px-6 md:px-20 py-20"
-      >
-        <GlacierNews />
-      </section>
 
       <Footer />
     </main>
