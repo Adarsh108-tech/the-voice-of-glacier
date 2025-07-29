@@ -49,7 +49,7 @@ const effortsData = [
   },
   {
     id: "year-of-glacier",
-    title: "2025: International Year of Glaciers’ Preservation",
+    title: "2025: International Year of Glaciers' Preservation",
     image: "/efforts/YearOfGlacier.png",
     alt: "International Year of Glaciers' Preservation",
     content: [

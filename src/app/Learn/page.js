@@ -141,9 +141,9 @@ export default function LearnPage() {
         </p>
 
         <ul className="list-disc list-inside mb-8 space-y-3 text-glacier-dark text-lg">
-          <li>🌐 <strong>70%</strong> of Earth's freshwater is locked in snow and ice</li>
-          <li>🧊 <strong>10%</strong> of Earth’s land area is covered by glaciers or ice sheets</li>
-          <li>🌊 Sea level rise (2006–2015) was <strong>2.5× faster</strong> than 1901–1990</li>
+          <li>🌐 <strong>70%</strong> of Earth&#39;s freshwater is locked in snow and ice</li>
+          <li>🧊 <strong>10%</strong> of Earth&#39;s land area is covered by glaciers or ice sheets</li>
+          <li>🌊 Sea level rise (2006-2015) was <strong>2.5x faster</strong> than 1901-1990</li>
           <li>🌨 Arctic snow cover in June dropped <strong>13.4%</strong> per decade since 1967</li>
           <li>🏔 Ice sheets are up to <strong>4 km</strong> thick in East Antarctica</li>
           <li>🧱 Antarctica holds ice that could raise sea levels by <strong>58 meters</strong></li>
