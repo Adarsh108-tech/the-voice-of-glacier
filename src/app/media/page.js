@@ -5,6 +5,7 @@ import VideoCard from "@/components/videoCard";
 import ImageCard from "@/components/ImageCard";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import NewsFeed from "@/components/glacialNews";
 
 export default function MediaPage() {
   const contentRef = useRef(null);
@@ -70,9 +71,8 @@ export default function MediaPage() {
           />
         </div>
       </section>
-
       {/* Glacier News Section */}
-
+      <NewsFeed/>
       <Footer />
     </main>
   );
