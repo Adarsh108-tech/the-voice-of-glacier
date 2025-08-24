@@ -6,8 +6,6 @@ import Footer from "@/components/footer";
 import DushanbeConferenceSection from "@/components/DushanbeConferenceSection";
 import SDGGrid from "@/components/SDG";
 
-
-
 const Button = ({ children, variant = "solid", className = "" }) => {
   const base = "px-6 py-2 rounded-md font-medium transition duration-300";
   const styles = {
@@ -25,27 +23,16 @@ const Button = ({ children, variant = "solid", className = "" }) => {
 const effortsData = [
   {
     id: "decade-of-ocean-science",
-    title: "United Nations Decade of Ocean Science for Sustainable Development (2021–2030)",
+    title:
+      "United Nations Decade of Ocean Science for Sustainable Development (2021-2030)",
     image: "/efforts/unitedNationsDecade.png",
     alt: "UN Decade of Ocean Science",
     content: [
       "The United Nations has proclaimed the years 2021 to 2030 as the Decade of Ocean Science for Sustainable Development, a groundbreaking global initiative aimed at transforming ocean science and policy to support a healthier, more resilient, and sustainable ocean. This initiative recognizes the urgent need to reverse the decline in ocean health and mobilize science and innovation in service of sustainable development.",
-      "Under the slogan &quot;The Science We Need for the Ocean We Want&quot;, the Decade brings together governments, academia, industry, NGOs, Indigenous knowledge holders, and youth to co-design and co-deliver ocean science solutions. The Decade focuses on seven societal outcomes, including a clean ocean, a healthy and resilient ocean, a predicted ocean, a safe ocean, a sustainably harvested ocean, a transparent ocean, and an inspiring and engaging ocean.",
+      'Under the slogan &quot;The Science We Need for the Ocean We Want&quot;, the Decade brings together governments, academia, industry, NGOs, Indigenous knowledge holders, and youth to co-design and co-deliver ocean science solutions. The Decade focuses on seven societal outcomes, including a clean ocean, a healthy and resilient ocean, a predicted ocean, a safe ocean, a sustainably harvested ocean, a transparent ocean, and an inspiring and engaging ocean.',
       "This initiative is critical to addressing challenges such as climate change, biodiversity loss, sea-level rise, marine pollution, and ocean acidification. By promoting partnerships and enhancing international cooperation, the Decade seeks to fill knowledge gaps and develop tools that empower communities and policymakers. It is a call to all stakeholders to unite in a common framework to deliver the science we need to safeguard the ocean for future generations.",
     ],
     imageOnLeft: false,
-  },
-  {
-    id: "decade-of-cryosphere",
-    title: "UN Decade of Action for Cryospheric Sciences (2025–2034)",
-    image: "/efforts/UNdecade.png",
-    alt: "UN Decade of Action for Cryospheric Sciences",
-    content: [
-      "The United Nations has designated 2025 to 2034 as the Decade of Action for Cryospheric Sciences&mdash;a pivotal global initiative to accelerate scientific understanding of Earth&rsquo;s frozen realms. This decade highlights the critical role glaciers, snow, permafrost, and polar ice play in regulating global climate, freshwater availability, sea-level rise, and biodiversity.",
-      "Through the Decade, scientists, Indigenous communities, policy leaders, and youth will work collaboratively to expand cryospheric data collection, deploy cutting-edge technologies, and amplify public awareness of cryosphere-driven change. The initiative underscores the fact that the cryosphere is no longer a distant, icy domain&mdash;its melting is a visible and urgent global challenge that threatens ecosystems, economies, and human lives.",
-      "The Decade of Action will support inclusive and interdisciplinary research, ensure open data access, and foster education and training across nations. It aims to turn knowledge into action, empowering communities in vulnerable glacier and permafrost regions to build resilience and inform global climate policy. As the cryosphere thaws, the time to act is now. This UN Decade stands as a beacon of hope, science, and solidarity for a rapidly changing planet.",
-    ],
-    imageOnLeft: true,
   },
   {
     id: "year-of-glacier",
@@ -60,6 +47,18 @@ const effortsData = [
     imageOnLeft: false,
   },
   {
+    id: "decade-of-cryosphere",
+    title: "UN Decade of Action for Cryospheric Sciences (2025-2034)",
+    image: "/efforts/UNdecade.png",
+    alt: "UN Decade of Action for Cryospheric Sciences",
+    content: [
+      "The United Nations has designated 2025 to 2034 as the Decade of Action for Cryospheric Sciences&mdash;a pivotal global initiative to accelerate scientific understanding of Earth&rsquo;s frozen realms. This decade highlights the critical role glaciers, snow, permafrost, and polar ice play in regulating global climate, freshwater availability, sea-level rise, and biodiversity.",
+      "Through the Decade, scientists, Indigenous communities, policy leaders, and youth will work collaboratively to expand cryospheric data collection, deploy cutting-edge technologies, and amplify public awareness of cryosphere-driven change. The initiative underscores the fact that the cryosphere is no longer a distant, icy domain&mdash;its melting is a visible and urgent global challenge that threatens ecosystems, economies, and human lives.",
+      "The Decade of Action will support inclusive and interdisciplinary research, ensure open data access, and foster education and training across nations. It aims to turn knowledge into action, empowering communities in vulnerable glacier and permafrost regions to build resilience and inform global climate policy. As the cryosphere thaws, the time to act is now. This UN Decade stands as a beacon of hope, science, and solidarity for a rapidly changing planet.",
+    ],
+    imageOnLeft: true,
+  },
+  {
     id: "international-polar-year",
     title: "The International Polar Year: A Global Cryosphere Initiative",
     image: "/efforts/InternationalPolarYear.png",
@@ -72,7 +71,6 @@ const effortsData = [
     imageOnLeft: true,
   },
 ];
-
 
 const programs = [
   {
@@ -150,60 +148,85 @@ export default function FlagshipPrograms() {
           <p className="text-xs md:text-2xl max-w-2xl font-cabin">
             &quot;Where glaciers speak, communities rise, and the world listens.&quot;
           </p>
-          <div className="mt-6 flex gap-4">
-          </div>
+          <div className="mt-6 flex gap-4"></div>
         </div>
       </section>
 
       {/* International Efforts Section */}
-      <section className="py-20 px-6 md:px-10 bg-white text-glacier-primary" id="international">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-lg md:text-4xl font-nohemi mb-12 leading-snug">
-            International efforts to advance cryospheric science.
-          </h2>
+      <section
+  className="py-20 px-6 md:px-10 bg-white text-glacier-primary"
+  id="international"
+>
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-lg md:text-4xl font-nohemi mb-12 leading-snug">
+      International efforts to advance cryospheric science.
+    </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                src: "/efforts/unitedNationsDecade.png",
-                alt: "Decade of Ocean Science",
-                label: "Decade of Ocean Science",
-              },
-              {
-                src: "/efforts/UNdecade.png",
-                alt: "Decade of Action for Cryospheric Sciences",
-                label: "Decade of Action for Cryospheric Sciences",
-              },
-              {
-                src: "/efforts/YearOfGlacier.png",
-                alt: "International Year of Glaciers' Preservation",
-                label: "International Year of Glaciers Preservation",
-              },
-              {
-                src: "/efforts/InternationalPolarYear.png",
-                alt: "International Polar Year",
-                label: "International Polar Year",
-              },
-            ].map(({ src, alt, label }, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col bg-glacier-light rounded-xl shadow-md overflow-hidden h-full"
-              >
-                <div className="h-64 w-full flex items-center justify-center bg-white">
-                  <img
-                    src={src}
-                    alt={alt}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
-                <div className="text-center font-medium py-4 min-h-[64px] text-xs md:text-base">
-                  {label}
-                </div>
-              </div>
-            ))}
+    <div
+      className="
+        flex flex-col space-y-6
+        md:flex-row md:flex-wrap md:space-y-0 md:space-x-0 md:gap-8
+        items-stretch justify-center
+      "
+    >
+      {[
+        {
+          src: "/efforts/susDevelopmentGoals.webp",
+          alt: "SDG decade of action. 2021-2030",
+          label: "SDG decade of action. 2021-2030",
+          targetId: "sdg-section", // 🔹 new
+        },
+        {
+          src: "/efforts/unitedNationsDecade.png",
+          alt: "Decade of Ocean Science",
+          label: "Decade of Ocean Science",
+          targetId: "decade-of-ocean-science",
+        },
+        {
+          src: "/efforts/YearOfGlacier.png",
+          alt: "International Year of Glaciers' Preservation",
+          label: "International Year of Glaciers Preservation",
+          targetId: "year-of-glacier",
+        },
+        {
+          src: "/efforts/UNdecade.png",
+          alt: "Decade of Action for Cryospheric Sciences",
+          label: "Decade of Action for Cryospheric Sciences",
+          targetId: "decade-of-cryosphere",
+        },
+        {
+          src: "/efforts/InternationalPolarYear.png",
+          alt: "International Polar Year",
+          label: "International Polar Year",
+          targetId: "international-polar-year",
+        },
+      ].map(({ src, alt, label, targetId }, idx) => (
+        <div
+          key={idx}
+          onClick={() => {
+            const section = document.getElementById(targetId);
+            section?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }}
+          className="flex flex-col bg-glacier-light rounded-xl shadow-md overflow-hidden w-full md:w-48 cursor-pointer"
+        >
+          <div className="h-64 w-full flex items-center justify-center bg-white">
+            <img
+              src={src}
+              alt={alt}
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div className="text-center font-medium py-4 min-h-[64px] text-xs md:text-base">
+            {label}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Summary Section */}
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-8" id="ourPrograms">
@@ -241,8 +264,11 @@ export default function FlagshipPrograms() {
           </div>
         </div>
       </section>
-      
-      <SDGGrid/>
+
+      <section id="sdg-section">
+        <SDGGrid />
+      </section>
+
 
       {/* Mapped Efforts Sections */}
       {effortsData.map((effort) => (
@@ -285,7 +311,9 @@ export default function FlagshipPrograms() {
               {effort.content.map((para, i) => (
                 <p
                   key={i}
-                  className={`text-xs md:text-lg font-cabin leading-relaxed ${i > 0 ? "mt-4" : ""}`}
+                  className={`text-xs md:text-lg font-cabin leading-relaxed ${
+                    i > 0 ? "mt-4" : ""
+                  }`}
                   dangerouslySetInnerHTML={{ __html: para }}
                 />
               ))}
@@ -293,12 +321,8 @@ export default function FlagshipPrograms() {
           </div>
         </section>
       ))}
-
-      <DushanbeConferenceSection/>
-
-
+      <DushanbeConferenceSection />
       <Footer />
     </div>
   );
 }
-
