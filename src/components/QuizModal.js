@@ -1,18 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { motion } from "framer-motion";
 import quizData from "@/data/quiz.json";
 
 export default function QuizModal({ onClose }) {
+  const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
   const [score, setScore] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
 
-  const question = quizData[current];
+  // Shuffle questions once when modal opens
+  useEffect(() => {
+    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+    setShuffledQuestions(shuffled);
+  }, []);
+
+  const question = shuffledQuestions[current];
 
   const handleOptionClick = (option) => setSelected(option);
 
@@ -22,7 +29,7 @@ export default function QuizModal({ onClose }) {
       if (selected === question.answer) setScore(score + 1);
       setShowAnswer(true);
     } else {
-      if (current + 1 < quizData.length) {
+      if (current + 1 < shuffledQuestions.length) {
         setCurrent(current + 1);
         setSelected(null);
         setShowAnswer(false);
@@ -31,6 +38,8 @@ export default function QuizModal({ onClose }) {
       }
     }
   };
+
+  if (shuffledQuestions.length === 0) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000]">
@@ -41,6 +50,7 @@ export default function QuizModal({ onClose }) {
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="relative w-full max-w-xl bg-glacier-light p-6 rounded-2xl shadow-lg"
       >
+        {/* Close button */}
         <button
           className="absolute top-4 right-4 text-glacier-accent hover:scale-110 transition"
           onClick={onClose}
@@ -50,9 +60,7 @@ export default function QuizModal({ onClose }) {
 
         {!isCompleted ? (
           <div className="space-y-4">
-            <h2 className="text-2xl font-nohemi text-glacier-dark">
-              Question {current + 1} of {quizData.length}
-            </h2>
+            {/* Removed "Question 1 of 22" text */}
             <p className="text-lg font-cabin text-glacier-primary">
               {question.question}
             </p>
@@ -79,14 +87,18 @@ export default function QuizModal({ onClose }) {
               onClick={handleSubmit}
               className="bg-glacier-primary hover:bg-glacier-dark text-white px-4 py-2 rounded-md font-cabin"
             >
-              {showAnswer ? (current + 1 < quizData.length ? "Next" : "Finish") : "Submit"}
+              {showAnswer
+                ? current + 1 < shuffledQuestions.length
+                  ? "Next"
+                  : "Finish"
+                : "Submit"}
             </button>
           </div>
         ) : (
           <div className="text-center space-y-4">
             <h2 className="text-2xl font-nohemi text-glacier-dark">Quiz Completed</h2>
             <p className="text-xl font-cabin text-glacier-primary">
-              Your score: {score} / {quizData.length}
+              Your score: {score} / {shuffledQuestions.length}
             </p>
             <button
               onClick={onClose}

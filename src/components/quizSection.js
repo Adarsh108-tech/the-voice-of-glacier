@@ -1,17 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import quizData from "@/data/quiz.json";
 
 export default function QuizSection() {
+  const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
   const [score, setScore] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
 
-  const question = quizData[current];
+  // Shuffle questions once when quiz starts
+  useEffect(() => {
+    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+    setShuffledQuestions(shuffled);
+  }, []);
+
+  const question = shuffledQuestions[current];
 
   const handleOptionClick = (option) => setSelected(option);
 
@@ -21,7 +28,7 @@ export default function QuizSection() {
       if (selected === question.answer) setScore(score + 1);
       setShowAnswer(true);
     } else {
-      if (current + 1 < quizData.length) {
+      if (current + 1 < shuffledQuestions.length) {
         setCurrent(current + 1);
         setSelected(null);
         setShowAnswer(false);
@@ -30,6 +37,8 @@ export default function QuizSection() {
       }
     }
   };
+
+  if (shuffledQuestions.length === 0) return null;
 
   return (
     <section className="w-full min-h-screen bg-glacier-light px-4 py-12 flex flex-col items-center justify-center">
@@ -50,16 +59,15 @@ export default function QuizSection() {
       >
         {!isCompleted ? (
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-nohemi text-glacier-dark">
-              Question {current + 1} of {quizData.length}
-            </h2>
+            {/* Removed "Question X of Y" heading */}
             <p className="text-sm sm:text-base md:text-lg font-cabin text-glacier-primary">
               {question.question}
             </p>
             <div className="space-y-2">
               {question.options.map((opt, index) => {
                 const isCorrect = showAnswer && opt === question.answer;
-                const isWrong = showAnswer && selected === opt && opt !== question.answer;
+                const isWrong =
+                  showAnswer && selected === opt && opt !== question.answer;
                 return (
                   <button
                     key={index}
@@ -79,7 +87,11 @@ export default function QuizSection() {
               onClick={handleSubmit}
               className="bg-glacier-primary hover:bg-glacier-dark text-white px-4 py-2 rounded-md font-cabin text-sm sm:text-base"
             >
-              {showAnswer ? (current + 1 < quizData.length ? "Next" : "Finish") : "Submit"}
+              {showAnswer
+                ? current + 1 < shuffledQuestions.length
+                  ? "Next"
+                  : "Finish"
+                : "Submit"}
             </button>
           </div>
         ) : (
@@ -88,7 +100,7 @@ export default function QuizSection() {
               Quiz Completed
             </h2>
             <p className="text-sm sm:text-lg md:text-xl font-cabin text-glacier-primary">
-              Your score: {score} / {quizData.length}
+              Your score: {score} / {shuffledQuestions.length}
             </p>
           </div>
         )}
