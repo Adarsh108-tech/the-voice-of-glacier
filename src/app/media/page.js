@@ -1,21 +1,39 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import VideoCard from "@/components/videoCard";
 import ImageCard from "@/components/ImageCard";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import NewsFeed from "@/components/glacialNews";
+import axios from "axios";
 
 export default function MediaPage() {
   const contentRef = useRef(null);
   const newsRef = useRef(null);
+
+  const [blogs, setBlogs] = useState([]);
+  const backendURL = "https://glacier-server.onrender.com"; // Replace with your backend URL
 
   const scrollToSection = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Fetch blogs from backend
+  const fetchBlogs = async () => {
+    try {
+      const res = await axios.get(`${backendURL}/getBlog`);
+      setBlogs(res.data.blogs);
+    } catch (err) {
+      console.error("Failed to fetch blogs:", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   return (
     <main className="w-full text-glacier-dark overflow-x-hidden font-cabin">
@@ -38,7 +56,7 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* Our Content */}
+      {/* Our Content (Dynamic Blogs) */}
       <section
         ref={contentRef}
         className="py-20 px-6 md:px-20 bg-glacier-light"
@@ -47,32 +65,33 @@ export default function MediaPage() {
           Our Content
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <VideoCard
-            videoSrc="/media/dushanbeConfrenceVideo.mp4"
-            heading="Melting Ice Revealed"
-            description="A time-lapse showing glacier retreat over the last decade."
-          />
-
-          <ImageCard
-            imageSrc="/media/dushanbeAnurag.jpg"
-            heading="Aerial Glacier View"
-            description="A breathtaking view of the Himalayas covered in glaciers."
-          />
-          <ImageCard
-            imageSrc="/media/one.jpg"
-            heading="Aerial Glacier View"
-            description="A breathtaking view of the Himalayas covered in glaciers."
-          />
-          <ImageCard
-            imageSrc="/media/two.jpg"
-            heading="Close-up of Glacial Ice"
-            description="Detailed structure of compact ice layers in a glacier."
-          />
-        </div>
+        {blogs.length === 0 ? (
+          <p className="text-center text-gray-500">No blogs available yet.</p>
+        ) : (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogs.map((blog) =>
+              blog.mediaType === "video" ? (
+                <VideoCard
+                  key={blog._id}
+                  videoSrc={blog.mediaUrl}
+                  heading={blog.title}
+                  description={blog.description}
+                />
+              ) : (
+                <ImageCard
+                  key={blog._id}
+                  imageSrc={blog.mediaUrl}
+                  heading={blog.title}
+                  description={blog.description}
+                />
+              )
+            )}
+          </div>
+        )}
       </section>
+
       {/* Glacier News Section */}
-      <NewsFeed/>
+      <NewsFeed />
       <Footer />
     </main>
   );
