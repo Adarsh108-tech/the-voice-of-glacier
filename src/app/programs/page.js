@@ -142,10 +142,10 @@ export default function FlagshipPrograms() {
           src="/glacier-hero.mp4"
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4 text-white">
-          <h1 className="text-lg md:text-6xl font-nohemi mb-4">
-            FLAGSHIP PROGRAMS AND EFFORTS
+          <h1 className="text-lg md:text-6xl font-cabin mb-4">
+            Flagship Programs And Efforts
           </h1>
-          <p className="text-xs md:text-2xl max-w-2xl font-cabin">
+          <p className="text-xs md:text-2xl max-w-2xl font-nohemi">
             &quot;Where glaciers speak, communities rise, and the world listens.&quot;
           </p>
           <div className="mt-6 flex gap-4"></div>

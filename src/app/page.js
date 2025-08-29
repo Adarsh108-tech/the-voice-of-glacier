@@ -396,7 +396,7 @@ useEffect(() => {
           <h3 className="text-2xl font-bold text-white">Vision</h3>
         </div>
         <p className=" text-white/90 leading-relaxed">
-          A world where glaciers are protected as sacred lifelines — through <b>collective memory, community action, and creative expression</b> — for climate justice and intergenerational resilience.
+          To spark a global movement that unites science, storytelling, and community action to protect glaciers and reimagine humanity&#39;s bond with the cryosphere.
         </p>
       </motion.div>
 
