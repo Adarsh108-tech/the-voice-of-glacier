@@ -9,7 +9,7 @@ export default function NewsFeed() {
   useEffect(() => {
     async function fetchNews() {
       try {
-        const res = await fetch("https://glacier-server.onrender.com/news");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/news`);
         const data = await res.json();
         setNews(data.articles || data); // depends on your API shape
       } catch (err) {
