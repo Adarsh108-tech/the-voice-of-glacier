@@ -11,7 +11,6 @@ import {
   FaBullhorn,
   FaPenFancy,
   FaCogs,
-  FaEnvelope,
   FaExternalLinkAlt,
 } from "react-icons/fa"
 import Navbar from "@/components/navbar"
