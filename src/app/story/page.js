@@ -58,7 +58,7 @@ export default function AnuraagStoryPage() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="/AnuragMaloo.mp4" type="video/mp4" />
+          <source src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/AnuragMaloo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -112,7 +112,7 @@ export default function AnuraagStoryPage() {
         </h2>
         <div className="w-full max-w-sm aspect-[9/16] shadow-xl rounded-lg overflow-hidden">
           <video
-            src="/story/amStory.mp4"
+            src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main//story/amStory.mp4"
             controls
             className="w-full h-full object-cover"
             playsInline
