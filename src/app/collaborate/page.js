@@ -151,7 +151,7 @@ export default function CollaboratePage() {
                 )
               }
             >
-              Contact Us to Collaborate
+              Collaborate with us
             </motion.button>
           </div>
         </section>

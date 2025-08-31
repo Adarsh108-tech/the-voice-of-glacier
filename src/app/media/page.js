@@ -40,7 +40,7 @@ export default function MediaPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-[50vh] w-full overflow-hidden">
         <video
           autoPlay
           loop
@@ -51,7 +51,7 @@ export default function MediaPage() {
         />
         <div className="absolute inset-0 bg-glacier-dark bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-6">
           <h1 className="text-4xl sm:text-5xl font-nohemi mb-6">
-            Updates about Glacier
+            Save glaciers, save our future.
           </h1>
         </div>
       </section>
@@ -61,9 +61,6 @@ export default function MediaPage() {
         ref={contentRef}
         className="py-20 px-6 md:px-20 bg-glacier-light"
       >
-        <h2 className="text-3xl sm:text-4xl font-nohemi mb-10 text-glacier-primary text-center">
-          Our Content
-        </h2>
 
         {blogs.length === 0 ? (
           <p className="text-center text-gray-500">No blogs available yet.</p>
