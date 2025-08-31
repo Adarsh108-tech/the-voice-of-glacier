@@ -13,7 +13,7 @@ export default function MediaPage() {
   const newsRef = useRef(null);
 
   const [blogs, setBlogs] = useState([]);
-  const backendURL = "https://glacier-server.onrender.com"; // Replace with your backend URL
+  const backendURL = "https://glacier-server.onrender.com"; 
 
   const scrollToSection = (ref) => {
     if (ref.current) {
