@@ -175,7 +175,7 @@ export default function StrategyPage() {
       {/* Hero Banner */}
       <div id="strategy-hero" className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
         <img
-          src="/img1.jpg"
+          src="/img1.webp"
           alt="Strategy Banner"
           className="w-full h-full object-cover"
         />
@@ -258,7 +258,7 @@ export default function StrategyPage() {
 
       
       {/* Parallax Section 3: Strategic Context Background */}
-      <ParallaxBackground imageUrl="/img3.jpg">
+      <ParallaxBackground imageUrl="/img3.webp">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeader
             title="Strategic Context: Why 2025-2034 is Critical"
@@ -562,53 +562,6 @@ export default function StrategyPage() {
           </div>
         </div>
       </motion.section>
-
-
-
-      {/* 6. Roadmap */}
-      {/* <motion.section
-        id="strategic-roadmap"
-        className="w-full bg-glacier-light py-24"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <div className="w-[90%] max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-glacier-primary mb-12 text-center">
-            Strategic Roadmap (2025-2035)
-          </h2>
-
-          <div className="relative border-l-4 border-glacier-primary pl-6 ml-3">
-            {roadmap.map((step, index) => (
-              <div key={index} className="mb-10 relative">
-                <div className="absolute -left-[1.45rem] top-2.5 bg-glacier-primary w-4 h-4 rounded-full border-4 border-white z-10" />
-
-                <div className="bg-white p-6 rounded-xl shadow-md border border-glacier-soft transition hover:shadow-lg">
-                  <h3 className="text-xl font-semibold text-glacier-primary mb-2">
-                    {step.phase}
-                  </h3>
-                  <p className="text-sm text-glacier-dark leading-relaxed">{step.focus}</p>
-                </div>
-              </div>
-            ))}
-
-            <div className="relative">
-              <div className="absolute -left-[1.45rem] top-2.5 bg-glacier-accent w-4 h-4 rounded-full border-4 border-white z-10" />
-              <div className="bg-glacier-accent/10 border border-glacier-accent text-glacier-dark p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-semibold text-glacier-accent mb-2">
-                  2030-2035 Goal
-                </h3>
-                <ul className="list-disc pl-5 text-sm leading-relaxed">
-                  {longTermGoal.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.section> */}
 
       <Footer/>
     </div>

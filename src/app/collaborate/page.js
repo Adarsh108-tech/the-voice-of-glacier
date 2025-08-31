@@ -34,7 +34,7 @@ export default function CollaboratePage() {
       {/* Hero Banner */}
       <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
         <img
-          src="/img1.jpg" // Ensure this image path is correct and the image exists
+          src="/img1.webp" // Ensure this image path is correct and the image exists
           alt="Glacier landscape"
           className="w-full h-full object-cover"
         />

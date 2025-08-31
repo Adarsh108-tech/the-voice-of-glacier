@@ -13,7 +13,7 @@ const effortsData = [
     id: "decade-of-ocean-science",
     title:
       "United Nations Decade of Ocean Science for Sustainable Development (2021-2030)",
-    image: "/efforts/unitedNationsDecade.png",
+    image: "/efforts/unitedNationsDecade.webp",
     alt: "UN Decade of Ocean Science",
     content: [
       "The United Nations has proclaimed the years 2021 to 2030 as the Decade of Ocean Science for Sustainable Development, a groundbreaking global initiative aimed at transforming ocean science and policy to support a healthier, more resilient, and sustainable ocean. This initiative recognizes the urgent need to reverse the decline in ocean health and mobilize science and innovation in service of sustainable development.",
@@ -25,7 +25,7 @@ const effortsData = [
   {
     id: "year-of-glacier",
     title: "2025: International Year of Glaciers' Preservation",
-    image: "/efforts/YearOfGlacier.png",
+    image: "/efforts/YearOfGlacier.webp",
     alt: "International Year of Glaciers' Preservation",
     content: [
       "In recognition of the urgent need to protect our planet&rsquo;s ice reserves, the United Nations has declared 2025 as the International Year of Glaciers&rsquo; Preservation. Glaciers are rapidly disappearing due to rising global temperatures, threatening freshwater sources, sea level stability, and entire ecosystems. This year-long global campaign seeks to raise awareness, mobilize action, and inspire scientific and community-led efforts toward glacier preservation.",
@@ -37,7 +37,7 @@ const effortsData = [
   {
     id: "decade-of-cryosphere",
     title: "UN Decade of Action for Cryospheric Sciences (2025-2034)",
-    image: "/efforts/UNdecade.png",
+    image: "/efforts/UNdecade.webp",
     alt: "UN Decade of Action for Cryospheric Sciences",
     content: [
       "The United Nations has designated 2025 to 2034 as the Decade of Action for Cryospheric Sciences&mdash;a pivotal global initiative to accelerate scientific understanding of Earth&rsquo;s frozen realms. This decade highlights the critical role glaciers, snow, permafrost, and polar ice play in regulating global climate, freshwater availability, sea-level rise, and biodiversity.",
@@ -49,7 +49,7 @@ const effortsData = [
   {
     id: "international-polar-year",
     title: "The International Polar Year: A Global Cryosphere Initiative",
-    image: "/efforts/InternationalPolarYear.png",
+    image: "/efforts/InternationalPolarYear.webp",
     alt: "International Polar Year",
     content: [
       "The International Polar Year (IPY) represents a historic, collaborative scientific effort to study Earth&rsquo;s polar regions&mdash;the Arctic and Antarctic&mdash;and their vital role in the planet&rsquo;s climate system. Organized in multiple editions, the most recent IPY spanned from 2007 to 2009 and brought together over 60 nations, thousands of researchers, and indigenous communities to observe, document, and understand the profound transformations occurring at the poles.",
@@ -172,25 +172,25 @@ export default function FlagshipPrograms() {
           targetId: "sdg-section", // 🔹 new
         },
         {
-          src: "/efforts/unitedNationsDecade.png",
+          src: "/efforts/unitedNationsDecade.webp",
           alt: "Decade of Ocean Science",
           label: "Decade of Ocean Science",
           targetId: "decade-of-ocean-science",
         },
         {
-          src: "/efforts/YearOfGlacier.png",
+          src: "/efforts/YearOfGlacier.webp",
           alt: "International Year of Glaciers' Preservation",
           label: "International Year of Glaciers Preservation",
           targetId: "year-of-glacier",
         },
         {
-          src: "/efforts/UNdecade.png",
+          src: "/efforts/UNdecade.webp",
           alt: "Decade of Action for Cryospheric Sciences",
           label: "Decade of Action for Cryospheric Sciences",
           targetId: "decade-of-cryosphere",
         },
         {
-          src: "/efforts/InternationalPolarYear.png",
+          src: "/efforts/InternationalPolarYear.webp",
           alt: "International Polar Year",
           label: "International Polar Year",
           targetId: "international-polar-year",
@@ -252,7 +252,7 @@ export default function FlagshipPrograms() {
 
           <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/img1.jpg"
+              src="/img1.webp"
               alt="Flagship Programs"
               className="w-full h-full object-cover"
             />

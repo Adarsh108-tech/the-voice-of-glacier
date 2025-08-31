@@ -31,7 +31,7 @@ export default function HomePage() {
   {
     title: "A Cryosphere Justice Framework",
     desc: "Glaciers legally and culturally protected in 10+ countries.",
-    image: "/img3.jpg",
+    image: "/img3.webp",
   },
   {
     title: "Cryosphere Pedagogy & Education",
@@ -252,7 +252,7 @@ useEffect(() => {
 
 
  {/* The Gaps We&#39;re Addressing */}
-      <ParallaxBackground imageUrl="/img1.jpg">
+      <ParallaxBackground imageUrl="/img1.webp">
         <div id="the-gaps" className="max-w-6xl mx-auto">
           <SectionHeader
             title="The Gaps We&#39;re Addressing"
@@ -374,7 +374,7 @@ useEffect(() => {
       </section>
 
       {/* Parallax Section 2: Vision & Mission Background */}
-      <ParallaxBackground imageUrl="/img2.jpg">
+      <ParallaxBackground imageUrl="/img2.webp">
   <div className="max-w-6xl mx-auto" id="vision">
     <SectionHeader
       title="Our Vision & Mission"
@@ -562,7 +562,7 @@ useEffect(() => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
               <img
-                src="/hero-image.jpg"
+                src="/hero-image.webp"
                 alt="Anurag Maloo"
                 className="w-full h-full object-cover"
               />

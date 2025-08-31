@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Right: Logo */}
         <div className="flex justify-center md:justify-end">
           <Image
-            src="/comapny-dark-logo.png"
+            src="/comapny-dark-logo.webp"
             alt="The Voice of Glaciers Logo"
             width={160}
             height={60}

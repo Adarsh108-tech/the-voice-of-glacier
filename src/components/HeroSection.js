@@ -33,7 +33,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/comapny-hero-logo.png"
+            src="/comapny-hero-logo.webp"
             alt="TVGF Logo"
             width={256}
             height={256}
