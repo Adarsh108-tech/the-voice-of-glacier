@@ -318,19 +318,7 @@ export default function CollaboratePage() {
             </motion.p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <motion.a
-                href="mailto:thevoiceofglaciers@gmail.com"
-                className="inline-flex items-center gap-2 bg-glacier-dark text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:opacity-90 transition-colors duration-300"
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.6, delay: 0.15 }}
-                viewport={{ once: true }}
-                aria-label="Email The Voice of Glaciers Foundation"
-              >
-                <FaEnvelope aria-hidden="true" />
-                Email us
-              </motion.a>
+
 
               <motion.a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScxbQubbwUS2rdI3KRD9ZGbppWN5B6ZITGw7SmDHMG34c2CXw/viewform?usp=preview"
