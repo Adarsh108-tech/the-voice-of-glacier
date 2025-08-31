@@ -133,7 +133,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/comapny-dark-logo.webp"
+              src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/comapny-dark-logo.webp"
               alt="Company Logo"
               width={120}
               height={40}

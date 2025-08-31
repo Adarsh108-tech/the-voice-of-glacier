@@ -13,7 +13,7 @@ const effortsData = [
     id: "decade-of-ocean-science",
     title:
       "United Nations Decade of Ocean Science for Sustainable Development (2021-2030)",
-    image: "/efforts/unitedNationsDecade.webp",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/unitedNationsDecade.webp",
     alt: "UN Decade of Ocean Science",
     content: [
       "The United Nations has proclaimed the years 2021 to 2030 as the Decade of Ocean Science for Sustainable Development, a groundbreaking global initiative aimed at transforming ocean science and policy to support a healthier, more resilient, and sustainable ocean. This initiative recognizes the urgent need to reverse the decline in ocean health and mobilize science and innovation in service of sustainable development.",
@@ -25,7 +25,7 @@ const effortsData = [
   {
     id: "year-of-glacier",
     title: "2025: International Year of Glaciers' Preservation",
-    image: "/efforts/YearOfGlacier.webp",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/YearOfGlacier.webp",
     alt: "International Year of Glaciers' Preservation",
     content: [
       "In recognition of the urgent need to protect our planet&rsquo;s ice reserves, the United Nations has declared 2025 as the International Year of Glaciers&rsquo; Preservation. Glaciers are rapidly disappearing due to rising global temperatures, threatening freshwater sources, sea level stability, and entire ecosystems. This year-long global campaign seeks to raise awareness, mobilize action, and inspire scientific and community-led efforts toward glacier preservation.",
@@ -37,7 +37,7 @@ const effortsData = [
   {
     id: "decade-of-cryosphere",
     title: "UN Decade of Action for Cryospheric Sciences (2025-2034)",
-    image: "/efforts/UNdecade.webp",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/UNdecade.webp",
     alt: "UN Decade of Action for Cryospheric Sciences",
     content: [
       "The United Nations has designated 2025 to 2034 as the Decade of Action for Cryospheric Sciences&mdash;a pivotal global initiative to accelerate scientific understanding of Earth&rsquo;s frozen realms. This decade highlights the critical role glaciers, snow, permafrost, and polar ice play in regulating global climate, freshwater availability, sea-level rise, and biodiversity.",
@@ -49,7 +49,7 @@ const effortsData = [
   {
     id: "international-polar-year",
     title: "The International Polar Year: A Global Cryosphere Initiative",
-    image: "/efforts/InternationalPolarYear.webp",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/InternationalPolarYear.webp",
     alt: "International Polar Year",
     content: [
       "The International Polar Year (IPY) represents a historic, collaborative scientific effort to study Earth&rsquo;s polar regions&mdash;the Arctic and Antarctic&mdash;and their vital role in the planet&rsquo;s climate system. Organized in multiple editions, the most recent IPY spanned from 2007 to 2009 and brought together over 60 nations, thousands of researchers, and indigenous communities to observe, document, and understand the profound transformations occurring at the poles.",
@@ -65,49 +65,49 @@ const programs = [
     id: "glacierx-gatherings",
     title: "GlacierX Gatherings",
     date: "",
-    image: "/img1.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img1.webp",
   },
   {
     id: "glacierx-residencies-fellowships",
     title: "GlacierX Residencies & Fellowships",
     date: "",
-    image: "/img2.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img2.webp",
   },
   {
     id: "education-toolkits",
     title: "Education & Toolkits",
     date: "",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.webp",
   },
   {
     id: "cultural-campaigns",
     title: "Cultural Campaigns & Public Rituals",
     date: "",
-    image: "/img1.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img1.webp",
   },
   {
     id: "glacier-guardians",
     title: "Glacier Guardians Network",
     date: "",
-    image: "/img2.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img2.webp",
   },
   {
     id: "policy-dialogues",
     title: "Policy Dialogues & Global Forums",
     date: "",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.webp",
   },
   {
     id: "digital-tools",
     title: "Digital Tools & Technology Platforms",
     date: "",
-    image: "/img2.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img2.webp",
   },
   {
     id: "storytelling",
     title: "Storytelling & Digital Strategy",
     date: "",
-    image: "/img1.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img2.webp",
   },
 ];
 
@@ -134,7 +134,7 @@ export default function FlagshipPrograms() {
           loop
           muted
           className="absolute w-full h-full object-cover"
-          src="/glacier-hero.mp4"
+          src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacier-hero.mp4"
         />
         <div className="absolute inset-0 bg-glacier-dark/50 flex flex-col items-center justify-center text-center p-4 text-white">
           <h1 className="text-lg md:text-6xl font-cabin mb-4">
@@ -166,31 +166,31 @@ export default function FlagshipPrograms() {
     >
       {[
         {
-          src: "/efforts/susDevelopmentGoals.webp",
+          src: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/susDevelopmentGoals.webp",
           alt: "SDG decade of action. 2021-2030",
           label: "SDG decade of action. 2021-2030",
           targetId: "sdg-section", // 🔹 new
         },
         {
-          src: "/efforts/unitedNationsDecade.webp",
+          src: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/unitedNationsDecade.webp",
           alt: "Decade of Ocean Science",
           label: "Decade of Ocean Science",
           targetId: "decade-of-ocean-science",
         },
         {
-          src: "/efforts/YearOfGlacier.webp",
+          src: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/YearOfGlacier.webp",
           alt: "International Year of Glaciers' Preservation",
           label: "International Year of Glaciers Preservation",
           targetId: "year-of-glacier",
         },
         {
-          src: "/efforts/UNdecade.webp",
+          src: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/UNdecade.webp",
           alt: "Decade of Action for Cryospheric Sciences",
           label: "Decade of Action for Cryospheric Sciences",
           targetId: "decade-of-cryosphere",
         },
         {
-          src: "/efforts/InternationalPolarYear.webp",
+          src: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/efforts/InternationalPolarYear.webp",
           alt: "International Polar Year",
           label: "International Polar Year",
           targetId: "international-polar-year",
@@ -252,7 +252,7 @@ export default function FlagshipPrograms() {
 
           <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/img1.webp"
+              src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img1.webp"
               alt="Flagship Programs"
               className="w-full h-full object-cover"
             />

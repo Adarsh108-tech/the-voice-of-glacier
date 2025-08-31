@@ -47,7 +47,7 @@ export default function MediaPage() {
           muted
           playsInline
           className="absolute w-full h-full object-cover"
-          src="/AnuragMaloo.mp4"
+          src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/AnuragMaloo.mp4"
         />
         <div className="absolute inset-0 bg-glacier-dark bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-6">
           <h1 className="text-4xl sm:text-5xl font-nohemi mb-6">
@@ -63,7 +63,10 @@ export default function MediaPage() {
       >
 
         {blogs.length === 0 ? (
-          <p className="text-center text-gray-500">No blogs available yet.</p>
+          <div className="flex justify-center items-center py-20">
+            <p className="text-center text-gray-500">No blogs available yet.</p>
+            <div className="h-10 w-10 border-4 border-glacier-dark border-t-transparent rounded-full animate-spin"></div>
+          </div>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogs.map((blog) =>

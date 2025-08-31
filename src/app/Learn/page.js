@@ -12,8 +12,8 @@ const glacierDetails = [
     location: "Garhwal Himalayas, source of the Ganga River",
     retreat: "~1 km in the last 70 years (~15-20 meters/year)",
     concern: "Significant mass & length loss; freshwater source for millions.",
-    beforeImage: "/glacierData/gangotri-new.webp",
-    afterImage: "/glacierData/gangotri-old.webp",
+    beforeImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/gangotri-new.webp",
+    afterImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/gangotri-old.webp",
     beforeLabel: "1984",
     afterLabel: "2023",
   },
@@ -22,8 +22,8 @@ const glacierDetails = [
     location: "Eastern Karakoram Range",
     retreat: "~1,000 meters over 30 years",
     concern: "Military activity accelerates melt; climate sensitive.",
-    beforeImage: "/glacierData/siachen-old.webp",
-    afterImage: "/glacierData/siachen-new.webp",
+    beforeImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/siachen-old.webp",
+    afterImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/siachen-new.webp",
     beforeLabel: "1984",
     afterLabel: "2020",
   },
@@ -32,8 +32,8 @@ const glacierDetails = [
     location: "Kumaon region",
     retreat: "~135 meters from 1958 to 2020 (~2 meters/year recently)",
     concern: "Moraine shift observed; high scientific attention.",
-    beforeImage: "/glacierData/Pindari-old.webp",
-    afterImage: "/glacierData/Pindari-new.webp",
+    beforeImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/Pindari-old.webp",
+    afterImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/Pindari-new.webp",
     beforeLabel: "1984",
     afterLabel: "2020",
   },
@@ -42,8 +42,8 @@ const glacierDetails = [
     location: "Near Kanchenjunga, Eastern Himalayas",
     retreat: "~27% area loss in recent decades",
     concern: "Vital for Teesta River; rapid satellite-observed retreat.",
-    beforeImage: "/glacierData/Zemu-old.webp",
-    afterImage: "/glacierData/Zemu-new.webp",
+    beforeImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/Zemu-old.webp",
+    afterImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/Zemu-new.webp",
     beforeLabel: "1984",
     afterLabel: "2020",
   },
@@ -52,8 +52,8 @@ const glacierDetails = [
     location: "Bhagirathi Valley",
     retreat: "~20 meters/year",
     concern: "Volume loss confirmed by Wadia Institute studies.",
-    beforeImage: "/glacierData/DokrainGlacier-old.webp",
-    afterImage: "/glacierData/DokrianiGlacier-new.webp",
+    beforeImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/DokrainGlacier-old.webp",
+    afterImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/DokrianiGlacier-new.webp",
     beforeLabel: "1984",
     afterLabel: "2020",
   },
@@ -62,8 +62,8 @@ const glacierDetails = [
     location: "Lahaul-Spiti region",
     retreat: "~15-20 meters/year",
     concern: "One of India's benchmark glaciers with detailed data.",
-    beforeImage: "/glacierData/chotta-old.webp",
-    afterImage: "/glacierData/chotta-new.webp",
+    beforeImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/chotta-old.webp",
+    afterImage: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacierData/chotta-new.webp",
     beforeLabel: "1984",
     afterLabel: "2020",
   },
@@ -82,7 +82,7 @@ export default function LearnPage() {
           muted
           playsInline
           className="absolute w-full h-full object-cover"
-          src="/AnuragMaloo.mp4"
+          src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/AnuragMaloo.mp4"
         />
         <div className="absolute inset-0 bg-glacier-dark bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-6">
           <h1 className="text-4xl sm:text-5xl font-nohemi mb-4">
@@ -163,27 +163,27 @@ export default function LearnPage() {
             {
               title: "NASA Climate Change",
               link: "https://climate.nasa.gov/",
-              image: "/explore/nasa.webp",
+              image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/explore/nasa.webp",
             },
             {
               title: "Learn about Cryosphere",
               link: "https://wmo.int/topics/cryosphere",
-              image: "/explore/cryosphere.webp",
+              image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/explore/cryosphere.webp",
             },
             {
               title: "International Year of Glaciers' Preservation 2025",
               link: "https://wmo.int/resources/campaigns/launch-of-website-international-year-of-glaciers-preservation-2025",
-              image: "/explore/YearOfGlacier.webp",
+              image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/explore/YearOfGlacier.webp",
             },
             {
               title: "National Snow and Ice Data Center",
               link: "https://nsidc.org/learn/parts-cryosphere/glaciers",
-              image: "/explore/NationalSnowIceDomain.webp",
+              image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/explore/NationalSnowIceDomain.webp",
             },
             {
               title: "List of Glaciers in India",
               link: "https://en.wikipedia.org/wiki/List_of_glaciers_in_India",
-              image: "/explore/ListOfGlacier.webp",
+              image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/explore/ListOfGlacier.webp",
             },
           ].map((item, i) => (
             <a

@@ -36,7 +36,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/substack-icon.webp"
+                src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/substack-icon.webp"
                 alt="Substack"
                 width={20}
                 height={20}
@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Right: Logo */}
         <div className="flex justify-center md:justify-end">
           <Image
-            src="/comapny-dark-logo.webp"
+            src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/comapny-dark-logo.webp"
             alt="The Voice of Glaciers Logo"
             width={160}
             height={60}

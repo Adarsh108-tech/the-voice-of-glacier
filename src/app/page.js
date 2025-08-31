@@ -31,32 +31,32 @@ export default function HomePage() {
   {
     title: "A Cryosphere Justice Framework",
     desc: "Glaciers legally and culturally protected in 10+ countries.",
-    image: "/img3.webp",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.webp",
   },
   {
     title: "Cryosphere Pedagogy & Education",
     desc: "Embedded in school systems worldwide.",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.jpg",
   },
   {
     title: "Real-time Glacier Monitoring",
     desc: "Publicly accessible data for all.",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.jpg",
   },
   {
     title: "Global Glacier Guardians Network",
     desc: "Mobilizing 100,000+ individuals across continents.",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.jpg",
   },
   {
     title: "Glaciers Resacralized",
     desc: "Through art, ritual, memory, and community initiatives.",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.jpg",
   },
   {
     title: "Humanity & Glaciers",
     desc: "A relationship built on reverence and reciprocity.",
-    image: "/img3.jpg",
+    image: "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.jpg",
   },
 ];
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,13 +64,13 @@ export default function HomePage() {
   const stats = [
   {
     icon: <FaTemperatureHigh className="text-2xl text-glacier-primary" />,
-    label: "3× Faster Warming",
+    label: "3x Faster Warming",
     desc: "The Cryosphere is warming three times faster than the global average, signaling an urgent climate crisis.",
   },
   {
     icon: <FaWater className="text-2xl text-glacier-primary" />,
     label: "50% Melt by 2100",
-    desc: "Half of the world’s glaciers could disappear by 2100, threatening ecosystems, water supplies, and sea levels.",
+    desc: "Half of the world's glaciers could disappear by 2100, threatening ecosystems, water supplies, and sea levels.",
   },
   {
     icon: <FaMountain className="text-2xl text-glacier-primary" />,
@@ -252,7 +252,7 @@ useEffect(() => {
 
 
  {/* The Gaps We&#39;re Addressing */}
-      <ParallaxBackground imageUrl="/img1.webp">
+      <ParallaxBackground imageUrl="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img1.webp">
         <div id="the-gaps" className="max-w-6xl mx-auto">
           <SectionHeader
             title="The Gaps We&#39;re Addressing"
@@ -374,7 +374,7 @@ useEffect(() => {
       </section>
 
       {/* Parallax Section 2: Vision & Mission Background */}
-      <ParallaxBackground imageUrl="/img2.webp">
+      <ParallaxBackground imageUrl="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img2.webp">
   <div className="max-w-6xl mx-auto" id="vision">
     <SectionHeader
       title="Our Vision & Mission"
@@ -437,7 +437,7 @@ useEffect(() => {
     {[...Array(6)].map((_, i) => (
       <img
         key={i}
-        src="/snow.svg"
+        src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/snow.svg"
         alt="Snowflake"
         className={`w-10 h-10 opacity-20 animate-float-slow-${i % 3}`}
         style={{
@@ -562,7 +562,7 @@ useEffect(() => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-glacier-primary shadow-xl transition-transform duration-300 mb-4">
               <img
-                src="/hero-image.webp"
+                src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/hero-image.webp"
                 alt="Anurag Maloo"
                 className="w-full h-full object-cover"
               />
@@ -593,7 +593,7 @@ useEffect(() => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-64 h-64 md:w-full md:h-full rounded-xl overflow-hidden border-4 border-glacier-light shadow-xl transition-transform duration-300 mb-4">
               <img
-                src="/story/anurag-snow.png"
+                src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/story/anurag-snow.png"
                 alt="Anurag in Snow"
                 className="w-full h-full object-cover"
               />

@@ -24,9 +24,10 @@ export default function NewsFeed() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <p className="text-gray-600 text-lg animate-pulse">Loading news...</p>
-      </div>
+        <div className="flex gap-5 justify-center items-center py-20">
+            <p className="text-center text-gray-500">Loading News.</p>
+            <div className="h-10 w-10 border-4 border-glacier-dark border-t-transparent rounded-full animate-spin"></div>
+        </div>
     );
   }
 

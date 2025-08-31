@@ -20,7 +20,7 @@ export default function HeroSection() {
         muted
         playsInline
         className="absolute w-full h-full object-cover"
-        src="/glacier-hero.mp4"
+        src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/glacier-hero.mp4"
       />
 
       {/* Overlay Content */}
@@ -33,7 +33,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/comapny-hero-logo.webp"
+            src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/comapny-hero-logo.webp"
             alt="TVGF Logo"
             width={256}
             height={256}

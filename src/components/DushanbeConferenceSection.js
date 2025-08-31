@@ -38,7 +38,7 @@ export default function DushanbeConferenceSection() {
             </h3>
             <div className="w-full h-[600px] border-2 border-glacier-primary rounded-xl overflow-hidden shadow-lg">
               <iframe
-                src="/dushanbe/Dushanbe-Glaciers-Declaration-High-Level-International-Conference_adopted.pdf"
+                src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/dushanbe/Dushanbe-Glaciers-Declaration-High-Level-International-Conference_adopted.pdf"
                 className="w-full h-full"
                 title="Dushanbe Declaration PDF"
               />

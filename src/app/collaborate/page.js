@@ -44,7 +44,7 @@ export default function CollaboratePage() {
       {/* Hero Banner */}
       <div className="relative w-full h-[300px] md:h-[420px] overflow-hidden">
         <img
-          src="/glacier-landscape-at-sunrise.png"
+          src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/sun-glacier.webp"
           alt="Sunrise over a glacier landscape"
           className="w-full h-full object-cover object-center"
           fetchPriority="high"
@@ -167,7 +167,7 @@ export default function CollaboratePage() {
               </div>
               <figure className="rounded-2xl overflow-hidden shadow-md border border-glacier-border aspect-[16/9] md:aspect-[4/3]">
                 <img
-                  src="/glacier-expedition-team-collaboration.jpg"
+                  src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/speaker.webp"
                   alt="A field team collaborating during a glacier expedition"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -303,7 +303,7 @@ export default function CollaboratePage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Let’s Climb Together
+              Let&#39;s Climb Together
             </motion.h2>
             <motion.p
               className="text-lg text-glacier-foreground mb-10 leading-relaxed"

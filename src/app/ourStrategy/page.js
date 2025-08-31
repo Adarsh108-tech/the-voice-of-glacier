@@ -175,7 +175,7 @@ export default function StrategyPage() {
       {/* Hero Banner */}
       <div id="strategy-hero" className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
         <img
-          src="/img1.webp"
+          src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img1.webp"
           alt="Strategy Banner"
           className="w-full h-full object-cover"
         />
@@ -258,7 +258,7 @@ export default function StrategyPage() {
 
       
       {/* Parallax Section 3: Strategic Context Background */}
-      <ParallaxBackground imageUrl="/img3.webp">
+      <ParallaxBackground imageUrl="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/img3.webp">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeader
             title="Strategic Context: Why 2025-2034 is Critical"
@@ -337,10 +337,10 @@ export default function StrategyPage() {
             {strategyGaps.map((gap, index) => {
             // Map index to image filenames
             const icons = [
-              "/strategicGaps/book-open-svgrepo-com.svg",
-              "/strategicGaps/file-svgrepo-com.svg",
-              "/strategicGaps/global-leader-happy-strong-power-svgrepo-com.svg",
-              "/strategicGaps/globe-2-svgrepo-com.svg",
+              "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/strategicGaps/book-open-svgrepo-com.svg",
+              "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/strategicGaps/file-svgrepo-com.svg",
+              "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/strategicGaps/global-leader-happy-strong-power-svgrepo-com.svg",
+              "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/strategicGaps/globe-2-svgrepo-com.svg",
             ];
 
             return (
@@ -406,7 +406,7 @@ export default function StrategyPage() {
             {/* Text and Icon */}
             <div className="flex items-center gap-6 bg-white shadow-md border border-glacier-dark/20 rounded-xl p-6 w-full md:w-auto max-w-xl">
               <img
-                src="/dual-force/goverment-building-svgrepo-com.svg"
+                src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/dual-force/goverment-building-svgrepo-com.svg"
                 alt="Government Icon"
                 className="w-12 h-12 flex-shrink-0"
               />
@@ -422,7 +422,7 @@ export default function StrategyPage() {
             {/* Text and Icon */}
             <div className="flex items-center gap-6 bg-white shadow-md border border-glacier-dark/20 rounded-xl p-6 w-full md:w-auto max-w-xl">
               <img
-                src="/dual-force/flag.svg"
+                src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/dual-force/flag.svg"
                 alt="Flag Icon"
                 className="w-12 h-12 flex-shrink-0"
               />

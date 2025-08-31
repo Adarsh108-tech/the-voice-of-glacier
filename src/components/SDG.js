@@ -36,7 +36,7 @@ export default function SDGGrid() {
             key={goal.id}
             className={`relative group w-full h-40 sm:h-48 md:h-52 bg-center bg-cover bg-no-repeat cursor-pointer`}
             style={{
-              backgroundImage: `url(/sdgs/${goal.id}-bg.webp)`,
+              backgroundImage: `url(https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/sdgs/${goal.id}-bg.webp)`,
             }}
           >
             {/* Hover Overlay with dynamic color */}
