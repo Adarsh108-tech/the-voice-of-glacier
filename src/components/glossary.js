@@ -94,7 +94,6 @@ const glossaryData= [
   { term: "Zone of Accumulation", scientificDefinition: "The region where snowfall adds to the glacier.", simpleDefinition: "Where snow keeps adding ice to the glacier." }
 ];
 
-
 export default function GlacierGlossary() {
   const [search, setSearch] = useState("");
   const [activeLetter, setActiveLetter] = useState("");
@@ -123,8 +122,13 @@ export default function GlacierGlossary() {
   };
 
   return (
-    <section id="glossary" className="py-20 px-4 md:px-20 bg-glacier-soft min-h-screen font-cabin">
-      <h2 className="text-4xl font-semibold mb-6 text-glacier-dark font-nohemi">Glacier Glossary</h2>
+    <section
+      id="glossary"
+      className="py-20 px-4 md:px-20 bg-glacier-soft min-h-screen font-cabin"
+    >
+      <h2 className="text-4xl font-semibold mb-6 text-glacier-dark font-nohemi">
+        Glacier Glossary
+      </h2>
 
       {/* Search */}
       <div className="mb-6 max-w-xl">
@@ -143,7 +147,9 @@ export default function GlacierGlossary() {
             key={letter}
             variant={activeLetter === letter ? "default" : "outline"}
             size="sm"
-            onClick={() => setActiveLetter(letter === activeLetter ? "" : letter)}
+            onClick={() =>
+              setActiveLetter(letter === activeLetter ? "" : letter)
+            }
             className="w-9 h-9 p-0 text-base font-semibold"
           >
             {letter}
@@ -152,34 +158,48 @@ export default function GlacierGlossary() {
       </div>
 
       {/* Glossary List */}
-      {Object.keys(grouped).sort().map((letter) => (
-        <div key={letter} className="mb-10">
-          <h3 className="text-2xl font-bold mb-4 text-glacier-primary">Letter: {letter}</h3>
-          <div className="space-y-4">
-            {grouped[letter].map(({ term, scientificDefinition , simpleDefinition }) => (
-              <div
-                key={term}
-                className="bg-glacier-light rounded-xl shadow-md p-4 flex flex-col transition-all duration-300 border border-glacier-light"
-              >
-                <button
-                  className="flex justify-between items-center text-left text-lg font-medium text-glacier-dark focus:outline-none"
-                  onClick={() => toggleExpand(term)}
-                >
-                  {term}
-                  {expandedTerms[term] ? (
-                    <ChevronUp className="w-5 h-5" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5" />
-                  )}
-                </button>
-                {expandedTerms[term] && (
-                  <p className="mt-2 text-xl text-glacier-dark "><br/> <b>Scientific Definition : </b> {scientificDefinition} <br/><br/> <b>Simple Definition : </b> {simpleDefinition} <br/></p>
-                )}
-              </div>
-            ))}
+      {Object.keys(grouped)
+        .sort()
+        .map((letter) => (
+          <div key={letter} className="mb-10">
+            <h3 className="text-2xl font-bold mb-4 text-glacier-primary">
+              Letter: {letter}
+            </h3>
+            <div className="space-y-4">
+              {grouped[letter].map(
+                ({ term, scientificDefinition, simpleDefinition }) => (
+                  <div
+                    key={term}
+                    className="bg-glacier-light rounded-xl shadow-md p-4 flex flex-col transition-all duration-300 border border-glacier-light"
+                  >
+                    <button
+                      className="flex justify-between items-center text-left text-sm md:text-xl text-glacier-dark focus:outline-none"
+                      onClick={() => toggleExpand(term)}
+                    >
+                      {term}
+                      {expandedTerms[term] ? (
+                        <ChevronUp className="w-5 h-5" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5" />
+                      )}
+                    </button>
+
+                    {expandedTerms[term] && (
+                      <div className="mt-3 space-y-3">
+                        <p className="text-xs md:text-base text-glacier-dark leading-relaxed">
+                          <b>Scientific Definition:</b> {scientificDefinition}
+                        </p>
+                        <p className="text-xs md:text-base text-gray-700 leading-relaxed">
+                          <b>Simple Definition:</b> {simpleDefinition}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
 
       {/* No Results */}
       {filtered.length === 0 && (

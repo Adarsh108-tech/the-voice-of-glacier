@@ -25,173 +25,7 @@ const SubTitle = ({ title }) => (
 );
 
 export default function CollaboratePage() {
-  const frameworkSections = [
-    {
-      title: "1. WHO — Stakeholder Groups to Engage",
-      content: (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 text-lg leading-relaxed">
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Knowledge Holders:</strong> Glaciologists, Indigenous elders
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Creative Translators:</strong> Artists, designers, writers
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Community Connectors:</strong> Youth leaders, climbers, teachers
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Spiritual Guides:</strong> Monks, healers, ritualists
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Changemakers:</strong> Entrepreneurs, tech innovators
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Policy Influencers:</strong> Journalists, advisors, think tanks
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "2. WHAT — What They Bring to the Table",
-      content: (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 text-lg leading-relaxed">
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Expertise & Knowledge:</strong> Climate science, ancestral wisdom
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Creativity & Expression:</strong> Music, murals, documentaries
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Local & Cultural Insight:</strong> Traditional practices
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Platforms & Reach:</strong> Networks, classrooms, social media
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Tools & Tech:</strong> Sensors, AI, open data platforms
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Healing & Meaning:</strong> Ceremonies, rituals, sacred stories
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "3. WHY — What They Gain",
-      content: (
-        <ul className="list-none space-y-4 text-lg leading-relaxed">
-          <li className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            Be part of a global, purpose-driven movement with tangible impact.
-          </li>
-          <li className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            Gain visibility through powerful storytelling, film, and exhibitions.
-          </li>
-          <li className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            Discover unique interdisciplinary collaboration opportunities.
-          </li>
-          <li className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            Access invaluable fieldwork opportunities in pristine glacier regions.
-          </li>
-          <li className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            Experience spiritual nourishment, purpose, and genuine human connection.
-          </li>
-          <li className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            Co-author significant outputs that actively shape global policy.
-          </li>
-        </ul>
-      ),
-    },
-    {
-      title: "4. WHEN — Volunteer Opportunities",
-      content: (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 text-lg leading-relaxed">
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Educational Reels (Glaciers):</strong> Online, ongoing contributions.
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>GlacierX Gatherings:</strong> Immersive 3-day seasonal events.
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Residencies:</strong> Focused 2-4 week immersive programs.
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Local Action Labs:</strong> Monthly/Quarterly community-led initiatives.
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Virtual Story Circles:</strong> Monthly online sharing sessions.
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Annual Rituals/Festivals:</strong> Celebrating during Global Glacier Week.
-          </p>
-          <p className="flex items-center">
-            <span className="text-glacier-primary mr-3 text-2xl">•</span>
-            <strong>Advocacy Drives:</strong> Targeted, issue-based campaigns.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "5. HOW — Step-by-Step Engagement Funnel",
-      content: (
-        <div className="space-y-6 text-lg leading-relaxed">
-          <div className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl font-bold">1.</span>
-            <div>
-              <strong>Inspiration:</strong> We captivate hearts and minds by sharing emotional stories through compelling reels, insightful talks, and widespread media.
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl font-bold">2.</span>
-            <div>
-              <strong>Invitation:</strong> We extend open calls for specific roles like &quot;Artists for Glaciers&quot; or &quot;Tech Innovators for Cryosphere,&quot; matching skills to needs.
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl font-bold">3.</span>
-            <div>
-              <strong>Immersion:</strong> Volunteers dive deep through hybrid glacier field visits, intensive residencies, and collaborative summits.
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl font-bold">4.</span>
-            <div>
-              <strong>Integration:</strong> Together, we co-create impactful outputs, ranging from digital content and powerful rituals to widespread campaigns.
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-glacier-primary mr-3 text-2xl font-bold">5.</span>
-            <div>
-              <strong>Impact Sharing:</strong> We ensure full credit, broad visibility, and continuous feedback loops, recognizing and amplifying every contribution.
-            </div>
-          </div>
-        </div>
-      ),
-    },
-  ];
+  
 
   return (
     <div className="bg-white text-glacier-dark min-h-screen">
@@ -212,42 +46,8 @@ export default function CollaboratePage() {
       </div>
 
       <main className="flex flex-col"> {/* Removed mt-0 and space-y-20 here */}
-        {/* Section: Introduction - placed immediately after banner, effectively removing extra top space */}
 
-        {/* Section: Volunteer Framework Main Header */}
-        <motion.section
-          className="w-full py-16 px-6" // This section just holds the main header for the framework
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="max-w-6xl mx-auto">
-            <SectionHeader
-              title="Volunteer Engagement Framework for TVGF"
-              description="Our structured approach ensures meaningful contributions and mutual growth for everyone involved in The Valley`s Glacier Future (TVGF)."
-            />
-          </div>
-        </motion.section>
 
-        {/* Individual Framework Sections (WHO, WHAT, WHY, WHEN, HOW) with alternating backgrounds */}
-        {frameworkSections.map((section, index) => (
-          <motion.section
-            key={index}
-            className={`w-full py-16 px-6 ${
-              index % 2 === 0 ? "bg-glacier-light" : "bg-white"
-            }`}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 * index }} // Stagger animations slightly
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <div className="max-w-6xl mx-auto">
-              <SubTitle title={section.title} />
-              {section.content}
-            </div>
-          </motion.section>
-        ))}
 
         {/* Section: Tiered Roles */}
         <motion.section
@@ -335,8 +135,8 @@ export default function CollaboratePage() {
               viewport={{ once: true }}
             >
               Whether you&#39;re a seasoned expert or just starting your journey,
-              there&#39;s a place for you in the **GlacierX movement**. Connect with us
-              to explore opportunities and become a part of something truly **monumental**.
+              there&#39;s a place for you in the <br/> <b>GlacierX movement</b>. Connect with us
+              to explore opportunities and become a part of something truly <b>monumental</b>.
             </motion.p>
             <motion.button
               className="bg-glacier-primary text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:bg-glacier-dark transition-colors duration-300 transform hover:scale-105"
@@ -344,6 +144,12 @@ export default function CollaboratePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLScxbQubbwUS2rdI3KRD9ZGbppWN5B6ZITGw7SmDHMG34c2CXw/viewform?usp=preview",
+                  "_blank" // opens in new tab
+                )
+              }
             >
               Contact Us to Collaborate
             </motion.button>

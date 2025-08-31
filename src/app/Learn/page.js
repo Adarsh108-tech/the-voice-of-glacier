@@ -116,16 +116,16 @@ export default function LearnPage() {
         className="py-20 px-6 md:px-20 bg-glacier-light text-glacier-dark font-cabin"
         id="introduction"
       >
-        <h2 className="text-4xl font-nohemi mb-8 text-glacier-primary">
+        <h2 className=" md:text-4xl text-3xl font-nohemi mb-8 text-glacier-primary">
           Introduction
         </h2>
 
-        <blockquote className="text-xl italic mb-8 text-center text-glacier-dark">
+        <blockquote className="md:text-xl text-md italic mb-8 text-center text-glacier-dark">
           &#8220;When the ice melts, it&#39;s not just water that disappears&mdash;it&#39;s
           memory, balance, and the future.&#8221;
         </blockquote>
 
-        <p className="mb-6 text-lg leading-relaxed">
+        <p className="mb-6 md:text-lg text-sm leading-relaxed">
           The <strong>cryosphere</strong> includes all components of the Earth
           System that are frozen&mdash;such as snow cover, glaciers, ice sheets,
           ice shelves, icebergs, sea ice, lake ice, river ice, permafrost, and
@@ -134,12 +134,12 @@ export default function LearnPage() {
           billions of people.
         </p>
 
-        <p className="mb-6 text-lg leading-relaxed">
+        <p className="mb-6 md:text-lg text-md leading-relaxed">
           According to the <strong>IPCC Special Report</strong>, the cryosphere
           is undergoing rapid and alarming changes:
         </p>
 
-        <ul className="list-disc list-inside mb-8 space-y-3 text-glacier-dark text-lg">
+        <ul className="list-disc list-inside mb-8 space-y-3 text-glacier-dark md:text-lg text-sm">
           <li>🌐 <strong>70%</strong> of Earth&#39;s freshwater is locked in snow and ice</li>
           <li>🧊 <strong>10%</strong> of Earth&#39;s land area is covered by glaciers or ice sheets</li>
           <li>🌊 Sea level rise (2006-2015) was <strong>2.5x faster</strong> than 1901-1990</li>

@@ -5,20 +5,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import DushanbeConferenceSection from "@/components/DushanbeConferenceSection";
 import SDGGrid from "@/components/SDG";
+import { HiArrowDown } from "react-icons/hi";
 
-const Button = ({ children, variant = "solid", className = "" }) => {
-  const base = "px-6 py-2 rounded-md font-medium transition duration-300";
-  const styles = {
-    solid: "bg-glacier-primary text-white hover:bg-glacier-dark",
-    outline:
-      "border border-glacier-primary text-glacier-primary hover:bg-glacier-primary hover:text-white",
-  };
-  return (
-    <button className={`${base} ${styles[variant]} ${className}`}>
-      {children}
-    </button>
-  );
-};
 
 const effortsData = [
   {
@@ -124,6 +112,13 @@ const programs = [
 ];
 
 export default function FlagshipPrograms() {
+    const handleScrollToConference = () => {
+    const section = document.getElementById("dushanbe-conference");
+    section?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <div className="bg-glacier-light text-glacier-dark min-h-screen">
       <Navbar />
@@ -141,7 +136,7 @@ export default function FlagshipPrograms() {
           className="absolute w-full h-full object-cover"
           src="/glacier-hero.mp4"
         />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4 text-white">
+        <div className="absolute inset-0 bg-glacier-dark/50 flex flex-col items-center justify-center text-center p-4 text-white">
           <h1 className="text-lg md:text-6xl font-cabin mb-4">
             Flagship Programs And Efforts
           </h1>
@@ -199,7 +194,7 @@ export default function FlagshipPrograms() {
           alt: "International Polar Year",
           label: "International Polar Year",
           targetId: "international-polar-year",
-        },
+        }
       ].map(({ src, alt, label, targetId }, idx) => (
         <div
           key={idx}
@@ -265,63 +260,73 @@ export default function FlagshipPrograms() {
         </div>
       </section>
 
-      <section id="sdg-section">
+      <section id="sdg-section" className="bg-white">
         <SDGGrid />
       </section>
 
+{/* Mapped Efforts Sections */}
+{effortsData.map((effort, index) => (
+  <section
+    key={effort.id}
+    id={effort.id}
+    className={`py-20 px-6 md:px-10 text-glacier-dark ${
+      index % 2 === 0 ? "bg-glacier-light" : "bg-white"
+    }`}
+  >
+    <div
+      className={`max-w-7xl mx-auto flex flex-col items-center gap-12 ${
+        effort.imageOnLeft ? "md:flex-row-reverse" : "md:flex-row"
+      }`}
+    >
+      {/* Image (first on mobile) */}
+      <motion.div
+        initial={{ opacity: 0, x: effort.imageOnLeft ? -50 : 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full md:w-[40%] rounded-xl overflow-hidden"
+      >
+        <img
+          src={effort.image}
+          alt={effort.alt}
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
 
-      {/* Mapped Efforts Sections */}
-      {effortsData.map((effort) => (
-        <section
-          key={effort.id}
-          id={effort.id}
-          className="py-20 px-6 md:px-10 bg-white text-glacier-dark"
-        >
-          <div
-            className={`max-w-7xl mx-auto flex flex-col items-center gap-12 ${
-              effort.imageOnLeft ? "md:flex-row-reverse" : "md:flex-row"
+      {/* Text Content */}
+      <motion.div
+        initial={{ opacity: 0, x: effort.imageOnLeft ? 50 : -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full md:w-[60%]"
+      >
+        <h2 className="text-lg md:text-4xl font-nohemi text-glacier-primary mb-6">
+          {effort.title}
+        </h2>
+        {effort.content.map((para, i) => (
+          <p
+            key={i}
+            className={`text-xs md:text-lg font-cabin leading-relaxed ${
+              i > 0 ? "mt-4" : ""
             }`}
-          >
-            {/* Image (first on mobile) */}
-            <motion.div
-              initial={{ opacity: 0, x: effort.imageOnLeft ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="w-full md:w-[40%] rounded-xl overflow-hidden"
-            >
-              <img
-                src={effort.image}
-                alt={effort.alt}
-                className="w-full h-auto object-contain"
-              />
-            </motion.div>
-
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: effort.imageOnLeft ? 50 : -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="w-full md:w-[60%]"
-            >
-              <h2 className="text-lg md:text-4xl font-nohemi text-glacier-primary mb-6">
-                {effort.title}
-              </h2>
-              {effort.content.map((para, i) => (
-                <p
-                  key={i}
-                  className={`text-xs md:text-lg font-cabin leading-relaxed ${
-                    i > 0 ? "mt-4" : ""
-                  }`}
-                  dangerouslySetInnerHTML={{ __html: para }}
-                />
-              ))}
-            </motion.div>
-          </div>
-        </section>
-      ))}
-      <DushanbeConferenceSection />
+            dangerouslySetInnerHTML={{ __html: para }}
+          />
+        ))}
+      </motion.div>
+    </div>
+  </section>
+))}
+      <section id="dushanbe-conference">
+        <DushanbeConferenceSection />
+      </section>
+      <button
+        onClick={handleScrollToConference}
+        className="fixed bottom-6 right-6 z-50 bg-glacier-primary hover:bg-glacier-dark text-white p-4 rounded-full shadow-lg transition-all flex gap-5 duration-300 text-sm md:text-base"
+      >
+        <span>Read the Dushanbe Declaration</span>
+        <HiArrowDown className="bg-glacier-dark rounded-full  text-lg md:text-xl" />
+      </button>
       <Footer />
     </div>
   );
