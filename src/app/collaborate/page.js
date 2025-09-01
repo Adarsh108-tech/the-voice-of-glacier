@@ -41,7 +41,7 @@ export default function CollaboratePage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <div className="relative w-full h-[300px] md:h-[420px] overflow-hidden">
+      <div className="relative w-full h-[600px] md:h-[420px] overflow-hidden">
         <img
           src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/sun-glacier.webp"
           alt="Sunrise over a glacier landscape"
@@ -51,14 +51,14 @@ export default function CollaboratePage() {
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-glacier-dark/70 to-glacier-primary/50 flex items-center">
-          <div className="px-6 md:px-16 max-w-7xl w-full mx-auto">
+          <div className="px-6 md:px-16 max-w-7xl w-full mx-auto md:pt-10">
             <motion.h1
-              className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg text-pretty"
+              className="text-2xl lg:text-5xl font-bold text-white drop-shadow-lg text-pretty"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              The Voice Of Glaciers
+              Be The Voice Of Glaciers Foundation
             </motion.h1>
             <motion.p
               className="mt-3 text-base md:text-xl text-white/90 max-w-2xl leading-relaxed"
@@ -66,8 +66,7 @@ export default function CollaboratePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Join researchers, storytellers, communities, and leaders working to protect glaciers and the people who
-              depend on them.
+              Join the multidisciplinary community of Glacier Guardians, as researchers, glaciologists, climate scientists, storytellers, artists, climbers, mountaineers, filmmakers, photographers, policymakers, journalists, media representatives, innovators, entrepreneurs, indigenous communities, and young leaders working to protect glaciers and the people who depend on them.
             </motion.p>
           </div>
         </div>
@@ -88,7 +87,7 @@ export default function CollaboratePage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="max-w-6xl mx-auto">
-            <SectionHeader title="Why Collaborate with TVGF?" Icon={FaUsers} />
+            <SectionHeader title="Why Collaborate with TVGF?" />
             <div className="grid md:grid-cols-3 gap-6 md:gap-10">
               {[
                 {
@@ -138,7 +137,7 @@ export default function CollaboratePage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="max-w-6xl mx-auto">
-            <SectionHeader title="Ways to Collaborate" Icon={FaLightbulb} />
+            <SectionHeader title="Ways to Collaborate" />
             <div className="grid gap-10 md:grid-cols-2 items-start">
               <div>
                 <ul className="space-y-6 text-lg text-glacier-foreground list-disc pl-5">
@@ -194,7 +193,6 @@ export default function CollaboratePage() {
             <SectionHeader
               title="Collaboration Pathways"
               description="Select the pathway that best describes how you want to collaborate. You can choose more than one."
-              Icon={FaMicroscope}
             />
             <div className="grid md:grid-cols-2 gap-6 md:gap-10">
               {[

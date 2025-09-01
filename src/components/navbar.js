@@ -121,114 +121,127 @@ export default function Navbar() {
       router.push(href);
     }
   };
-
-  return (
+ return (
     <nav
-      className={`fixed w-full z-50 transition-transform duration-300 font-cabin ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      } bg-transparent border-b border-white/20 shadow-sm`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
-          <Link href="/">
-            <Image
-              src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/comapny-dark-logo.webp"
-              alt="Company Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain rounded-lg"
-              priority
-            />
-          </Link>
+  className={`fixed w-full z-50 transition-transform duration-300 font-cabin ${
+    showNavbar ? "translate-y-0" : "-translate-y-full"
+  } backdrop-blur-sm border-b border-white/20 shadow-sm`}
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between h-16 items-center">
+      {/* Logo */}
+      <Link href="/" className="flex-shrink-0">
+        <Image
+          src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/comapny-dark-logo.webp"
+          alt="Company Logo"
+          width={140}
+          height={48}
+          className="h-8 sm:h-10 md:h-12 w-auto object-contain rounded-lg"
+          priority
+        />
+      </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8 items-center relative" ref={dropdownRef}>
-            {structuredLinks.map((link) => (
-              <div key={link.name} className="relative">
-                <button
-                  onClick={() =>
-                    setDesktopDropdown(desktopDropdown === link.name ? null : link.name)
-                  }
-                  className="flex items-center gap-1 text-white font-bold "
-                >
-                  {link.name}
-                  {link.sublinks?.length > 0 && <ChevronDown size={16} />}
-                </button>
-                {link.sublinks?.length > 0 && desktopDropdown === link.name && (
-                  <div className="absolute left-0 top-full mt-2 w-56 bg-white text-black rounded-md shadow-lg z-10">
-                    {link.sublinks.map((sublink) => (
-                      <a
-                        key={sublink.label}
-                        href={sublink.href}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setDesktopDropdown(null);
-                          handleSmoothScroll(sublink.href);
-                        }}
-                        className="block px-4 py-2 text-sm hover:bg-gray-100"
-                      >
-                        {sublink.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile Toggle */}
-          <div className="md:hidden">
+      {/* Desktop Nav */}
+      <div
+        className="hidden md:flex md:space-x-6 lg:space-x-10 items-center relative"
+        ref={dropdownRef}
+      >
+        {structuredLinks.map((link) => (
+          <div key={link.name} className="relative">
             <button
-              onClick={() => {
-                setIsOpen(!isOpen);
-                setMobileDropdown(null);
-              }}
-              className="text-white"
+              onClick={() =>
+                setDesktopDropdown(
+                  desktopDropdown === link.name ? null : link.name
+                )
+              }
+              className="flex items-center gap-1 
+                         text-white font-semibold 
+                         text-sm md:text-xs lg:text-base 
+                         hover:text-cyan-300 transition-colors"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {link.name}
+              {link.sublinks?.length > 0 && <ChevronDown size={16} />}
             </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-4 pt-2 pb-4 space-y-4 bg-black/80 shadow-md border-t border-white/20">
-          {structuredLinks.map((link) => (
-            <div key={link.name}>
-              <button
-                onClick={() =>
-                  setMobileDropdown((prev) => (prev === link.name ? null : link.name))
-                }
-                className="w-full text-left text-white font-medium"
-              >
-                {link.name}
-              </button>
-
-              {mobileDropdown === link.name && (
-                <div className="ml-4 mt-1 space-y-1">
+            {link.sublinks?.length > 0 &&
+              desktopDropdown === link.name && (
+                <div className="absolute left-0 top-full mt-2 w-56 bg-white text-black rounded-md shadow-lg z-10">
                   {link.sublinks.map((sublink) => (
                     <a
                       key={sublink.label}
                       href={sublink.href}
-                      onClick={async (e) => {
+                      onClick={(e) => {
                         e.preventDefault();
-                        setIsOpen(false);
-                        setMobileDropdown(null);
-                        await handleSmoothScroll(sublink.href);
+                        setDesktopDropdown(null);
+                        handleSmoothScroll(sublink.href);
                       }}
-                      className="block text-white text-sm hover:text-cyan-300"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100"
                     >
                       {sublink.label}
                     </a>
                   ))}
                 </div>
               )}
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile Toggle */}
+      <div className="md:hidden">
+        <button
+          onClick={() => {
+            setIsOpen(!isOpen);
+            setMobileDropdown(null);
+          }}
+          className="text-white"
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  {isOpen && (
+    <div className="md:hidden px-4 pt-3 pb-6 space-y-4 backdrop-blur-md shadow-md border-t border-white/20">
+      {structuredLinks.map((link) => (
+        <div key={link.name}>
+          <button
+            onClick={() =>
+              setMobileDropdown((prev) =>
+                prev === link.name ? null : link.name
+              )
+            }
+            className="w-full flex justify-between items-center text-left text-white font-medium text-lg py-2"
+          >
+            {link.name}
+            {link.sublinks?.length > 0 && <ChevronDown size={16} />}
+          </button>
+
+          {mobileDropdown === link.name && link.sublinks?.length > 0 && (
+            <div className="ml-4 mt-2 space-y-2">
+              {link.sublinks.map((sublink) => (
+                <a
+                  key={sublink.label}
+                  href={sublink.href}
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    setIsOpen(false);
+                    setMobileDropdown(null);
+                    await handleSmoothScroll(sublink.href);
+                  }}
+                  className="block text-white text-sm hover:text-cyan-300 transition-colors"
+                >
+                  {sublink.label}
+                </a>
+              ))}
             </div>
-          ))}
+          )}
         </div>
-      )}
-    </nav>
+      ))}
+    </div>
+  )}
+</nav>
+
   );
 }
