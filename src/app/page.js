@@ -23,6 +23,7 @@ import {
   FaEye, FaBullseye , FaTint, FaBookOpen, FaMagic , FaLeaf
 } from "react-icons/fa";
 import Link from "next/link";
+import { Landmark, Users } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 
 export default function HomePage() {
@@ -604,7 +605,6 @@ useEffect(() => {
       </div>
     </section>
      
-
 
 
       {/* Join the Movement CTA */}
