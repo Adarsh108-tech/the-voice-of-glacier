@@ -611,7 +611,7 @@ useEffect(() => {
       <section className="py-24 px-6 md:px-16 bg-gradient-to-r from-glacier-primary to-glacier-dark text-center text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow ">Join the Movement</h2>
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Whether you&#39;re a glacier lover, scientist, student, or global citizen—there&#39;s a vital place for you in the Voice of Glaciers Foundation.
+              Join researchers, storytellers, communities, and leaders working to protect glaciers and the people who depend on them.
         </p>
         <div className="flex flex-wrap justify-center gap-6">
           <Button className="bg-white text-glacier-dark font-semibold hover:!bg-glacier-soft">
