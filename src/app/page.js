@@ -615,12 +615,10 @@ useEffect(() => {
         </p>
         <div className="flex flex-wrap justify-center gap-6">
           <Button className="bg-white text-glacier-dark font-semibold hover:!bg-glacier-soft">
-            <span className="text-glacier-dark">
-              Become a Glacier Guardian
-            </span>
+            <Link className="text-glacier-dark" href="/collaborate">
+              Collaborate with us
+            </Link>
           </Button>
-          <Button variant="outline" className="!border-white !text-white hover:!bg-white hover:!text-glacier-dark">Volunteer Now</Button>
-          <Button variant="outline" className="!border-white !text-white hover:!bg-white hover:!text-glacier-dark">Donate</Button>
         </div>
       </section>
       <Footer/>

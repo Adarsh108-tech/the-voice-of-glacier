@@ -58,7 +58,7 @@ export default function CollaboratePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              The Voice Of Glacier
+              The Voice Of Glaciers
             </motion.h1>
             <motion.p
               className="mt-3 text-base md:text-xl text-white/90 max-w-2xl leading-relaxed"
