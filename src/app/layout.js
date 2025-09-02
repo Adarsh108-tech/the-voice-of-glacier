@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Voice Of Glacier",
-  description: "The Voice Of Glacier website",
+  title: "The Voice Of Glaciers",
+  description: "The Voice Of Glaciers website",
   icons: {
     icon: "/favicon.ico", // relative to /public
   },
